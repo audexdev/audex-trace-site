@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Audex Trace detects the active playback format and keeps your Mac's output in sync automatically.">
+    <meta name="theme-color" content="#07090d">
+    <title>Audex Trace</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <!-- Header -->
+      <header class="site-header" data-elevate>
+        <a class="brand" href="#top" aria-label="Audex Trace home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Audex Trace</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#features">Features</a>
+          <a href="#apps">Apps</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#status">Status</a>
+        </nav>
+        <button class="header-cta" type="button" disabled>Coming soon</button>
+      </header>
+
+      <main id="top">
+        <!-- Hero -->
+        <section class="hero section-grid" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Real-time playback format detection for macOS audio.</p>
+            <h1 id="hero-title">Trace what’s actually playing.</h1>
+            <p class="hero-subtitle">Audex Trace detects the active playback format and keeps your Mac’s output in sync — automatically.</p>
+            <div class="hero-actions" aria-label="Audex Trace status actions">
+              <button class="primary-cta" type="button" disabled>Coming soon</button>
+              <a class="secondary-cta" href="#status">View status</a>
+            </div>
+            <p class="status-badge">macOS 26 ready <span aria-hidden="true">•</span> Beta in development</p>
+          </div>
+
+          <!-- Demo mockup -->
+          <div class="demo-wrap" aria-label="Audex Trace menu bar preview">
+            <div class="menu-card">
+              <div class="menu-topbar">
+                <div class="traffic-lights" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="menu-title">Audex Trace</span>
+                <span class="menu-state">Live</span>
+              </div>
+              <div class="format-readout">
+                <div>
+                  <span class="readout-label">Sample rate</span>
+                  <strong>96.0 kHz</strong>
+                </div>
+                <div>
+                  <span class="readout-label">Bit depth</span>
+                  <strong>24-bit</strong>
+                </div>
+              </div>
+              <div class="active-row">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                <span>Active playback</span>
+              </div>
+              <div class="app-pills" aria-label="Beta target apps">
+                <span>Apple Music</span>
+                <span>Spotify</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Problem -->
+        <section class="problem content-band" aria-labelledby="problem-title">
+          <div class="section-kicker">The gap</div>
+          <h2 id="problem-title">Music changes. macOS output often does not.</h2>
+          <div class="problem-grid">
+            <p>Albums and tracks can move between 44.1, 48, 96, and 192 kHz while the selected output format stays fixed.</p>
+            <p>Manual switching in Audio MIDI Setup interrupts listening, and metadata-based guessing can be late or wrong.</p>
+          </div>
+        </section>
+
+        <!-- Solution / Features -->
+        <section class="features content-band" id="features" aria-labelledby="features-title">
+          <div class="section-kicker">Solution</div>
+          <h2 id="features-title">Built for precise, quiet automation.</h2>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="card-icon">RT</span>
+              <h3>Real-time playback format detection</h3>
+              <p>Designed to identify the active playback format as listening changes.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-icon">SR</span>
+              <h3>Automatic output sample rate switching</h3>
+              <p>Keeps the Mac’s selected output rate aligned with what is actually playing.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-icon">MB</span>
+              <h3>Menu bar visibility</h3>
+              <p>See the current format at a glance without opening a full control panel.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-icon">AP</span>
+              <h3>Works beyond a single player</h3>
+              <p>Initial beta work targets Apple Music and Spotify, with broader app coverage under test.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-icon">SB</span>
+              <h3>Safe beta behavior</h3>
+              <p>Avoids unnecessary switching when the detected playback format is uncertain.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-icon">LC</span>
+              <h3>Local-only processing</h3>
+              <p>Playback format tracing is handled on the Mac, without cloud processing.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Supported apps -->
+        <section class="apps content-band" id="apps" aria-labelledby="apps-title">
+          <div class="section-kicker">Apps</div>
+          <h2 id="apps-title">Beta support is being mapped carefully.</h2>
+          <div class="status-table" role="table" aria-label="Supported apps status">
+            <div class="table-row table-head" role="row">
+              <span role="columnheader">App</span>
+              <span role="columnheader">Status</span>
+            </div>
+            <div class="table-row" role="row">
+              <span role="cell">Apple Music</span>
+              <span role="cell">Beta target</span>
+            </div>
+            <div class="table-row" role="row">
+              <span role="cell">Spotify</span>
+              <span role="cell">Beta target</span>
+            </div>
+            <div class="table-row" role="row">
+              <span role="cell">Safari / Web audio</span>
+              <span role="cell">Testing</span>
+            </div>
+            <div class="table-row" role="row">
+              <span role="cell">TIDAL / Qobuz</span>
+              <span role="cell">Research</span>
+            </div>
+            <div class="table-row" role="row">
+              <span role="cell">Local files</span>
+              <span role="cell">Experimental</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Privacy -->
+        <section class="privacy content-band" id="privacy" aria-labelledby="privacy-title">
+          <div class="section-kicker">Privacy</div>
+          <h2 id="privacy-title">Trace means playback format tracing, not user tracking.</h2>
+          <div class="privacy-list">
+            <p>Processing happens locally on the Mac.</p>
+            <p>No audio is recorded.</p>
+            <p>No listening history is uploaded.</p>
+            <p>No analytics for the initial beta.</p>
+          </div>
+        </section>
+
+        <!-- Status / Coming soon -->
+        <section class="status content-band" id="status" aria-labelledby="status-title">
+          <div class="section-kicker">Status</div>
+          <h2 id="status-title">Public beta is in development.</h2>
+          <p>Pricing and downloads will be announced later.</p>
+          <a class="repository-link" href="#">Follow the repository for updates</a>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <span>Audex Trace</span>
+        <span>© 2026 Audex</span>
+        <nav aria-label="Footer links">
+          <a href="#privacy">Privacy</a>
+          <a href="#">GitHub</a>
+          <a href="#">Contact</a>
+        </nav>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
