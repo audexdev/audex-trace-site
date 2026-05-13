@@ -91,14 +91,11 @@ a {
 }
 
 .brand-mark {
-  width: 18px;
-  height: 18px;
-  border: 1px solid rgba(119, 215, 255, 0.68);
-  border-radius: 50%;
-  background:
-    linear-gradient(90deg, transparent 46%, rgba(119, 215, 255, 0.9) 47% 53%, transparent 54%),
-    radial-gradient(circle, rgba(185, 237, 255, 0.34), rgba(119, 215, 255, 0.08) 62%, transparent 64%);
-  box-shadow: 0 0 20px rgba(119, 215, 255, 0.22);
+  width: 20px;
+  height: 20px;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(51, 219, 255, 0.28));
+  flex: 0 0 auto;
 }
 
 .site-nav {
