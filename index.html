@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Audex Trace detects the active playback format and keeps your Mac's output in sync automatically.">
+    <meta name="description" content="Audex Trace is a premium Apple Music companion for Lossless and Hi-Res listeners on macOS.">
     <meta name="theme-color" content="#07090d">
     <title>Audex Trace</title>
     <link rel="stylesheet" href="styles.css">
@@ -19,6 +19,7 @@
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="#features">Features</a>
           <a href="#apps">Apps</a>
+          <a href="#pricing">Pricing</a>
           <a href="#privacy">Privacy</a>
           <a href="#status">Status</a>
         </nav>
@@ -29,45 +30,29 @@
         <!-- Hero -->
         <section class="hero section-grid" aria-labelledby="hero-title">
           <div class="hero-copy">
-            <p class="eyebrow">Real-time playback format detection for macOS audio.</p>
+            <p class="eyebrow">Built first for Apple Music.</p>
             <h1 id="hero-title">Trace what’s actually playing.</h1>
-            <p class="hero-subtitle">Audex Trace detects the active playback format and keeps your Mac’s output in sync — automatically.</p>
+            <p class="hero-subtitle">A premium Apple Music companion for Lossless and Hi-Res listeners. See codec, bit depth, and sample rate in a clean Mac mini player, with optional output sync.</p>
             <div class="hero-actions" aria-label="Audex Trace status actions">
               <button class="primary-cta" type="button" disabled>Coming soon</button>
               <a class="secondary-cta" href="#status">View status</a>
             </div>
-            <p class="status-badge">macOS 26 ready <span aria-hidden="true">•</span> Beta in development</p>
+            <p class="status-badge">Apple Music-first <span aria-hidden="true">•</span> Beta in development</p>
           </div>
 
-          <!-- Demo mockup -->
-          <div class="demo-wrap" aria-label="Audex Trace menu bar preview">
-            <div class="menu-card">
-              <div class="menu-topbar">
-                <div class="traffic-lights" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <span class="menu-title">Audex Trace</span>
-                <span class="menu-state">Live</span>
-              </div>
-              <div class="format-readout">
-                <div>
-                  <span class="readout-label">Sample rate</span>
-                  <strong>96.0 kHz</strong>
-                </div>
-                <div>
-                  <span class="readout-label">Bit depth</span>
-                  <strong>24-bit</strong>
-                </div>
-              </div>
-              <div class="active-row">
-                <span class="pulse-dot" aria-hidden="true"></span>
-                <span>Active playback</span>
-              </div>
-              <div class="app-pills" aria-label="Beta target apps">
-                <span>Apple Music</span>
-                <span>Spotify</span>
+          <!-- Product demo -->
+          <div class="demo-wrap" aria-label="Audex Trace product demo">
+            <div class="hero-video-crop">
+              <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="" aria-label="Audex Trace showing Apple Music quality information">
+                <source src="assets/site-hero.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="playback-format-card" aria-label="Detected switch">
+              <span class="format-card-label">Detected switch</span>
+              <div class="format-card-values">
+                <span>16-bit / 44.1 kHz</span>
+                <span class="format-arrow" aria-hidden="true">→</span>
+                <strong>24-bit / 96.0 kHz</strong>
               </div>
             </div>
           </div>
@@ -78,45 +63,45 @@
           <div class="section-kicker">The gap</div>
           <h2 id="problem-title">Music changes. macOS output often does not.</h2>
           <div class="problem-grid">
-            <p>Albums and tracks can move between 44.1, 48, 96, and 192 kHz while the selected output format stays fixed.</p>
-            <p>Manual switching in Audio MIDI Setup interrupts listening, and metadata-based guessing can be late or wrong.</p>
+            <p>Apple Music can move between 44.1, 48, 96, and 192 kHz while the selected macOS output format stays fixed.</p>
+            <p>Manual switching in Audio MIDI Setup interrupts listening, and Apple Music’s own UI keeps technical playback details out of sight.</p>
           </div>
         </section>
 
         <!-- Solution / Features -->
         <section class="features content-band" id="features" aria-labelledby="features-title">
           <div class="section-kicker">Solution</div>
-          <h2 id="features-title">Built for precise, quiet automation.</h2>
+          <h2 id="features-title">A focused mini player for Lossless and Hi-Res listening.</h2>
           <div class="feature-grid">
             <article class="feature-card">
               <span class="card-icon">RT</span>
-              <h3>Real-time playback format detection</h3>
-              <p>Designed to identify the active playback format as listening changes.</p>
+              <h3>Hi-Res readout</h3>
+              <p>Shows codec, bit depth, and sample rate while you listen to Apple Music.</p>
             </article>
             <article class="feature-card">
-              <span class="card-icon">SR</span>
-              <h3>Automatic output sample rate switching</h3>
-              <p>Keeps the Mac’s selected output rate aligned with what is actually playing.</p>
+              <span class="card-icon">AM</span>
+              <h3>Apple Music-first</h3>
+              <p>Built first for Apple Music instead of making broad, untested player claims.</p>
             </article>
             <article class="feature-card">
               <span class="card-icon">MB</span>
-              <h3>Menu bar visibility</h3>
-              <p>See the current format at a glance without opening a full control panel.</p>
+              <h3>Beautiful mini player</h3>
+              <p>Keep playback controls and quality information close without opening a full control panel.</p>
             </article>
             <article class="feature-card">
-              <span class="card-icon">AP</span>
-              <h3>Works beyond a single player</h3>
-              <p>Initial beta work targets Apple Music and Spotify, with broader app coverage under test.</p>
+              <span class="card-icon">SR</span>
+              <h3>Auto Sample Rate Match</h3>
+              <p>Experimental output sync can update the Mac’s selected output rate for the current track.</p>
             </article>
             <article class="feature-card">
               <span class="card-icon">SB</span>
-              <h3>Safe beta behavior</h3>
-              <p>Avoids unnecessary switching when the detected playback format is uncertain.</p>
+              <h3>Careful switching behavior</h3>
+              <p>Designed to avoid unnecessary output changes when Audex Trace should stay out of the way.</p>
             </article>
             <article class="feature-card">
               <span class="card-icon">LC</span>
               <h3>Local-only processing</h3>
-              <p>Playback format tracing is handled on the Mac, without cloud processing.</p>
+              <p>Runs on your Mac without cloud processing or listening-history uploads.</p>
             </article>
           </div>
         </section>
@@ -124,7 +109,7 @@
         <!-- Supported apps -->
         <section class="apps content-band" id="apps" aria-labelledby="apps-title">
           <div class="section-kicker">Apps</div>
-          <h2 id="apps-title">Beta support is being mapped carefully.</h2>
+          <h2 id="apps-title">Apple Music is the v1 target.</h2>
           <div class="status-table" role="table" aria-label="Supported apps status">
             <div class="table-row table-head" role="row">
               <span role="columnheader">App</span>
@@ -132,44 +117,81 @@
             </div>
             <div class="table-row" role="row">
               <span role="cell">Apple Music</span>
-              <span role="cell">Beta target</span>
+              <span role="cell" class="status-supported">Supported in v1</span>
             </div>
             <div class="table-row" role="row">
               <span role="cell">Spotify</span>
-              <span role="cell">Beta target</span>
-            </div>
-            <div class="table-row" role="row">
-              <span role="cell">Safari / Web audio</span>
-              <span role="cell">Testing</span>
-            </div>
-            <div class="table-row" role="row">
-              <span role="cell">TIDAL / Qobuz</span>
               <span role="cell">Research</span>
             </div>
             <div class="table-row" role="row">
               <span role="cell">Local files</span>
               <span role="cell">Experimental</span>
             </div>
+            <div class="table-row" role="row">
+              <span role="cell">Other players</span>
+              <span role="cell">Planned</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="pricing content-band" id="pricing" aria-labelledby="pricing-title">
+          <div class="section-kicker">Pricing</div>
+          <h2 id="pricing-title">One-time purchase. No subscription.</h2>
+          <div class="pricing-grid">
+            <article class="price-card">
+              <span class="price-label">Launch offer</span>
+              <strong>$19.99</strong>
+              <p>Available for the first public release window. Final launch-offer timing will be announced with the download.</p>
+            </article>
+            <article class="price-card price-card-muted">
+              <span class="price-label">Regular price</span>
+              <strong>$24.99</strong>
+              <p>Includes Audex Trace for macOS with the Apple Music mini player, quality readout, and experimental Auto Sample Rate Match.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Requirements -->
+        <section class="requirements content-band" id="requirements" aria-labelledby="requirements-title">
+          <div class="section-kicker">Requirements</div>
+          <h2 id="requirements-title">Designed for recent macOS and Apple Music.</h2>
+          <div class="requirements-list">
+            <p>macOS with the Apple Music app installed.</p>
+            <p>Local Apple Music playback on the Mac.</p>
+            <p>One-time purchase with no subscription.</p>
+            <p>Auto Sample Rate Match requires an output device that exposes compatible macOS sample rates.</p>
           </div>
         </section>
 
         <!-- Privacy -->
         <section class="privacy content-band" id="privacy" aria-labelledby="privacy-title">
           <div class="section-kicker">Privacy</div>
-          <h2 id="privacy-title">Trace means playback format tracing, not user tracking.</h2>
+          <h2 id="privacy-title">Built for your Mac, not for tracking.</h2>
           <div class="privacy-list">
             <p>Processing happens locally on the Mac.</p>
             <p>No audio is recorded.</p>
             <p>No listening history is uploaded.</p>
+            <p>No Apple Music account access.</p>
             <p>No analytics for the initial beta.</p>
+          </div>
+        </section>
+
+        <!-- Refund / limitations -->
+        <section class="policy content-band" id="policy" aria-labelledby="policy-title">
+          <div class="section-kicker">Policy</div>
+          <h2 id="policy-title">A narrow refund policy for compatibility.</h2>
+          <div class="policy-grid">
+            <p><strong>7-day compatibility refund.</strong> If Audex Trace cannot show Apple Music quality information on your Mac, contact support within 7 days.</p>
+            <p><strong>Known limitation.</strong> Future macOS or Apple Music updates may require Audex Trace updates.</p>
           </div>
         </section>
 
         <!-- Status / Coming soon -->
         <section class="status content-band" id="status" aria-labelledby="status-title">
           <div class="section-kicker">Status</div>
-          <h2 id="status-title">Public beta is in development.</h2>
-          <p>Pricing and downloads will be announced later.</p>
+          <h2 id="status-title">Audex Trace 1.0 is being prepared for launch.</h2>
+          <p>Planned launch price is $19.99, then $24.99. Downloads will open after the public build is ready.</p>
           <a class="repository-link" href="#">Follow the repository for updates</a>
         </section>
       </main>
@@ -180,7 +202,7 @@
         <span>© 2026 Audex</span>
         <nav aria-label="Footer links">
           <a href="#privacy">Privacy</a>
-          <a href="#">GitHub</a>
+          <a href="#pricing">Pricing</a>
           <a href="#">Contact</a>
         </nav>
       </footer>
