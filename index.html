@@ -33,7 +33,7 @@
           <div class="hero-copy">
             <p class="eyebrow">Built first for Apple Music.</p>
             <h1 id="hero-title">Trace what’s actually playing.</h1>
-            <p class="hero-subtitle">A premium Apple Music companion for Lossless and Hi-Res listeners. See codec, bit depth, and sample rate in a clean Mac mini player, with optional output sync.</p>
+            <p class="hero-subtitle">A premium Apple Music companion for Lossless and Hi-Res listeners. See codec, bit depth, sample rate, and output match status in a clean Mac mini player, with experimental output sync.</p>
             <div class="hero-actions" aria-label="Audex Trace status actions">
               <button class="primary-cta" type="button" disabled>Coming soon</button>
               <a class="secondary-cta" href="#status">View status</a>
@@ -44,7 +44,7 @@
           <!-- Product demo -->
           <div class="demo-wrap" aria-label="Audex Trace product demo">
             <div class="hero-video-crop">
-              <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="" aria-label="Audex Trace showing Apple Music quality information">
+              <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="" aria-label="Audex Trace showing Apple Music playback format information">
                 <source src="assets/site-hero.mp4" type="video/mp4">
               </video>
             </div>
@@ -75,9 +75,9 @@
           <h2 id="features-title">A focused mini player for Lossless and Hi-Res listening.</h2>
           <div class="feature-grid">
             <article class="feature-card">
-              <span class="card-icon">RT</span>
-              <h3>Hi-Res readout</h3>
-              <p>Shows codec, bit depth, and sample rate while you listen to Apple Music.</p>
+              <span class="card-icon">OM</span>
+              <h3>Output Match Status</h3>
+              <p>See what Apple Music is playing and whether the current Mac output rate matches it.</p>
             </article>
             <article class="feature-card">
               <span class="card-icon">AM</span>
@@ -87,7 +87,7 @@
             <article class="feature-card">
               <span class="card-icon">MB</span>
               <h3>Beautiful mini player</h3>
-              <p>Keep playback controls and quality information close without opening a full control panel.</p>
+              <p>Keep playback controls and format details close without opening a full control panel.</p>
             </article>
             <article class="feature-card">
               <span class="card-icon">SR</span>
@@ -122,7 +122,7 @@
             </div>
             <div class="table-row" role="row">
               <span role="cell">Spotify</span>
-              <span role="cell">Research</span>
+              <span role="cell">Not planned for v1</span>
             </div>
             <div class="table-row" role="row">
               <span role="cell">Local files</span>
@@ -130,7 +130,7 @@
             </div>
             <div class="table-row" role="row">
               <span role="cell">Other players</span>
-              <span role="cell">Planned</span>
+              <span role="cell">Future consideration</span>
             </div>
           </div>
         </section>
@@ -148,7 +148,7 @@
             <article class="price-card price-card-muted">
               <span class="price-label">Regular price</span>
               <strong>$24.99</strong>
-              <p>Includes Audex Trace for macOS with the Apple Music mini player, quality readout, and experimental Auto Sample Rate Match.</p>
+              <p>Includes Audex Trace for macOS with the Apple Music mini player, playback format readout, output match status, and experimental Auto Sample Rate Match.</p>
             </article>
           </div>
         </section>
@@ -158,7 +158,9 @@
           <div class="section-kicker">Requirements</div>
           <h2 id="requirements-title">Designed for recent macOS and Apple Music.</h2>
           <div class="requirements-list">
-            <p>macOS with the Apple Music app installed.</p>
+            <p>Requires macOS 15 or later with the Apple Music app installed.</p>
+            <p>Tested on macOS 15.4, 26.3.1, and 26.4.1.</p>
+            <p>macOS 14 and earlier are not officially supported in Audex Trace 1.0.</p>
             <p>Local Apple Music playback on the Mac.</p>
             <p>One-time purchase with no subscription.</p>
             <p>Auto Sample Rate Match requires an output device that exposes compatible macOS sample rates.</p>
@@ -171,6 +173,7 @@
           <h2 id="privacy-title">Built for your Mac, not for tracking.</h2>
           <div class="privacy-list">
             <p>Processing happens locally on the Mac.</p>
+            <p>Audex Trace does not modify, enhance, or process your audio.</p>
             <p>No audio is recorded.</p>
             <p>No listening history is uploaded.</p>
             <p>No Apple Music account access.</p>
@@ -183,7 +186,7 @@
           <div class="section-kicker">Policy</div>
           <h2 id="policy-title">A narrow refund policy for compatibility.</h2>
           <div class="policy-grid">
-            <p><strong>7-day compatibility refund.</strong> If Audex Trace cannot show Apple Music quality information on your Mac, contact support within 7 days.</p>
+            <p><strong>7-day compatibility refund.</strong> If Audex Trace cannot detect Apple Music playback format on a supported macOS version, contact support within 7 days.</p>
             <p><strong>Known limitation.</strong> Future macOS or Apple Music updates may require Audex Trace updates.</p>
           </div>
         </section>
