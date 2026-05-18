@@ -127,11 +127,11 @@ a {
 .header-cta,
 .primary-cta {
   border: 1px solid rgba(255, 255, 255, 0.18);
-  color: rgba(246, 247, 249, 0.72);
-  background: rgba(255, 255, 255, 0.07);
+  color: #061018;
+  background: linear-gradient(180deg, #c7f2ff 0%, #77d7ff 100%);
   font: inherit;
   font-weight: 600;
-  cursor: not-allowed;
+  box-shadow: 0 14px 34px rgba(119, 215, 255, 0.22);
 }
 
 .header-cta {
@@ -227,6 +227,17 @@ h3 {
 
 .primary-cta {
   min-width: 142px;
+}
+
+.header-cta:hover,
+.primary-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 42px rgba(119, 215, 255, 0.28);
+}
+
+.header-cta:active,
+.primary-cta:active {
+  transform: translateY(0);
 }
 
 .secondary-cta {

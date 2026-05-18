@@ -22,9 +22,9 @@
           <a href="#apps">Apps</a>
           <a href="#pricing">Pricing</a>
           <a href="#privacy">Privacy</a>
-          <a href="#status">Status</a>
+          <a href="#support">Support</a>
         </nav>
-        <button class="header-cta" type="button" disabled>Coming soon</button>
+        <a class="header-cta" href="https://github.com/audexdev/MiniPlayer-Mac/releases">Download</a>
       </header>
 
       <main id="top">
@@ -35,10 +35,10 @@
             <h1 id="hero-title">Trace what’s actually playing.</h1>
             <p class="hero-subtitle">A premium Apple Music companion for Lossless and Hi-Res listeners. See codec, bit depth, sample rate, and output match status in a clean Mac mini player, with experimental output sync.</p>
             <div class="hero-actions" aria-label="Audex Trace status actions">
-              <button class="primary-cta" type="button" disabled>Coming soon</button>
-              <a class="secondary-cta" href="#status">View status</a>
+              <a class="primary-cta" href="https://github.com/audexdev/MiniPlayer-Mac/releases">Download for macOS</a>
+              <a class="secondary-cta" href="#pricing">View pricing</a>
             </div>
-            <p class="status-badge">Apple Music-first <span aria-hidden="true">•</span> Beta in development</p>
+            <p class="status-badge">Apple Music-first <span aria-hidden="true">•</span> macOS 15+</p>
           </div>
 
           <!-- Product demo -->
@@ -143,7 +143,7 @@
             <article class="price-card">
               <span class="price-label">Launch offer</span>
               <strong>$19.99</strong>
-              <p>Available for the first public release window. Final launch-offer timing will be announced with the download.</p>
+              <p>Available during the first public release window. Purchase and license activation are handled by Audex Trace after install.</p>
             </article>
             <article class="price-card price-card-muted">
               <span class="price-label">Regular price</span>
@@ -176,29 +176,31 @@
             <p>Audex Trace does not modify, enhance, record, or upload your audio.</p>
             <p>No listening history is uploaded for audio-quality detection.</p>
             <p>No Apple Music account sign-in or cloud library API access.</p>
-            <p>License verification, update checks, purchase checkout, and artwork fallback may use the network.</p>
+            <p>License verification, update checks, purchase checkout, activation email delivery, recovery email delivery, and artwork fallback may use the network.</p>
+            <p>For purchase and license operations, Audex stores the purchase email, Stripe checkout/payment identifiers, license status, encrypted license key data, hashed license key data, and related timestamps needed for activation, recovery, support, and refunds.</p>
             <p>Artwork fallback may send track, artist, or album search terms to the iTunes Search API when local artwork sources miss.</p>
             <p>No analytics for the initial beta.</p>
           </div>
         </section>
 
         <!-- Refund / limitations -->
-        <section class="policy content-band" id="policy" aria-labelledby="policy-title">
+        <section class="policy content-band" id="support" aria-labelledby="policy-title">
           <div class="section-kicker">Policy</div>
           <h2 id="policy-title">A narrow refund policy for compatibility.</h2>
           <div class="policy-grid">
-            <p><strong>7-day compatibility refund.</strong> If Audex Trace cannot detect Apple Music playback format on a supported macOS version, contact support within 7 days.</p>
+            <p><strong>7-day compatibility refund.</strong> If Audex Trace cannot detect Apple Music playback format on a supported macOS version, contact <a href="mailto:trace@audex.dev">trace@audex.dev</a> within 7 days.</p>
+            <p><strong>Support.</strong> Use the activation email, recovery flow, or <a href="mailto:trace@audex.dev">trace@audex.dev</a> for license recovery, refund requests, and purchase issues.</p>
             <p><strong>Known limitation.</strong> Future macOS or Apple Music updates may require Audex Trace updates.</p>
           </div>
         </section>
 
-        <!-- Status / Coming soon -->
+        <!-- Status -->
         <section class="status content-band" id="status" aria-labelledby="status-title">
           <div class="section-kicker">Status</div>
-          <h2 id="status-title">Audex Trace 1.0 is being prepared for launch.</h2>
-          <p>Planned launch price is $19.99, then $24.99. Downloads will open after the public build is ready.</p>
-          <p>Release downloads will be hosted on GitHub Releases. Homebrew tap installation instructions are planned after the first signed public build is available.</p>
-          <a class="repository-link" href="https://github.com/audexdev/MiniPlayer-Mac">Follow the repository for updates</a>
+          <h2 id="status-title">Audex Trace 1.0 is available for macOS.</h2>
+          <p>Download the latest signed release from GitHub Releases. Homebrew tap installation instructions may be added after the first public build.</p>
+          <p>Use the free compatibility check before purchase if you want to confirm playback-format detection and sample-rate matching on your setup.</p>
+          <a class="repository-link" href="https://github.com/audexdev/MiniPlayer-Mac/releases">Open GitHub Releases</a>
         </section>
       </main>
 
@@ -209,7 +211,7 @@
         <nav aria-label="Footer links">
           <a href="#privacy">Privacy</a>
           <a href="#pricing">Pricing</a>
-          <a href="https://audex.dev">Contact</a>
+          <a href="mailto:trace@audex.dev">Support</a>
         </nav>
       </footer>
     </div>
