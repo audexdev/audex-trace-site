@@ -616,6 +616,61 @@ h3 {
   }
 }
 
+@media (max-width: 360px) {
+  .site-header {
+    padding-inline: 10px;
+  }
+
+  .brand {
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+
+  .header-cta {
+    padding-inline: 10px;
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    padding-top: 52px;
+  }
+
+  h1 {
+    font-size: clamp(2.55rem, 12.5vw, 3rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1.08rem;
+  }
+
+  .status-badge {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    align-items: start;
+    border-radius: 18px;
+    font-size: 0.84rem;
+  }
+
+  .status-badge span[aria-hidden="true"] {
+    display: none;
+  }
+
+  .demo-wrap {
+    min-height: 320px;
+  }
+
+  .playback-format-card {
+    padding: 16px;
+  }
+
+  .format-card-values {
+    flex-wrap: wrap;
+    gap: 6px 9px;
+    white-space: normal;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
