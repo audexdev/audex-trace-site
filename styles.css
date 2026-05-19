@@ -280,7 +280,7 @@ h3 {
 .hero-video-crop {
   position: relative;
   width: min(100%, 390px);
-  aspect-ratio: 166 / 85;
+  aspect-ratio: 360 / 157;
   border-radius: 19px;
   background: transparent;
   filter: drop-shadow(0 24px 70px rgba(0, 0, 0, 0.44));
