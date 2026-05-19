@@ -30,3 +30,6 @@ build/
 .cache/
 .parcel-cache/
 .vite/
+
+# Local/private notes
+docs/

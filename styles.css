@@ -50,6 +50,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+button {
+  cursor: pointer;
+}
+
 .page-shell {
   width: min(100%, 1440px);
   margin: 0 auto;
@@ -215,6 +219,10 @@ h3 {
   margin-bottom: 20px;
 }
 
+.checkout-form {
+  display: contents;
+}
+
 .primary-cta,
 .secondary-cta {
   display: inline-flex;
@@ -223,6 +231,11 @@ h3 {
   min-height: 46px;
   padding: 0 18px;
   border-radius: 999px;
+}
+
+button.primary-cta {
+  appearance: none;
+  font: inherit;
 }
 
 .primary-cta {
@@ -490,6 +503,11 @@ h3 {
 .policy-grid p,
 .requirements-list p {
   margin: 0;
+}
+
+.price-action {
+  display: block;
+  margin-top: 22px;
 }
 
 .privacy-list,
