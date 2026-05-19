@@ -263,8 +263,8 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  min-height: 460px;
+  gap: 20px;
+  min-height: 500px;
 }
 
 .demo-wrap::before {
@@ -279,7 +279,7 @@ h3 {
 
 .hero-video-crop {
   position: relative;
-  width: min(100%, 390px);
+  width: min(100%, 500px);
   aspect-ratio: 360 / 157;
   border-radius: 19px;
   background: transparent;
@@ -297,8 +297,8 @@ h3 {
 
 .playback-format-card {
   position: relative;
-  width: min(100%, 340px);
-  padding: 14px 16px;
+  width: min(100%, 430px);
+  padding: 18px 20px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   background:
@@ -310,9 +310,9 @@ h3 {
 
 .format-card-label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: var(--subtle);
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   font-weight: 750;
   letter-spacing: 0.08em;
 }
@@ -320,9 +320,9 @@ h3 {
 .format-card-values {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 11px;
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: 1.08rem;
   font-weight: 650;
   white-space: nowrap;
 }
