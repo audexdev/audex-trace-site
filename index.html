@@ -146,7 +146,7 @@
             <article class="price-card">
               <span class="price-label">Launch offer</span>
               <strong>$19.99</strong>
-              <p>Available during the first public release window. Purchase and license activation are handled by Audex Trace after install.</p>
+              <p>Available during the first public release window. Purchase is handled by Stripe Checkout, with a license key shown after checkout and sent by email for activation in the Mac app.</p>
               <form class="checkout-form price-action" method="post" action="https://trace-auth.audex.dev/api/checkout/redirect">
                 <button class="primary-cta" type="submit">Buy for $19.99</button>
               </form>
@@ -185,7 +185,7 @@
             <p>License verification, update checks, purchase checkout, activation email delivery, recovery email delivery, and artwork fallback may use the network.</p>
             <p>For purchase and license operations, Audex stores the purchase email, Stripe checkout/payment identifiers, license status, encrypted license key data, hashed license key data, and related timestamps needed for activation, recovery, support, and refunds.</p>
             <p>Artwork fallback may send track, artist, or album search terms to the iTunes Search API when local artwork sources miss.</p>
-            <p>No analytics for the initial beta.</p>
+            <p>No analytics for the initial public release.</p>
           </div>
         </section>
 
