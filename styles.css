@@ -466,6 +466,17 @@ button.primary-cta {
   gap: 14px;
 }
 
+.pricing-note {
+  max-width: 760px;
+  margin: -8px 0 24px;
+  padding: 16px 18px;
+  border: 1px solid rgba(119, 215, 255, 0.18);
+  border-radius: var(--radius);
+  color: #d7dbe2;
+  background: rgba(119, 215, 255, 0.055);
+  font-size: 0.98rem;
+}
+
 .price-card {
   min-height: 230px;
   padding: 24px;
@@ -631,6 +642,12 @@ button.primary-cta {
 
 .site-footer a:hover {
   color: var(--text);
+}
+
+.footer-brand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 @media (max-width: 900px) {
