@@ -442,6 +442,13 @@ h3 {
   gap: 14px;
 }
 
+.purchase-check {
+  max-width: 820px;
+  margin: -10px 0 28px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
 .price-card {
   min-height: 230px;
   padding: 24px;
