@@ -23,9 +23,9 @@
           <a href="#apps">Apps</a>
           <a href="#pricing">Pricing</a>
           <a href="#privacy">Privacy</a>
-          <a href="#status">Status</a>
+          <a href="#download">Download</a>
         </nav>
-        <button class="header-cta" type="button" disabled>Coming soon</button>
+        <a class="header-cta" href="#pricing">Buy Pro</a>
       </header>
 
       <main id="top">
@@ -36,13 +36,15 @@
             <h1 id="hero-title">Trace what’s actually playing.</h1>
             <p class="hero-subtitle">A premium Apple Music companion for Lossless and Hi-Res listeners. See codec, bit depth, sample rate, and output match status in a clean Mac mini player, with experimental output sync.</p>
             <div class="hero-actions" aria-label="Audex Trace status actions">
-              <button class="primary-cta" type="button" disabled>Coming soon</button>
-              <a class="secondary-cta" href="#status">View status</a>
+              <a class="primary-cta" href="https://github.com/audexdev/trace-releases/releases/download/v1.0/AudexTrace-1.0.zip">Download v1.0</a>
+              <form class="inline-checkout-form" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post">
+                <button class="secondary-cta" type="submit">Buy Pro for $19.99</button>
+              </form>
             </div>
             <p class="status-badge">
               <span>Apple Music-first</span>
               <span aria-hidden="true">•</span>
-              <span>Beta in development</span>
+              <span>Available now for macOS 15+</span>
             </p>
           </div>
 
@@ -149,7 +151,10 @@
             <article class="price-card">
               <span class="price-label">Launch offer</span>
               <strong>$19.99</strong>
-              <p>Available for the first public release window. Final launch-offer timing will be announced with the download.</p>
+              <p>Available during the first public release window. One-time lifetime license for Audex Trace Pro.</p>
+              <form class="price-action" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post">
+                <button class="primary-cta" type="submit">Buy for $19.99</button>
+              </form>
             </article>
             <article class="price-card price-card-muted">
               <span class="price-label">Regular price</span>
@@ -198,13 +203,16 @@
           </div>
         </section>
 
-        <!-- Status / Coming soon -->
-        <section class="status content-band" id="status" aria-labelledby="status-title">
-          <div class="section-kicker">Status</div>
-          <h2 id="status-title">Audex Trace 1.0 is being prepared for launch.</h2>
-          <p>Planned launch price is $19.99, then $24.99. Downloads will open after the public build is ready.</p>
-          <p>Release downloads will be hosted on GitHub Releases. Homebrew tap installation instructions are planned after the first signed public build is available.</p>
-          <a class="repository-link" href="https://github.com/audexdev/MiniPlayer-Mac">Follow the repository for updates</a>
+        <!-- Download -->
+        <section class="status content-band" id="download" aria-labelledby="download-title">
+          <div class="section-kicker">Download</div>
+          <h2 id="download-title">Audex Trace 1.0 is available now.</h2>
+          <p>Download the signed and notarized macOS app from GitHub Releases. Requires macOS 15 or later.</p>
+          <p>Before purchasing Pro, run the built-in Compatibility Check on your own Mac. Apple Music Song Transitions, AutoMix, or Crossfade can make playback-format detection delayed or unavailable around track changes.</p>
+          <div class="download-actions">
+            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/download/v1.0/AudexTrace-1.0.zip">Download Audex Trace 1.0</a>
+            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.0">View GitHub Release</a>
+          </div>
         </section>
       </main>
 
@@ -215,6 +223,7 @@
         <nav aria-label="Footer links">
           <a href="#privacy">Privacy</a>
           <a href="#pricing">Pricing</a>
+          <a href="#download">Download</a>
           <a href="https://audex.dev">Contact</a>
         </nav>
       </footer>
