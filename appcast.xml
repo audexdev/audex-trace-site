@@ -4,6 +4,15 @@
         <title>Audex Trace</title>
         <item>
             <title>1.0</title>
+            <pubDate>Sat, 23 May 2026 06:14:01 +0900</pubDate>
+            <link>https://trace.audex.dev</link>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.0/AudexTrace-1.0.zip" length="5842685" type="application/octet-stream" sparkle:edSignature="zaMa1P9yT9Hun1Abg4iox8XORVNVyA50mQborUvOeR4uI+Stdly0bJGqkuNht56eMOkGo7g6GHKnVkOesXT6Cg=="/>
+        </item>
+        <item>
+            <title>1.0</title>
             <pubDate>Fri, 22 May 2026 23:43:40 +0900</pubDate>
             <link>https://trace.audex.dev</link>
             <sparkle:version>21</sparkle:version>
