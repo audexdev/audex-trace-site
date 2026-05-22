@@ -4,12 +4,12 @@
         <title>Audex Trace</title>
         <item>
             <title>1.0</title>
-            <pubDate>Fri, 22 May 2026 23:34:59 +0900</pubDate>
+            <pubDate>Fri, 22 May 2026 23:43:40 +0900</pubDate>
             <link>https://trace.audex.dev</link>
             <sparkle:version>21</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.0-rc.4/AudexTrace-1.0-rc.4.zip" length="5893982" type="application/octet-stream" sparkle:edSignature="UjIpNxLVB71PAECQg+6I6/byr2LC/X2POJMjYl9I8U+FlLIcoN+L244HBwpUf/iPQlyPeMhRcHg3bvrculXdAA=="/>
+            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.0-rc.4/AudexTrace-1.0-rc.4.zip" length="5833900" type="application/octet-stream" sparkle:edSignature="deqc3ZpKtAjs7Chm2eTlyLAehN51D1wfXFyyZzak/q8bCFOKhphwSjMFz06htIXGB+RzbFOpTukqieBe9IB7CQ=="/>
         </item>
     </channel>
 </rss>
