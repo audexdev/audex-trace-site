@@ -611,11 +611,33 @@ h3 {
   color: var(--muted);
 }
 
+.changelog-meta .repository-link {
+  margin-top: 18px;
+}
+
+.changelog-details p,
 .changelog-details ul {
   margin: 0;
-  padding-left: 1.15rem;
   color: var(--muted);
   font-size: 1.05rem;
+}
+
+.changelog-details h3 {
+  margin: 24px 0 10px;
+}
+
+.changelog-details h3:first-child {
+  margin-top: 0;
+}
+
+.changelog-details ul {
+  padding-left: 1.15rem;
+}
+
+.changelog-details p + p,
+.changelog-details p + ul,
+.changelog-details ul + p {
+  margin-top: 14px;
 }
 
 .changelog-details li + li {
