@@ -4,11 +4,13 @@ Audex Trace is a macOS Apple Music mini player for Lossless and Hi-Res listeners
 
 Official site: https://trace.audex.dev/
 
-Download: https://github.com/audexdev/trace-releases/releases/download/v1.0/AudexTrace-1.0.zip
+Download: https://github.com/audexdev/trace-releases/releases/download/v1.1/AudexTrace-1.1.zip
 
-Release notes: https://github.com/audexdev/trace-releases/releases/tag/v1.0
+Release notes: https://github.com/audexdev/trace-releases/releases/tag/v1.1
 
-Current version: 1.0
+Changelog: https://trace.audex.dev/changelog.html
+
+Current version: 1.1
 
 Minimum macOS version: macOS 15
 
@@ -31,7 +33,7 @@ Pricing:
 Known limitations:
 - Apple Music Song Transitions, AutoMix, or Crossfade can make playback-format detection delayed or unavailable around track changes.
 - Auto Sample Rate Match depends on the output device exposing compatible macOS sample rates.
-- macOS 14 and earlier are not officially supported in Audex Trace 1.0.
+- macOS 14 and earlier are not officially supported.
 
 Privacy summary:
 - Playback format detection runs locally using Music.app state and local playback metadata/log signals.
