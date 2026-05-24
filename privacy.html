@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Privacy details for Audex Trace, a macOS Apple Music mini player that runs playback format detection locally.">
+    <meta name="theme-color" content="#07090d">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://trace.audex.dev/privacy.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Audex Trace">
+    <meta property="og:title" content="Audex Trace Privacy">
+    <meta property="og:description" content="Privacy details for Audex Trace, including local playback format detection and network use.">
+    <meta property="og:url" content="https://trace.audex.dev/privacy.html">
+    <meta property="og:image" content="https://trace.audex.dev/assets/og-image.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Audex Trace Privacy">
+    <meta name="twitter:description" content="Privacy details for Audex Trace.">
+    <meta name="twitter:image" content="https://trace.audex.dev/assets/og-image.svg">
+    <title>Audex Trace Privacy</title>
+    <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Audex Trace Privacy",
+        "url": "https://trace.audex.dev/privacy.html",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Audex",
+          "url": "https://audex.dev/"
+        },
+        "description": "Audex Trace runs playback format detection locally on the Mac and does not upload listening history for audio-quality detection."
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" data-elevate>
+        <a class="brand" href="index.html#top" aria-label="Audex Trace home">
+          <img class="brand-mark" src="assets/trace-mark.svg" alt="" aria-hidden="true">
+          <span>Audex Trace</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="index.html#features">Features</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="privacy.html" aria-current="page">Privacy</a>
+          <a href="changelog.html">Changelog</a>
+          <a href="index.html#download">Download</a>
+        </nav>
+        <a class="header-cta" href="https://github.com/audexdev/trace-releases/releases/download/v1.1/AudexTrace-1.1.zip">Free Download</a>
+      </header>
+
+      <main>
+        <section class="changelog-hero content-band" aria-labelledby="privacy-page-title">
+          <div class="section-kicker">Privacy</div>
+          <h1 id="privacy-page-title">Audex Trace Privacy</h1>
+          <p class="hero-subtitle">Playback format detection is designed to run locally on your Mac. Network use is limited to product functions that need it.</p>
+        </section>
+
+        <section class="content-band" aria-labelledby="privacy-summary-title">
+          <div class="section-kicker">Summary</div>
+          <h2 id="privacy-summary-title">Built for your Mac, not for tracking.</h2>
+          <div class="privacy-list">
+            <p>Audex Trace does not modify, enhance, record, or upload your audio.</p>
+            <p>No listening history is uploaded for audio-quality detection.</p>
+            <p>No Apple Music account sign-in or cloud library API access is required.</p>
+            <p>No analytics are used for the initial beta.</p>
+          </div>
+        </section>
+
+        <section class="content-band" aria-labelledby="local-processing-title">
+          <div class="section-kicker">Local processing</div>
+          <h2 id="local-processing-title">What runs on your Mac.</h2>
+          <div class="page-copy">
+            <p>Playback format detection uses Music.app state and local playback metadata/log signals on your Mac.</p>
+            <p>Compatibility Check is a free manual diagnostic surface so you can test playback-format detection before buying Pro.</p>
+            <p>Auto Sample Rate Match is an experimental Pro feature that can update the selected macOS output rate when your output device exposes a compatible sample rate.</p>
+          </div>
+        </section>
+
+        <section class="content-band" aria-labelledby="network-use-title">
+          <div class="section-kicker">Network use</div>
+          <h2 id="network-use-title">When Audex Trace may use the network.</h2>
+          <div class="requirements-list">
+            <p>License verification may contact Audex services.</p>
+            <p>Purchase checkout uses the Audex checkout redirect service.</p>
+            <p>Update checks use the public Sparkle appcast at <code>https://trace.audex.dev/appcast.xml</code>.</p>
+            <p>Artwork fallback may send track, artist, or album search terms to the iTunes Search API when local artwork sources miss.</p>
+          </div>
+        </section>
+
+        <section class="status content-band" aria-labelledby="privacy-contact-title">
+          <div class="section-kicker">Contact</div>
+          <h2 id="privacy-contact-title">Questions about privacy?</h2>
+          <p>Contact <a class="text-link" href="mailto:support@audex.dev">support@audex.dev</a>.</p>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>Audex Trace</span>
+        <span>© 2026 Audex</span>
+        <nav aria-label="Footer links">
+          <a href="privacy.html">Privacy</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="changelog.html">Changelog</a>
+          <a href="index.html#download">Download</a>
+          <a href="mailto:support@audex.dev">Contact</a>
+        </nav>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

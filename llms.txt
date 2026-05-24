@@ -9,6 +9,7 @@ Download: https://github.com/audexdev/trace-releases/releases/download/v1.1/Aude
 Release notes: https://github.com/audexdev/trace-releases/releases/tag/v1.1
 
 Changelog: https://trace.audex.dev/changelog.html
+Privacy: https://trace.audex.dev/privacy.html
 
 Current version: 1.1
 
@@ -39,3 +40,23 @@ Privacy summary:
 - Playback format detection runs locally using Music.app state and local playback metadata/log signals.
 - Audex Trace does not modify, enhance, record, or upload audio.
 - License verification, update checks, purchase checkout, and artwork fallback may use the network.
+- No listening history is uploaded for audio-quality detection.
+- No Apple Music account sign-in or cloud library API access is required.
+- No analytics are used for the initial beta.
+
+FAQ:
+
+Q: What is Audex Trace?
+A: Audex Trace is a macOS mini player for Apple Music that shows playback format details such as codec, bit depth, sample rate, and output match status.
+
+Q: Does Audex Trace change Apple Music audio?
+A: No. Audex Trace does not modify, enhance, record, or upload audio. Playback format detection runs locally on the Mac.
+
+Q: Can Audex Trace automatically match the Mac output sample rate?
+A: Audex Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates.
+
+Q: Which macOS version does Audex Trace require?
+A: Audex Trace requires macOS 15 or later and the Apple Music app.
+
+Q: Where can I download Audex Trace?
+A: Audex Trace is distributed through GitHub Releases from the official site at https://trace.audex.dev/.

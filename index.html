@@ -12,11 +12,14 @@
     <meta property="og:title" content="Audex Trace">
     <meta property="og:description" content="A macOS Apple Music mini player for Lossless and Hi-Res listeners, with playback format detection and output match status.">
     <meta property="og:url" content="https://trace.audex.dev/">
-    <meta property="og:image" content="https://trace.audex.dev/assets/apple-touch-icon.png">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://trace.audex.dev/assets/og-image.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Audex Trace">
     <meta name="twitter:description" content="A macOS Apple Music mini player for Lossless and Hi-Res listeners.">
-    <meta name="twitter:image" content="https://trace.audex.dev/assets/apple-touch-icon.png">
+    <meta name="twitter:image" content="https://trace.audex.dev/assets/og-image.svg">
     <title>Audex Trace - Apple Music playback format detection for macOS</title>
     <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
@@ -24,26 +27,91 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Audex Trace",
-        "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "macOS 15 or later",
-        "url": "https://trace.audex.dev/",
-        "downloadUrl": "https://github.com/audexdev/trace-releases/releases/download/v1.1/AudexTrace-1.1.zip",
-        "softwareVersion": "1.1",
-        "description": "Audex Trace is a macOS Apple Music mini player for Lossless and Hi-Res listeners, with playback format detection, output match status, and experimental sample-rate matching.",
-        "offers": {
-          "@type": "Offer",
-          "price": "19.99",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://trace.audex.dev/#pricing"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "Audex",
-          "url": "https://audex.dev/"
-        }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://audex.dev/#organization",
+            "name": "Audex",
+            "url": "https://audex.dev/"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://trace.audex.dev/#website",
+            "name": "Audex Trace",
+            "url": "https://trace.audex.dev/",
+            "publisher": {
+              "@id": "https://audex.dev/#organization"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://trace.audex.dev/#software",
+            "name": "Audex Trace",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "macOS 15 or later",
+            "url": "https://trace.audex.dev/",
+            "downloadUrl": "https://github.com/audexdev/trace-releases/releases/download/v1.1/AudexTrace-1.1.zip",
+            "softwareVersion": "1.1",
+            "description": "Audex Trace is a macOS Apple Music mini player for Lossless and Hi-Res listeners, with playback format detection, output match status, and experimental sample-rate matching.",
+            "image": "https://trace.audex.dev/assets/og-image.svg",
+            "offers": {
+              "@type": "Offer",
+              "price": "19.99",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://trace.audex.dev/#pricing"
+            },
+            "author": {
+              "@id": "https://audex.dev/#organization"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://trace.audex.dev/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Audex Trace?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Audex Trace is a macOS mini player for Apple Music that shows playback format details such as codec, bit depth, sample rate, and output match status."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Audex Trace change Apple Music audio?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Audex Trace does not modify, enhance, record, or upload audio. Playback format detection runs locally on the Mac."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can Audex Trace automatically match the Mac output sample rate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Audex Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which macOS version does Audex Trace require?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Audex Trace requires macOS 15 or later and the Apple Music app."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where can I download Audex Trace?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Audex Trace is distributed through GitHub Releases from the official site at https://trace.audex.dev/."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
@@ -59,6 +127,7 @@
           <a href="#features">Features</a>
           <a href="#apps">Apps</a>
           <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
           <a href="#privacy">Privacy</a>
           <a href="changelog.html">Changelog</a>
           <a href="#download">Download</a>
@@ -221,6 +290,41 @@
             <p>Artwork fallback may send track, artist, or album search terms to the iTunes Search API when local artwork sources miss.</p>
             <p>No analytics for the initial beta.</p>
           </div>
+          <div class="section-actions">
+            <a class="repository-link" href="privacy.html">Read Privacy Details</a>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq content-band" id="faq" aria-labelledby="faq-title">
+          <div class="section-kicker">FAQ</div>
+          <h2 id="faq-title">Common questions about Audex Trace.</h2>
+          <div class="faq-grid">
+            <article class="faq-card">
+              <h3>What is Audex Trace?</h3>
+              <p>Audex Trace is a macOS mini player for Apple Music that shows playback format details such as codec, bit depth, sample rate, and output match status.</p>
+            </article>
+            <article class="faq-card">
+              <h3>Does Audex Trace change Apple Music audio?</h3>
+              <p>No. Audex Trace does not modify, enhance, record, or upload audio. Playback format detection runs locally on your Mac.</p>
+            </article>
+            <article class="faq-card">
+              <h3>Can it match the Mac output sample rate automatically?</h3>
+              <p>Audex Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates.</p>
+            </article>
+            <article class="faq-card">
+              <h3>Which macOS version is required?</h3>
+              <p>Audex Trace requires macOS 15 or later with the Apple Music app installed. macOS 14 and earlier are not officially supported.</p>
+            </article>
+            <article class="faq-card">
+              <h3>Is it free?</h3>
+              <p>The app is a free download. Pro features are available through a one-time purchase, with no subscription.</p>
+            </article>
+            <article class="faq-card">
+              <h3>Where is Audex Trace distributed?</h3>
+              <p>Audex Trace is distributed outside the Mac App Store through the official site and GitHub Releases.</p>
+            </article>
+          </div>
         </section>
 
         <!-- Refund / limitations -->
@@ -252,8 +356,9 @@
         <span>Audex Trace</span>
         <span>© 2026 Audex</span>
         <nav aria-label="Footer links">
-          <a href="#privacy">Privacy</a>
+          <a href="privacy.html">Privacy</a>
           <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
           <a href="changelog.html">Changelog</a>
           <a href="#download">Download</a>
           <a href="mailto:support@audex.dev">Contact</a>
