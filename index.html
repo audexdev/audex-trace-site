@@ -23,7 +23,7 @@
     <title>Audex Trace - Apple Music playback format detection for macOS</title>
     <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260527">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -50,7 +50,7 @@
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "macOS 15 or later",
             "url": "https://trace.audex.dev/",
-            "downloadUrl": "https://github.com/audexdev/trace-releases/releases/download/v1.1/AudexTrace-1.1.zip",
+            "downloadUrl": "https://trace-auth.audex.dev/download?version=1.1&source=software_schema",
             "softwareVersion": "1.1",
             "description": "Audex Trace is a macOS Apple Music mini player for Lossless and Hi-Res listeners, with playback format detection, output match status, and experimental sample-rate matching.",
             "image": "https://trace.audex.dev/assets/og-image.svg",
@@ -132,7 +132,7 @@
           <a href="changelog.html">Changelog</a>
           <a href="#download">Download</a>
         </nav>
-        <a class="header-cta" href="https://github.com/audexdev/trace-releases/releases/download/v1.1/AudexTrace-1.1.zip">Free Download</a>
+        <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.1&source=header_download" data-track-download>Free Download</a>
       </header>
 
       <main id="top">
@@ -143,8 +143,11 @@
             <h1 id="hero-title">Trace what’s actually playing.</h1>
             <p class="hero-subtitle">A premium Apple Music companion for Lossless and Hi-Res listeners. See codec, bit depth, sample rate, and output match status in a clean Mac mini player, with experimental output sync.</p>
             <div class="hero-actions" aria-label="Audex Trace status actions">
-              <a class="primary-cta" href="https://github.com/audexdev/trace-releases/releases/download/v1.1/AudexTrace-1.1.zip">Free Download</a>
-              <form class="inline-checkout-form" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post">
+              <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.1&source=hero_download" data-track-download>Free Download</a>
+              <form class="inline-checkout-form" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
+                <input type="hidden" name="source" value="hero_buy">
+                <input type="hidden" name="version" value="1.1">
+                <input type="hidden" name="page_path" value="/">
                 <button class="secondary-cta" type="submit">Buy Pro for $19.99</button>
               </form>
             </div>
@@ -245,13 +248,16 @@
         <section class="pricing content-band" id="pricing" aria-labelledby="pricing-title">
           <div class="section-kicker">Pricing</div>
           <h2 id="pricing-title">One-time purchase. No subscription.</h2>
-          <p class="purchase-check">Before buying, run the free Compatibility Check on your own Mac. Playback-format detection depends on your macOS version, Music settings, Apple Music behavior, and output device. For best real-time detection, turn off Song Transitions, AutoMix, or Crossfade in Music.</p>
+          <p class="purchase-check">Try it on your own Mac before paying. The free download includes Compatibility Check, basic detection, basic now playing, and a limited preview so you can confirm your setup works before buying Pro.</p>
           <div class="pricing-grid">
             <article class="price-card">
               <span class="price-label">Launch offer</span>
               <strong>$19.99</strong>
               <p>Available during the first public release window. One-time lifetime license for Audex Trace Pro.</p>
-              <form class="price-action" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post">
+              <form class="price-action" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
+                <input type="hidden" name="source" value="pricing_buy">
+                <input type="hidden" name="version" value="1.1">
+                <input type="hidden" name="page_path" value="/#pricing">
                 <button class="primary-cta" type="submit">Buy for $19.99</button>
               </form>
             </article>
@@ -261,6 +267,31 @@
               <p>Includes Audex Trace for macOS with the Apple Music mini player, playback format readout, output match status, and experimental Auto Sample Rate Match.</p>
             </article>
           </div>
+          <div class="plan-compare" aria-label="Free and Pro feature comparison">
+            <div class="plan-column">
+              <h3>Free</h3>
+              <p>Try it on your own Mac before paying.</p>
+              <ul>
+                <li>Compatibility Check</li>
+                <li>Basic detection test</li>
+                <li>Basic now playing</li>
+                <li>Limited preview</li>
+                <li>Confirm your setup works</li>
+              </ul>
+            </div>
+            <div class="plan-column plan-column-pro">
+              <h3>Pro</h3>
+              <p>Unlock the full listening companion.</p>
+              <ul>
+                <li>Full mini player</li>
+                <li>Format readout</li>
+                <li>Output match status</li>
+                <li>Auto Sample Rate Match</li>
+                <li>Lifetime license</li>
+              </ul>
+            </div>
+          </div>
+          <p class="purchase-note">Playback-format detection depends on your macOS version, Music settings, Apple Music behavior, and output device. For best real-time detection, turn off Song Transitions, AutoMix, or Crossfade in Music.</p>
         </section>
 
         <!-- Requirements -->
@@ -282,13 +313,22 @@
           <div class="section-kicker">Privacy</div>
           <h2 id="privacy-title">Built for your Mac, not for tracking.</h2>
           <div class="privacy-list">
-            <p>Playback format detection runs locally on your Mac using Music.app state and local playback metadata/log signals.</p>
-            <p>Audex Trace does not modify, enhance, record, or upload your audio.</p>
-            <p>No listening history is uploaded for audio-quality detection.</p>
-            <p>No Apple Music account sign-in or cloud library API access.</p>
-            <p>License verification, update checks, purchase checkout, and artwork fallback may use the network.</p>
-            <p>Artwork fallback may send track, artist, or album search terms to the iTunes Search API when local artwork sources miss.</p>
-            <p>No analytics for the initial beta.</p>
+            <article class="privacy-card">
+              <h3>Local detection</h3>
+              <p>Playback format detection runs on your Mac using Music.app state and local playback metadata/log signals.</p>
+            </article>
+            <article class="privacy-card">
+              <h3>No audio or history upload</h3>
+              <p>Audex Trace does not modify, record, or upload your audio, and no listening history is uploaded for quality detection.</p>
+            </article>
+            <article class="privacy-card">
+              <h3>No Apple Music sign-in</h3>
+              <p>No Apple Music account sign-in or cloud library API access.</p>
+            </article>
+            <article class="privacy-card">
+              <h3>Limited network use</h3>
+              <p>License verification, update checks, purchase checkout, optional artwork fallback, and minimal website download/checkout counts may use the network.</p>
+            </article>
           </div>
           <div class="section-actions">
             <a class="repository-link" href="privacy.html">Read Privacy Details</a>
@@ -299,30 +339,42 @@
         <section class="faq content-band" id="faq" aria-labelledby="faq-title">
           <div class="section-kicker">FAQ</div>
           <h2 id="faq-title">Common questions about Audex Trace.</h2>
-          <div class="faq-grid">
-            <article class="faq-card">
-              <h3>What is Audex Trace?</h3>
-              <p>Audex Trace is a macOS mini player for Apple Music that shows playback format details such as codec, bit depth, sample rate, and output match status.</p>
+          <div class="faq-list">
+            <article class="faq-item is-open">
+              <button class="faq-question" type="button" id="faq-question-trace" aria-expanded="true" aria-controls="faq-answer-trace">What is Audex Trace?</button>
+              <div class="faq-answer" id="faq-answer-trace" role="region" aria-labelledby="faq-question-trace">
+                <p>Audex Trace is a macOS mini player for Apple Music that shows playback format details such as codec, bit depth, sample rate, and output match status.</p>
+              </div>
             </article>
-            <article class="faq-card">
-              <h3>Does Audex Trace change Apple Music audio?</h3>
-              <p>No. Audex Trace does not modify, enhance, record, or upload audio. Playback format detection runs locally on your Mac.</p>
+            <article class="faq-item">
+              <button class="faq-question" type="button" id="faq-question-audio" aria-expanded="false" aria-controls="faq-answer-audio">Does Audex Trace change Apple Music audio?</button>
+              <div class="faq-answer" id="faq-answer-audio" role="region" aria-labelledby="faq-question-audio" aria-hidden="true">
+                <p>No. Audex Trace does not modify, enhance, record, or upload audio. Playback format detection runs locally on your Mac.</p>
+              </div>
             </article>
-            <article class="faq-card">
-              <h3>Can it match the Mac output sample rate automatically?</h3>
-              <p>Audex Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates.</p>
+            <article class="faq-item">
+              <button class="faq-question" type="button" id="faq-question-rate" aria-expanded="false" aria-controls="faq-answer-rate">Can it match the Mac output sample rate automatically?</button>
+              <div class="faq-answer" id="faq-answer-rate" role="region" aria-labelledby="faq-question-rate" aria-hidden="true">
+                <p>Audex Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates.</p>
+              </div>
             </article>
-            <article class="faq-card">
-              <h3>Which macOS version is required?</h3>
-              <p>Audex Trace requires macOS 15 or later with the Apple Music app installed. macOS 14 and earlier are not officially supported.</p>
+            <article class="faq-item">
+              <button class="faq-question" type="button" id="faq-question-macos" aria-expanded="false" aria-controls="faq-answer-macos">Which macOS version is required?</button>
+              <div class="faq-answer" id="faq-answer-macos" role="region" aria-labelledby="faq-question-macos" aria-hidden="true">
+                <p>Audex Trace requires macOS 15 or later with the Apple Music app installed. macOS 14 and earlier are not officially supported.</p>
+              </div>
             </article>
-            <article class="faq-card">
-              <h3>Is it free?</h3>
-              <p>The app is a free download. Pro features are available through a one-time purchase, with no subscription.</p>
+            <article class="faq-item">
+              <button class="faq-question" type="button" id="faq-question-free" aria-expanded="false" aria-controls="faq-answer-free">Is it free?</button>
+              <div class="faq-answer" id="faq-answer-free" role="region" aria-labelledby="faq-question-free" aria-hidden="true">
+                <p>The app is a free download. Pro features are available through a one-time purchase, with no subscription.</p>
+              </div>
             </article>
-            <article class="faq-card">
-              <h3>Where is Audex Trace distributed?</h3>
-              <p>Audex Trace is distributed outside the Mac App Store through the official site and GitHub Releases.</p>
+            <article class="faq-item">
+              <button class="faq-question" type="button" id="faq-question-distribution" aria-expanded="false" aria-controls="faq-answer-distribution">Where is Audex Trace distributed?</button>
+              <div class="faq-answer" id="faq-answer-distribution" role="region" aria-labelledby="faq-question-distribution" aria-hidden="true">
+                <p>Audex Trace is distributed outside the Mac App Store through the official site and GitHub Releases.</p>
+              </div>
             </article>
           </div>
         </section>
@@ -344,7 +396,7 @@
           <p>Download the signed and notarized macOS app from GitHub Releases. Requires macOS 15 or later.</p>
           <p>Before purchasing Pro, run the built-in Compatibility Check on your own Mac. Apple Music Song Transitions, AutoMix, or Crossfade can make playback-format detection delayed or unavailable around track changes.</p>
           <div class="download-actions">
-            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/download/v1.1/AudexTrace-1.1.zip">Free Download</a>
+            <a class="repository-link" href="https://trace-auth.audex.dev/download?version=1.1&source=download_section" data-track-download>Free Download</a>
             <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.1">View GitHub Release</a>
             <a class="repository-link" href="changelog.html">View Changelog</a>
           </div>
@@ -353,18 +405,20 @@
 
       <!-- Footer -->
       <footer class="site-footer">
-        <span>Audex Trace</span>
-        <span>© 2026 Audex</span>
+        <div class="footer-brand">
+          <span>Audex Trace</span>
+          <span>© 2026 Audex</span>
+        </div>
         <nav aria-label="Footer links">
           <a href="privacy.html">Privacy</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
           <a href="changelog.html">Changelog</a>
           <a href="#download">Download</a>
-          <a href="mailto:support@audex.dev">Contact</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </footer>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260527"></script>
   </body>
 </html>

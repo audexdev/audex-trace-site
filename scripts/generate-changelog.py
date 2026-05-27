@@ -11,6 +11,7 @@ import subprocess
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
 
@@ -35,6 +36,10 @@ def run_json(args: list[str]) -> object:
 
 def github_release_url(repo: str, tag: str) -> str:
     return f"https://github.com/{repo}/releases/tag/{tag}"
+
+
+def tracked_download_url(version: str, source: str) -> str:
+    return f"https://trace-auth.audex.dev/download?version={quote(version)}&source={quote(source)}"
 
 
 def parse_github_datetime(value: str) -> datetime:
@@ -204,7 +209,7 @@ def render_changelog(releases: list[Release]) -> str:
     <title>Audex Trace Changelog</title>
     <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260527">
     <script type="application/ld+json">
       {{
         "@context": "https://schema.org",
@@ -237,7 +242,7 @@ def render_changelog(releases: list[Release]) -> str:
           <a href="changelog.html" aria-current="page">Changelog</a>
           <a href="index.html#download">Download</a>
         </nav>
-        <a class="header-cta" href="{html.escape(latest.download_url)}">Free Download</a>
+        <a class="header-cta" href="{html.escape(tracked_download_url(latest.version, "changelog_header_download"))}" data-track-download>Free Download</a>
       </header>
 
       <main>
@@ -246,7 +251,7 @@ def render_changelog(releases: list[Release]) -> str:
           <h1 id="changelog-title">Audex Trace Changelog</h1>
           <p class="hero-subtitle">Signed and notarized macOS releases, generated from GitHub Releases.</p>
           <div class="download-actions">
-            <a class="primary-cta" href="{html.escape(latest.download_url)}">Download {html.escape(latest.version)}</a>
+            <a class="primary-cta" href="{html.escape(tracked_download_url(latest.version, "changelog_download"))}" data-track-download>Download {html.escape(latest.version)}</a>
             <a class="repository-link" href="{html.escape(latest.release_url)}">Latest GitHub Release</a>
           </div>
         </section>
@@ -257,19 +262,21 @@ def render_changelog(releases: list[Release]) -> str:
       </main>
 
       <footer class="site-footer">
-        <span>Audex Trace</span>
-        <span>© 2026 Audex</span>
+        <div class="footer-brand">
+          <span>Audex Trace</span>
+          <span>© 2026 Audex</span>
+        </div>
         <nav aria-label="Footer links">
           <a href="privacy.html">Privacy</a>
           <a href="index.html#pricing">Pricing</a>
           <a href="index.html#faq">FAQ</a>
           <a href="changelog.html">Changelog</a>
           <a href="index.html#download">Download</a>
-          <a href="mailto:support@audex.dev">Contact</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </footer>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260527"></script>
   </body>
 </html>
 """
