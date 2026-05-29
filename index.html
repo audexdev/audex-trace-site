@@ -51,7 +51,7 @@
             "operatingSystem": "macOS 15 or later",
             "url": "https://trace.audex.dev/",
             "downloadUrl": "https://trace-auth.audex.dev/download?version=1.2&source=software_schema",
-            "softwareVersion": "1.1",
+            "softwareVersion": "1.2",
             "description": "Audex Trace is a macOS Apple Music companion for Lossless and Hi-Res listeners, with playback readout, output match status, Playing Next, queue quality estimates, skip warnings, and experimental sample-rate matching.",
             "image": "https://trace.audex.dev/assets/og-image.svg",
             "offers": {
@@ -146,7 +146,7 @@
               <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2&source=hero_download" data-track-download>Free Download</a>
               <form class="inline-checkout-form" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
                 <input type="hidden" name="source" value="hero_buy">
-                <input type="hidden" name="version" value="1.1">
+                <input type="hidden" name="version" value="1.2">
                 <input type="hidden" name="page_path" value="/">
                 <button class="secondary-cta" type="submit">Buy Pro for $19.99</button>
               </form>
@@ -190,7 +190,7 @@
         <section class="features content-band" id="features" aria-labelledby="features-title">
           <div class="section-kicker">Solution</div>
           <h2 id="features-title">A focused companion for Apple Music playback.</h2>
-          <p class="section-lede">Keep the details Apple Music usually hides close by: the active playback format, the next few tracks, and early signals when quality or playback may not behave as expected.</p>
+          <p class="section-lede">Keep the details Apple Music usually hides close by: the active playback format, the next few tracks, and early warnings when quality or playback may not behave as expected.</p>
           <div class="feature-grid">
             <article class="feature-card">
               <span class="card-icon">PN</span>
@@ -241,21 +241,21 @@
           <h2 id="pricing-title">One-time purchase. No subscription.</h2>
           <p class="purchase-check">Try it on your own Mac before paying. The free download includes Compatibility Check, basic detection, basic now playing, and a limited preview so you can confirm your setup works before buying Pro.</p>
           <div class="pricing-grid">
-            <article class="price-card">
-              <span class="price-label">Launch offer</span>
-              <strong>$19.99</strong>
-              <p>Available during the first public release window. One-time lifetime license for Audex Trace Pro.</p>
-              <form class="price-action" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
-                <input type="hidden" name="source" value="pricing_buy">
-                <input type="hidden" name="version" value="1.1">
-                <input type="hidden" name="page_path" value="/#pricing">
-                <button class="primary-cta" type="submit">Buy for $19.99</button>
-              </form>
-            </article>
-            <article class="price-card price-card-muted">
-              <span class="price-label">Regular price</span>
-              <strong>$29.99</strong>
-              <p>Includes Audex Trace for macOS with Playing Next, queue quality estimates, skip warnings, playback readout, output match status, and experimental Auto Sample Rate Match.</p>
+            <article class="price-card price-card-featured">
+              <div class="price-card-heading">
+                <span class="price-label">Launch offer</span>
+                <strong>$19.99</strong>
+                <p class="price-regular">Regular price $29.99 after the launch window.</p>
+              </div>
+              <div class="price-card-copy">
+                <p>One-time lifetime license for Audex Trace Pro. Includes Playing Next, estimated queue quality, skip warnings, playback readout, output match status, and experimental Auto Sample Rate Match.</p>
+                <form class="price-action" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
+                  <input type="hidden" name="source" value="pricing_buy">
+                  <input type="hidden" name="version" value="1.2">
+                  <input type="hidden" name="page_path" value="/#pricing">
+                  <button class="primary-cta" type="submit">Buy for $19.99</button>
+                </form>
+              </div>
             </article>
           </div>
           <div class="plan-compare" aria-label="Free and Pro feature comparison">
@@ -308,7 +308,7 @@
           <div class="privacy-list">
             <article class="privacy-card">
               <h3>Local detection</h3>
-              <p>Playback format detection runs on your Mac using Music.app state and local playback metadata/log signals.</p>
+              <p>Playback format detection runs locally on your Mac.</p>
             </article>
             <article class="privacy-card">
               <h3>No audio or history upload</h3>
@@ -385,7 +385,7 @@
         <!-- Download -->
         <section class="status content-band" id="download" aria-labelledby="download-title">
           <div class="section-kicker">Download</div>
-          <h2 id="download-title">Audex Trace 1.1 is available now.</h2>
+          <h2 id="download-title">Audex Trace 1.2 is available now.</h2>
           <p>Download the signed and notarized macOS app from GitHub Releases. Requires macOS 15 or later.</p>
           <p>Before purchasing Pro, run the built-in Compatibility Check on your own Mac. Apple Music Song Transitions, AutoMix, or Crossfade can make playback-format detection delayed or unavailable around track changes.</p>
           <div class="download-actions">

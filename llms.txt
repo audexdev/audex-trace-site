@@ -11,7 +11,7 @@ Release notes: https://github.com/audexdev/trace-releases/releases/tag/v1.2
 Changelog: https://trace.audex.dev/changelog.html
 Privacy: https://trace.audex.dev/privacy.html
 
-Current version: 1.1
+Current version: 1.2
 
 Minimum macOS version: macOS 15
 
@@ -41,7 +41,7 @@ Known limitations:
 - macOS 14 and earlier are not officially supported.
 
 Privacy summary:
-- Playback format detection runs locally using Music.app state and local playback metadata/log signals.
+- Playback format detection runs locally on the Mac.
 - Audex Trace does not modify, enhance, record, or upload audio.
 - License verification, update checks, purchase checkout, artwork fallback, and minimal website download/checkout counts may use the network.
 - No listening history is uploaded for audio-quality detection.
