@@ -35,7 +35,7 @@
           "@type": "SoftwareApplication",
           "name": "Audex Trace",
           "operatingSystem": "macOS 15 or later",
-          "softwareVersion": "1.1",
+          "softwareVersion": "1.2",
           "url": "https://trace.audex.dev/"
         }
       }
@@ -56,7 +56,7 @@
           <a href="changelog.html" aria-current="page">Changelog</a>
           <a href="index.html#download">Download</a>
         </nav>
-        <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.1&source=changelog_header_download" data-track-download>Free Download</a>
+        <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2&amp;source=changelog_header_download" data-track-download>Free Download</a>
       </header>
 
       <main>
@@ -65,8 +65,8 @@
           <h1 id="changelog-title">Audex Trace Changelog</h1>
           <p class="hero-subtitle">Signed and notarized macOS releases, generated from GitHub Releases.</p>
           <div class="download-actions">
-            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.1&source=changelog_download" data-track-download>Download 1.1</a>
-            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.1">Latest GitHub Release</a>
+            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2&amp;source=changelog_download" data-track-download>Download 1.2</a>
+            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2">Latest GitHub Release</a>
           </div>
         </section>
 
@@ -74,6 +74,50 @@
           <article class="changelog-entry">
             <div class="changelog-meta">
               <span class="price-label">Current release</span>
+              <h2>1.2</h2>
+              <p>May 29, 2026</p>
+              <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2">GitHub Release</a>
+            </div>
+            <div class="changelog-details release-notes">
+              <p>Feature update for Apple Music listeners on macOS 15 and later, focused on seeing what is coming next and catching playback-quality issues earlier.</p>
+              <p>Download <code>AudexTrace-1.2.zip</code>, unzip it, and move <code>Audex Trace.app</code> to <code>/Applications</code>.</p>
+              <h3>What&#x27;s new</h3>
+              <ul>
+              <li>Added Playing Next, a compact queue view for upcoming Apple Music tracks.</li>
+              <li>Added queue quality estimates so upcoming tracks can show estimated Lossless or Hi-Res availability before playback reaches them.</li>
+              <li>Added skip warnings for queued tracks that look likely to fail or be skipped by Apple Music.</li>
+              <li>Added Playing Next preferences so queue, quality, and skip-warning surfaces can be controlled from the app.</li>
+              </ul>
+              <h3>Quality detection and reliability</h3>
+              <ul>
+              <li>Reduced audio-quality log-stream CPU load by filtering capture to Music.app and waiting for capture shutdown cleanly.</li>
+              <li>Added startup backfill for skip detection so the current track can recover recent skip signals after Trace restarts.</li>
+              <li>Isolated Compatibility Check from live quality detection so manual checks do not mutate the current playback-quality state.</li>
+              <li>Hardened MediaRemote queue handling, artwork recovery, stale stream termination, and adapter JSON parsing.</li>
+              <li>Coalesced Music refresh requests to avoid redundant full snapshot refreshes after notifications and local commands.</li>
+              </ul>
+              <h3>UI polish</h3>
+              <ul>
+              <li>Refined compact player controls, footer alignment, artwork fallback, and playback transitions.</li>
+              <li>Improved Playing Next layout after UI scale changes and preserved compact queue position after dragging.</li>
+              <li>Improved menu bar controls and notch artwork/playback-state transitions.</li>
+              <li>Kept playback readout, output match status, and experimental Auto Sample Rate Match aligned with the v1.2 Pro feature set.</li>
+              </ul>
+              <h3>Release and compatibility</h3>
+              <ul>
+              <li>Signed and notarized Developer ID build 24.</li>
+              <li>Added a dedicated Distribution build configuration and removed Local Network / Bonjour prompts from release builds.</li>
+              <li>Fixed release packaging so the production MediaRemote queue adapter is signed for notarization.</li>
+              <li>Requires macOS 15 or later.</li>
+              <li>For best real-time playback-format detection, turn off Song Transitions, AutoMix, or Crossfade in Music.</li>
+              <li>Auto Sample Rate Match depends on the output device exposing compatible macOS sample rates.</li>
+              <li>Audex Trace currently supports local Apple Music playback on the Mac. The iPhone Remote feature is not included in this public release.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="price-label">Release</span>
               <h2>1.1</h2>
               <p>May 24, 2026</p>
               <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.1">GitHub Release</a>
