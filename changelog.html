@@ -79,39 +79,23 @@
               <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2">GitHub Release</a>
             </div>
             <div class="changelog-details release-notes">
-              <p>Feature update for Apple Music listeners on macOS 15 and later, focused on seeing what is coming next and catching playback-quality issues earlier.</p>
+              <p>Feature update for Apple Music listeners on macOS 15 and later, centered on Playing Next and earlier visibility into upcoming playback issues.</p>
               <p>Download <code>AudexTrace-1.2.zip</code>, unzip it, and move <code>Audex Trace.app</code> to <code>/Applications</code>.</p>
               <h3>What&#x27;s new</h3>
               <ul>
               <li>Added Playing Next, a compact queue view for upcoming Apple Music tracks.</li>
-              <li>Added queue quality estimates so upcoming tracks can show estimated Lossless or Hi-Res availability before playback reaches them.</li>
-              <li>Added skip warnings for queued tracks that look likely to fail or be skipped by Apple Music.</li>
-              <li>Added Playing Next preferences so queue, quality, and skip-warning surfaces can be controlled from the app.</li>
+              <li>Playing Next is available for free with upcoming track metadata and artwork.</li>
+              <li>Pro users can now see queue quality estimates for upcoming tracks, including Lossless and Hi-Res availability signals before playback reaches them.</li>
+              <li>Pro users can now see skip warnings for queued tracks that look likely to fail or be skipped.</li>
+              <li>Added Playing Next preferences so queue details, quality estimates, and skip warnings can be shown or hidden.</li>
               </ul>
-              <h3>Quality detection and reliability</h3>
+              <h3>Improvements</h3>
               <ul>
-              <li>Reduced audio-quality log-stream CPU load by filtering capture to Music.app and waiting for capture shutdown cleanly.</li>
-              <li>Added startup backfill for skip detection so the current track can recover recent skip signals after Trace restarts.</li>
-              <li>Isolated Compatibility Check from live quality detection so manual checks do not mutate the current playback-quality state.</li>
-              <li>Hardened MediaRemote queue handling, artwork recovery, stale stream termination, and adapter JSON parsing.</li>
-              <li>Coalesced Music refresh requests to avoid redundant full snapshot refreshes after notifications and local commands.</li>
-              </ul>
-              <h3>UI polish</h3>
-              <ul>
-              <li>Refined compact player controls, footer alignment, artwork fallback, and playback transitions.</li>
-              <li>Improved Playing Next layout after UI scale changes and preserved compact queue position after dragging.</li>
-              <li>Improved menu bar controls and notch artwork/playback-state transitions.</li>
-              <li>Kept playback readout, output match status, and experimental Auto Sample Rate Match aligned with the v1.2 Pro feature set.</li>
-              </ul>
-              <h3>Release and compatibility</h3>
-              <ul>
-              <li>Signed and notarized Developer ID build 24.</li>
-              <li>Added a dedicated Distribution build configuration and removed Local Network / Bonjour prompts from release builds.</li>
-              <li>Fixed release packaging so the production MediaRemote queue adapter is signed for notarization.</li>
-              <li>Requires macOS 15 or later.</li>
-              <li>For best real-time playback-format detection, turn off Song Transitions, AutoMix, or Crossfade in Music.</li>
-              <li>Auto Sample Rate Match depends on the output device exposing compatible macOS sample rates.</li>
-              <li>Audex Trace currently supports local Apple Music playback on the Mac. The iPhone Remote feature is not included in this public release.</li>
+              <li>Reduced CPU usage while audio-quality features are active.</li>
+              <li>Improved queue refresh behavior and artwork stability around track changes.</li>
+              <li>Improved compact player layout, footer alignment, and playback transitions.</li>
+              <li>Refined menu bar and notch presentation for the new queue experience.</li>
+              <li>Improved Preferences organization with a clearer Support and Feedback area.</li>
               </ul>
             </div>
           </article>
@@ -130,18 +114,15 @@
               <li>Refined compact player, menu bar, and notch interaction polish.</li>
               <li>Improved expanded notch layout behavior.</li>
               <li>Improved artwork fallback transitions so artwork changes feel steadier.</li>
-              <li>Stabilized optimistic playback state after user commands.</li>
+              <li>Made playback state changes feel steadier after play/pause interactions.</li>
               <li>Kept Apple Music playback format display, output match status, and experimental Auto Sample Rate Match available for Pro users.</li>
-              <li>Updated the signed and notarized release artifact to build 23.</li>
               <li>Fixed release publishing so the public site points to the exact versioned download and release page.</li>
-              <li>Updated the production Sparkle appcast for the 1.1 release.</li>
               </ul>
               <h3>Compatibility notes</h3>
               <ul>
               <li>Requires macOS 15 or later.</li>
               <li>For best real-time playback-format detection, turn off Song Transitions, AutoMix, or Crossfade in Music.</li>
               <li>Auto Sample Rate Match depends on the output device exposing compatible macOS sample rates.</li>
-              <li>Audex Trace currently supports local Apple Music playback on the Mac. The iPhone Remote feature is not included in this public release.</li>
               </ul>
             </div>
           </article>
@@ -164,7 +145,7 @@
               <li>Output sample-rate match status for Pro users.</li>
               <li>Experimental Auto Sample Rate Match for Pro users.</li>
               <li>Built-in Compatibility Check so users can verify playback-format detection before buying Pro.</li>
-              <li>Signed and notarized Developer ID build distributed through GitHub Releases.</li>
+              <li>Signed and notarized release distributed through GitHub Releases.</li>
               <li>Sparkle update support using the production appcast at <code>https://trace.audex.dev/appcast.xml</code>.</li>
               </ul>
               <h3>Before buying Pro</h3>
@@ -177,7 +158,6 @@
               <ul>
               <li>Apple Music can prepare upcoming tracks before playback starts, so Song Transitions, AutoMix, or Crossfade may make format detection delayed or unavailable around track changes.</li>
               <li>macOS 14 and earlier are not officially supported.</li>
-              <li>Audex Trace currently supports local Apple Music playback on the Mac. The iPhone Remote feature is not included in this public release.</li>
               </ul>
             </div>
           </article>
