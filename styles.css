@@ -541,7 +541,6 @@ h3 {
 
 .price-action {
   margin-top: 24px;
-  align-self: flex-end;
 }
 
 .plan-compare {
@@ -960,10 +959,6 @@ h3 {
   .price-card-featured {
     grid-template-columns: 1fr;
     gap: 22px;
-  }
-
-  .price-action {
-    align-self: flex-start;
   }
 
   .content-band {
