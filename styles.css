@@ -442,6 +442,24 @@ h3 {
   line-height: 1.55;
 }
 
+.queue-demo {
+  position: relative;
+  width: 100%;
+  margin: 0 0 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.34);
+  overflow: hidden;
+}
+
+.queue-demo-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
