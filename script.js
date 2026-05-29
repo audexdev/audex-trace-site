@@ -1,4 +1,7 @@
 const header = document.querySelector("[data-elevate]");
+const menuToggle = document.querySelector("[data-menu-toggle]");
+const primaryNav = document.querySelector("#primary-navigation");
+const mobileNavQuery = window.matchMedia("(max-width: 900px)");
 
 const updateHeader = () => {
   header?.classList.toggle("is-elevated", window.scrollY > 8);
@@ -6,6 +9,60 @@ const updateHeader = () => {
 
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
+
+const setMenuOpen = (isOpen) => {
+  if (!header || !menuToggle || !primaryNav) return;
+
+  header.classList.toggle("is-menu-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+
+  if (mobileNavQuery.matches) {
+    primaryNav.setAttribute("aria-hidden", String(!isOpen));
+  } else {
+    primaryNav.removeAttribute("aria-hidden");
+  }
+};
+
+const syncMenuForViewport = () => {
+  if (!header || !menuToggle || !primaryNav) return;
+
+  if (!mobileNavQuery.matches) {
+    header.classList.remove("is-menu-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation");
+    primaryNav.removeAttribute("aria-hidden");
+    return;
+  }
+
+  primaryNav.setAttribute("aria-hidden", String(!header.classList.contains("is-menu-open")));
+};
+
+menuToggle?.addEventListener("click", () => {
+  setMenuOpen(!header?.classList.contains("is-menu-open"));
+});
+
+primaryNav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (mobileNavQuery.matches) {
+      setMenuOpen(false);
+    }
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && header?.classList.contains("is-menu-open")) {
+    setMenuOpen(false);
+    menuToggle?.focus();
+  }
+});
+
+syncMenuForViewport();
+if (typeof mobileNavQuery.addEventListener === "function") {
+  mobileNavQuery.addEventListener("change", syncMenuForViewport);
+} else {
+  mobileNavQuery.addListener(syncMenuForViewport);
+}
 
 const faqItems = Array.from(document.querySelectorAll(".faq-item"));
 window.audexTraceFaqReady = faqItems.length > 0;

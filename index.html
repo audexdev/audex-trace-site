@@ -123,7 +123,7 @@
           <img class="brand-mark" src="assets/trace-mark.svg" alt="" aria-hidden="true">
           <span>Audex Trace</span>
         </a>
-        <nav class="site-nav" aria-label="Primary navigation">
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
           <a href="#features">Features</a>
           <a href="#apps">Apps</a>
           <a href="#pricing">Pricing</a>
@@ -132,7 +132,14 @@
           <a href="changelog.html">Changelog</a>
           <a href="#download">Download</a>
         </nav>
-        <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2&source=header_download" data-track-download>Free Download</a>
+        <div class="header-actions">
+          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2&source=header_download" data-track-download>Free Download</a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </header>
 
       <main id="top">
@@ -412,6 +419,6 @@
         </nav>
       </footer>
     </div>
-    <script src="script.js?v=20260527"></script>
+    <script src="script.js?v=20260529"></script>
   </body>
 </html>
