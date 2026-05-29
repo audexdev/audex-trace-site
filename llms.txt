@@ -1,6 +1,6 @@
 # Audex Trace
 
-Audex Trace is a macOS Apple Music mini player for Lossless and Hi-Res listeners.
+Audex Trace is a macOS Apple Music companion for Lossless and Hi-Res listeners.
 
 Official site: https://trace.audex.dev/
 
@@ -19,6 +19,9 @@ Primary supported player: Apple Music on macOS
 
 Key features:
 - Apple Music mini player for macOS
+- Playing Next queue with up to 3 upcoming Apple Music tracks
+- Queue quality estimates for Lossless and Hi-Res availability before playback starts
+- Skip warnings for upcoming tracks that may fail or skip
 - Playback format readout for codec, bit depth, and sample rate
 - Output sample-rate match status
 - Experimental Auto Sample Rate Match
@@ -28,8 +31,8 @@ Key features:
 Pricing:
 - Free download for Compatibility Check, basic detection test, basic now playing, limited preview, and confirming your setup works before paying.
 - Audex Trace Pro launch offer: $19.99 one-time purchase
-- Pro includes the full mini player, format readout, output match status, Auto Sample Rate Match, and a lifetime license.
-- Regular price: $24.99 one-time purchase
+- Pro includes Playing Next, queue quality estimates, skip warnings, playback readout, output match status, Auto Sample Rate Match, and a lifetime license.
+- Regular price: $29.99 one-time purchase
 - No subscription
 
 Known limitations:
@@ -48,7 +51,7 @@ Privacy summary:
 FAQ:
 
 Q: What is Audex Trace?
-A: Audex Trace is a macOS mini player for Apple Music that shows playback format details such as codec, bit depth, sample rate, and output match status.
+A: Audex Trace is a macOS Apple Music companion that shows playback format details such as codec, bit depth, sample rate, output match status, and what is coming next in Playing Next.
 
 Q: Does Audex Trace change Apple Music audio?
 A: No. Audex Trace does not modify, enhance, record, or upload audio. Playback format detection runs locally on the Mac.

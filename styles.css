@@ -383,9 +383,17 @@ h3 {
   font-size: 0.98rem;
 }
 
+.section-lede {
+  max-width: 760px;
+  margin: -10px 0 32px;
+  color: var(--muted);
+  font-size: clamp(1.02rem, 1.6vw, 1.18rem);
+  line-height: 1.55;
+}
+
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
 
