@@ -952,6 +952,7 @@ h3 {
 
 .guide-copy {
   max-width: 840px;
+  min-width: 0;
 }
 
 .guide-copy section + section {
@@ -1002,22 +1003,42 @@ h3 {
   margin-bottom: 0;
 }
 
-.comparison-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+.guide-table-wrap {
   margin: 24px 0;
-}
-
-.comparison-grid > div {
-  padding: 20px;
+  overflow-x: auto;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--panel);
 }
 
-.comparison-grid p {
-  margin-bottom: 0;
+.guide-comparison-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+}
+
+.guide-comparison-table th,
+.guide-comparison-table td {
+  padding: 16px 18px;
+  border-top: 1px solid var(--line);
+  color: #d8dde5;
+  font-size: 0.96rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.guide-comparison-table thead th {
+  border-top: 0;
+  color: var(--subtle);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.78rem;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+.guide-comparison-table tbody th {
+  color: var(--text);
+  font-weight: 700;
 }
 
 .guide-steps {
@@ -1248,7 +1269,6 @@ h3 {
     .pricing-grid,
     .plan-compare,
     .feature-grid,
-    .comparison-grid,
     .changelog-entry {
     grid-template-columns: 1fr;
   }
@@ -1264,6 +1284,53 @@ h3 {
   .guide-cta {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .guide-table-wrap {
+    overflow: hidden;
+  }
+
+  .guide-comparison-table,
+  .guide-comparison-table tbody,
+  .guide-comparison-table tr,
+  .guide-comparison-table th,
+  .guide-comparison-table td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .guide-comparison-table thead {
+    display: none;
+  }
+
+  .guide-comparison-table tr {
+    padding: 16px;
+    border-top: 1px solid var(--line);
+  }
+
+  .guide-comparison-table tr:first-child {
+    border-top: 0;
+  }
+
+  .guide-comparison-table th,
+  .guide-comparison-table td {
+    padding: 0;
+    border-top: 0;
+  }
+
+  .guide-comparison-table td {
+    margin-top: 10px;
+  }
+
+  .guide-comparison-table td::before {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--subtle);
+    content: attr(data-label);
+    font-size: 0.72rem;
+    font-weight: 750;
+    text-transform: uppercase;
   }
 
   .price-card-featured {

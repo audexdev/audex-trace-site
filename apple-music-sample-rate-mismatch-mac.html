@@ -78,7 +78,7 @@
                 "name": "Why does my DAC show 48 kHz when Apple Music says Hi-Res Lossless?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Your DAC may be showing the Mac output format rather than the Apple Music source track. Check Audio MIDI Setup and the current playback readout separately."
+                  "text": "Your DAC may be showing the Mac output format rather than the detected Apple Music playback format. Check Audio MIDI Setup and the playback readout separately."
                 }
               },
               {
@@ -158,10 +158,10 @@
                 <div class="section-kicker">Quick answer</div>
                 <h2 id="quick-answer-title">Apple Music playback quality and Mac output format are not the same thing.</h2>
                 <p>Apple Music can play tracks marked Lossless or Hi-Res Lossless while your selected macOS output device is still set to a fixed format in Audio MIDI Setup. That is the most common source of an Apple Music sample rate mismatch on Mac.</p>
-                <p>For example, the Music app may show a 24-bit / 96 kHz ALAC track, while your external DAC display, audio interface control panel, or Audio MIDI Setup still shows 48.0 kHz. In that case, Apple Music's current playback readout and the Mac output sample rate are describing different layers.</p>
+                <p>For example, Apple Music may indicate Lossless or Hi-Res Lossless while a playback readout detected by Trace shows an ALAC 24-bit / 96 kHz stream, and your external DAC display, audio interface control panel, or Audio MIDI Setup still shows 48.0 kHz. In that case, the detected playback format and the Mac output sample rate are describing different layers.</p>
                 <div class="guide-callout">
                   <strong>Short version:</strong>
-                  <p>A track's source quality can change from song to song. Your Mac output format may remain fixed until you change it, the route changes, or software changes it for you.</p>
+                  <p>A track's detected playback format can change from song to song. Your Mac output format may remain fixed until you change it, the route changes, or software changes it for you.</p>
                 </div>
               </section>
 
@@ -172,7 +172,7 @@
                 <ul class="guide-list">
                   <li>Apple Music sample rate not changing on Mac.</li>
                   <li>Apple Music shows Hi-Res Lossless, but DAC shows 48 kHz.</li>
-                  <li>Music app says 24-bit / 96 kHz, but Audio MIDI Setup is still 44.1 kHz.</li>
+                  <li>A detected playback readout says 24-bit / 96 kHz, but Audio MIDI Setup is still 44.1 kHz.</li>
                   <li>Apple Music Lossless plays, but macOS output format does not follow the song.</li>
                   <li>A DAC sample rate light stays at 48 kHz while Apple Music moves between 44.1, 48, 96, and 192 kHz tracks.</li>
                 </ul>
@@ -184,15 +184,28 @@
                 <h2 id="why-title">Why Apple Music sample rate is not changing automatically.</h2>
                 <p>Apple describes Apple Music lossless audio as ALAC, with Lossless and Hi-Res Lossless options reaching up to 24-bit / 192 kHz depending on the track, settings, route, and hardware. On a Mac, the selected audio device also has a Format setting in Audio MIDI Setup where sample rate and bit depth can be chosen when supported by the device.</p>
                 <p>That means there are at least two numbers worth watching:</p>
-                <div class="comparison-grid">
-                  <div>
-                    <h3>Apple Music playback format</h3>
-                    <p>The codec, bit depth, and sample rate that Apple Music appears to be playing now, such as ALAC 24-bit / 96.0 kHz.</p>
-                  </div>
-                  <div>
-                    <h3>Mac output format</h3>
-                    <p>The format currently selected for the output device in macOS, such as 2ch 24-bit Integer 48.0 kHz.</p>
-                  </div>
+                <div class="guide-table-wrap">
+                  <table class="guide-comparison-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Term</th>
+                        <th scope="col">What it means</th>
+                        <th scope="col">Example</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Apple Music playback format</th>
+                        <td data-label="What it means">The source or stream format being played, detected from the current Apple Music playback.</td>
+                        <td data-label="Example">ALAC 24-bit / 96.0 kHz</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Mac output format</th>
+                        <td data-label="What it means">The format selected for the current output device in macOS.</td>
+                        <td data-label="Example">2ch 24-bit Integer 48.0 kHz</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <p>If those numbers differ, your Mac may be converting the audio stream to the currently selected output format before it reaches your speakers, headphones, audio interface, or external DAC. The exact behavior depends on macOS, Music settings, the output route, and device support.</p>
               </section>
@@ -240,7 +253,7 @@
                 <div class="section-kicker">Audex Trace</div>
                 <h2 id="trace-title">Audex Trace helps you see what is playing now, and what is coming next.</h2>
                 <p>Audex Trace is a macOS Apple Music companion for listeners who care about Lossless and Hi-Res playback details. It does not modify, enhance, record, or upload audio. The free download includes Compatibility Check and a limited preview so you can test detection on your own Mac before paying.</p>
-                <p>Trace Pro keeps the current playback readout visible, including codec, bit depth, sample rate, and output match status. Pro also includes Playing Next, estimated queue quality, skip warnings, and experimental Auto Sample Rate Match for compatible output devices. That is useful when Apple Music's queue is about to move from 44.1 kHz to 96 kHz, or when the next track may not behave as expected.</p>
+                <p>Playing Next itself is included in the free download. Trace Pro keeps the current playback readout visible, including codec, bit depth, sample rate, and output match status, and adds estimated queue quality, skip warnings, and experimental Auto Sample Rate Match for compatible output devices. That is useful when Apple Music's queue is about to move from 44.1 kHz to 96 kHz, or when the next track may not behave as expected.</p>
                 <div class="guide-cta">
                   <div>
                     <h3>Want to check your own Mac?</h3>
@@ -267,7 +280,7 @@
                   <article class="faq-item is-open">
                     <button class="faq-question" type="button" id="guide-faq-dac" aria-expanded="true" aria-controls="guide-faq-dac-answer">Why does my DAC show 48 kHz when Apple Music says Hi-Res Lossless?</button>
                     <section class="faq-answer" id="guide-faq-dac-answer" aria-labelledby="guide-faq-dac">
-                      <p>Your DAC may be showing the Mac output format rather than the Apple Music source track. Check Audio MIDI Setup and the current playback readout separately.</p>
+                      <p>Your DAC may be showing the Mac output format rather than the detected Apple Music playback format. Check Audio MIDI Setup and the playback readout separately.</p>
                     </section>
                   </article>
                   <article class="faq-item">
