@@ -494,10 +494,9 @@ h3 {
 
 .price-card-featured {
   display: grid;
-  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1fr);
-  gap: 28px;
-  align-items: end;
-  max-width: 920px;
+  grid-template-columns: minmax(220px, 0.62fr) minmax(320px, 1fr);
+  gap: 32px;
+  align-items: center;
 }
 
 .price-label {
@@ -524,7 +523,14 @@ h3 {
 }
 
 .price-card-copy {
-  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-self: stretch;
+}
+
+.price-card-copy p {
+  max-width: 590px;
 }
 
 .price-card p,
@@ -535,6 +541,7 @@ h3 {
 
 .price-action {
   margin-top: 24px;
+  align-self: flex-end;
 }
 
 .plan-compare {
@@ -953,6 +960,10 @@ h3 {
   .price-card-featured {
     grid-template-columns: 1fr;
     gap: 22px;
+  }
+
+  .price-action {
+    align-self: flex-start;
   }
 
   .content-band {
