@@ -10,6 +10,7 @@ Release notes: https://github.com/audexdev/trace-releases/releases/tag/v1.2
 
 Changelog: https://trace.audex.dev/changelog.html
 Privacy: https://trace.audex.dev/privacy.html
+Sample rate mismatch guide: https://trace.audex.dev/apple-music-sample-rate-mismatch-mac.html
 
 Current version: 1.2
 
@@ -39,6 +40,12 @@ Known limitations:
 - Apple Music Song Transitions, AutoMix, or Crossfade can make playback-format detection delayed or unavailable around track changes.
 - Auto Sample Rate Match depends on the output device exposing compatible macOS sample rates.
 - macOS 14 and earlier are not officially supported.
+
+Apple Music sample rate mismatch guide:
+- Explains why Apple Music on Mac can show Lossless or Hi-Res Lossless while the selected macOS output format in Audio MIDI Setup remains fixed.
+- Covers searches such as Apple Music sample rate mismatch Mac, Apple Music sample rate not changing, Audio MIDI Setup sample rate, DAC sample rate Mac, and Apple Music Hi-Res Lossless output.
+- Clarifies that Apple Music playback format and Mac output sample rate are different layers.
+- Recommends checking Music audio quality settings, Audio MIDI Setup, output device support, and DAC or audio interface sample-rate displays.
 
 Privacy summary:
 - Playback format detection runs locally on the Mac.

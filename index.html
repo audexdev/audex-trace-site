@@ -126,6 +126,7 @@
         <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
           <a href="#features">Features</a>
           <a href="#apps">Apps</a>
+          <a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
           <a href="#privacy">Privacy</a>
@@ -149,7 +150,7 @@
             <p class="eyebrow">Built first for Apple Music.</p>
             <h1 id="hero-title">Trace what’s actually playing.</h1>
             <p class="hero-subtitle">Audex Trace is not just a mini player. It helps you see what Apple Music is doing now &mdash; and what&rsquo;s coming next.</p>
-            <div class="hero-actions" aria-label="Audex Trace status actions">
+            <div class="hero-actions" role="group" aria-label="Audex Trace status actions">
               <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2&source=hero_download" data-track-download>Free Download</a>
               <form class="inline-checkout-form" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
                 <input type="hidden" name="source" value="hero_buy">
@@ -166,13 +167,13 @@
           </div>
 
           <!-- Product demo -->
-          <div class="demo-wrap" aria-label="Audex Trace product demo">
+          <div class="demo-wrap" role="group" aria-label="Audex Trace product demo">
             <div class="hero-video-crop">
-              <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="" aria-label="Audex Trace showing Apple Music playback format information">
+              <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-label="Audex Trace showing Apple Music playback format information">
                 <source src="assets/site-hero.mp4" type="video/mp4">
               </video>
             </div>
-            <div class="playback-format-card" aria-label="Detected switch">
+            <div class="playback-format-card" role="group" aria-label="Detected switch">
               <span class="format-card-label">Detected switch</span>
               <div class="format-card-values">
                 <span>16-bit / 44.1 kHz</span>
@@ -191,6 +192,9 @@
             <p>Apple Music can move between 44.1, 48, 96, and 192 kHz while the selected macOS output format stays fixed.</p>
             <p>Manual switching in Audio MIDI Setup interrupts listening, and Apple Music’s own UI keeps technical playback details out of sight.</p>
           </div>
+          <div class="section-actions">
+            <a class="repository-link" href="apple-music-sample-rate-mismatch-mac.html">Read the sample rate mismatch guide</a>
+          </div>
         </section>
 
         <!-- Solution / Features -->
@@ -198,7 +202,7 @@
           <div class="section-kicker">Solution</div>
           <h2 id="features-title">A focused companion for Apple Music playback.</h2>
           <p class="section-lede">Keep the details Apple Music usually hides close by: the active playback format, the next few tracks, and early warnings when quality or playback may not behave as expected.</p>
-          <div class="queue-demo" aria-label="Audex Trace 1.2 Playing Next and queue quality demo">
+          <div class="queue-demo" role="group" aria-label="Audex Trace 1.2 Playing Next and queue quality demo">
             <video class="queue-demo-video" autoplay muted loop playsinline preload="metadata" poster="assets/trace-v12-queue-demo-poster.jpg" aria-label="Audex Trace showing Playing Next, estimated queue quality, and skip warnings">
               <source src="assets/trace-v12-queue-demo.mp4" type="video/mp4">
             </video>
@@ -270,7 +274,7 @@
               </div>
             </article>
           </div>
-          <div class="plan-compare" aria-label="Free and Pro feature comparison">
+          <div class="plan-compare" role="group" aria-label="Free and Pro feature comparison">
             <div class="plan-column">
               <h3>Free</h3>
               <p>Try it on your own Mac before paying.</p>
@@ -415,6 +419,7 @@
           <span>© 2026 Audex</span>
         </div>
         <nav aria-label="Footer links">
+          <a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate Guide</a>
           <a href="privacy.html">Privacy</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
@@ -424,6 +429,6 @@
         </nav>
       </footer>
     </div>
-    <script src="script.js?v=20260529"></script>
+    <script src="script.js?v=20260530"></script>
   </body>
 </html>

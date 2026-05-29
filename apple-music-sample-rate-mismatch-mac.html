@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Why Apple Music on Mac can show a sample rate mismatch, why the sample rate may not change automatically, and how to check Audio MIDI Setup.">
+    <meta name="theme-color" content="#07090d">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://trace.audex.dev/apple-music-sample-rate-mismatch-mac.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Audex Trace">
+    <meta property="og:title" content="Apple Music Sample Rate Mismatch on Mac">
+    <meta property="og:description" content="A practical guide to Apple Music Lossless, Hi-Res Lossless, Audio MIDI Setup, DAC sample-rate displays, and macOS output format mismatch.">
+    <meta property="og:url" content="https://trace.audex.dev/apple-music-sample-rate-mismatch-mac.html">
+    <meta property="og:image" content="https://trace.audex.dev/assets/og-image.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Apple Music Sample Rate Mismatch on Mac">
+    <meta name="twitter:description" content="Why Apple Music can play Lossless or Hi-Res while your Mac output sample rate appears unchanged.">
+    <meta name="twitter:image" content="https://trace.audex.dev/assets/og-image.svg">
+    <title>Apple Music Sample Rate Mismatch on Mac: Why It May Not Change</title>
+    <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css?v=20260530">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://audex.dev/#organization",
+            "name": "Audex",
+            "url": "https://audex.dev/"
+          },
+          {
+            "@type": "Article",
+            "@id": "https://trace.audex.dev/apple-music-sample-rate-mismatch-mac.html#article",
+            "headline": "Apple Music Sample Rate Mismatch on Mac: Why It May Not Change",
+            "description": "A practical explanation of Apple Music sample rate mismatch on Mac, Audio MIDI Setup output format, DAC sample-rate displays, Lossless, and Hi-Res Lossless playback.",
+            "image": "https://trace.audex.dev/assets/og-image.svg",
+            "inLanguage": "en",
+            "author": {
+              "@id": "https://audex.dev/#organization"
+            },
+            "publisher": {
+              "@id": "https://audex.dev/#organization"
+            },
+            "datePublished": "2026-05-30",
+            "dateModified": "2026-05-30",
+            "mainEntityOfPage": "https://trace.audex.dev/apple-music-sample-rate-mismatch-mac.html"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://trace.audex.dev/apple-music-sample-rate-mismatch-mac.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Audex Trace",
+                "item": "https://trace.audex.dev/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Apple Music Sample Rate Mismatch on Mac",
+                "item": "https://trace.audex.dev/apple-music-sample-rate-mismatch-mac.html"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://trace.audex.dev/apple-music-sample-rate-mismatch-mac.html#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Why does my DAC show 48 kHz when Apple Music says Hi-Res Lossless?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Your DAC may be showing the Mac output format rather than the Apple Music source track. Check Audio MIDI Setup and the current playback readout separately."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does matching the sample rate guarantee bit-perfect Apple Music playback?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Sample-rate matching is one signal. Device drivers, output routes, system processing, Music behavior, and track availability can also affect what reaches the output."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can Audex Trace automatically change the Mac output sample rate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Audex Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" data-elevate>
+        <a class="brand" href="index.html#top" aria-label="Audex Trace home">
+          <img class="brand-mark" src="assets/trace-mark.svg" alt="" aria-hidden="true">
+          <span>Audex Trace</span>
+        </a>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+          <a href="index.html#features">Features</a>
+          <a href="apple-music-sample-rate-mismatch-mac.html" aria-current="page">Sample Rate</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="changelog.html">Changelog</a>
+          <a href="index.html#download">Download</a>
+        </nav>
+        <div class="header-actions">
+          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2&source=sample_rate_guide_header_download" data-track-download>Free Download</a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <article>
+          <section class="changelog-hero content-band guide-hero" aria-labelledby="guide-title">
+            <div class="section-kicker">Apple Music on Mac</div>
+            <h1 id="guide-title">Apple Music sample rate mismatch on Mac: why it may not change.</h1>
+            <p class="hero-subtitle">If Apple Music says Lossless or Hi-Res Lossless but your DAC, Audio MIDI Setup, or macOS output still shows 44.1 kHz, 48 kHz, 96 kHz, or 192 kHz, you are probably looking at two different parts of the playback path.</p>
+            <div class="guide-meta">
+              <span>Updated May 30, 2026</span>
+              <span aria-hidden="true">•</span>
+              <span>For Apple Music on macOS</span>
+            </div>
+          </section>
+
+          <section class="content-band guide-layout" aria-label="Sample rate mismatch guide">
+            <aside class="guide-aside" aria-label="On this page">
+              <h2>On this page</h2>
+              <a href="#quick-answer">Quick answer</a>
+              <a href="#symptoms">Common symptoms</a>
+              <a href="#why">Why it happens</a>
+              <a href="#check">How to check</a>
+              <a href="#manual-fix">Change sample rate</a>
+              <a href="#trace">How Trace helps</a>
+            </aside>
+
+            <div class="guide-copy">
+              <section id="quick-answer" aria-labelledby="quick-answer-title">
+                <div class="section-kicker">Quick answer</div>
+                <h2 id="quick-answer-title">Apple Music playback quality and Mac output format are not the same thing.</h2>
+                <p>Apple Music can play tracks marked Lossless or Hi-Res Lossless while your selected macOS output device is still set to a fixed format in Audio MIDI Setup. That is the most common source of an Apple Music sample rate mismatch on Mac.</p>
+                <p>For example, the Music app may show a 24-bit / 96 kHz ALAC track, while your external DAC display, audio interface control panel, or Audio MIDI Setup still shows 48.0 kHz. In that case, Apple Music's current playback readout and the Mac output sample rate are describing different layers.</p>
+                <div class="guide-callout">
+                  <strong>Short version:</strong>
+                  <p>A track's source quality can change from song to song. Your Mac output format may remain fixed until you change it, the route changes, or software changes it for you.</p>
+                </div>
+              </section>
+
+              <section id="symptoms" aria-labelledby="symptoms-title">
+                <div class="section-kicker">Symptoms</div>
+                <h2 id="symptoms-title">What the mismatch looks like.</h2>
+                <p>People usually notice one of these signs:</p>
+                <ul class="guide-list">
+                  <li>Apple Music sample rate not changing on Mac.</li>
+                  <li>Apple Music shows Hi-Res Lossless, but DAC shows 48 kHz.</li>
+                  <li>Music app says 24-bit / 96 kHz, but Audio MIDI Setup is still 44.1 kHz.</li>
+                  <li>Apple Music Lossless plays, but macOS output format does not follow the song.</li>
+                  <li>A DAC sample rate light stays at 48 kHz while Apple Music moves between 44.1, 48, 96, and 192 kHz tracks.</li>
+                </ul>
+                <p>Those symptoms do not automatically prove that something is broken. They mean you need to separate the Apple Music playback format from the output format selected for the Mac audio device.</p>
+              </section>
+
+              <section id="why" aria-labelledby="why-title">
+                <div class="section-kicker">Why</div>
+                <h2 id="why-title">Why Apple Music sample rate is not changing automatically.</h2>
+                <p>Apple describes Apple Music lossless audio as ALAC, with Lossless and Hi-Res Lossless options reaching up to 24-bit / 192 kHz depending on the track, settings, route, and hardware. On a Mac, the selected audio device also has a Format setting in Audio MIDI Setup where sample rate and bit depth can be chosen when supported by the device.</p>
+                <p>That means there are at least two numbers worth watching:</p>
+                <div class="comparison-grid">
+                  <div>
+                    <h3>Apple Music playback format</h3>
+                    <p>The codec, bit depth, and sample rate that Apple Music appears to be playing now, such as ALAC 24-bit / 96.0 kHz.</p>
+                  </div>
+                  <div>
+                    <h3>Mac output format</h3>
+                    <p>The format currently selected for the output device in macOS, such as 2ch 24-bit Integer 48.0 kHz.</p>
+                  </div>
+                </div>
+                <p>If those numbers differ, your Mac may be converting the audio stream to the currently selected output format before it reaches your speakers, headphones, audio interface, or external DAC. The exact behavior depends on macOS, Music settings, the output route, and device support.</p>
+              </section>
+
+              <section id="check" aria-labelledby="check-title">
+                <div class="section-kicker">Check</div>
+                <h2 id="check-title">How to check Apple Music sample rate mismatch on Mac.</h2>
+                <ol class="guide-steps">
+                  <li>
+                    <strong>Check Apple Music audio quality settings.</strong>
+                    <span>In Music settings, confirm Lossless Audio is enabled and choose whether you want Lossless or Hi-Res Lossless for streaming and downloads.</span>
+                  </li>
+                  <li>
+                    <strong>Look at the track's playback quality.</strong>
+                    <span>Apple Music may show Lossless or Hi-Res Lossless for the current track. Audex Trace can help you test detection before purchase, and Pro keeps the playback readout visible while you listen.</span>
+                  </li>
+                  <li>
+                    <strong>Open Audio MIDI Setup.</strong>
+                    <span>Select your output device and check the Format menu. This is the macOS output sample rate and bit depth for that device.</span>
+                  </li>
+                  <li>
+                    <strong>Check your DAC or audio interface display.</strong>
+                    <span>If your device has a sample-rate indicator, compare it with both Apple Music and Audio MIDI Setup.</span>
+                  </li>
+                  <li>
+                    <strong>Turn off transitions while testing.</strong>
+                    <span>Song Transitions, Crossfade, or AutoMix where available can make track-change behavior harder to read in real time.</span>
+                  </li>
+                </ol>
+              </section>
+
+              <section id="manual-fix" aria-labelledby="manual-fix-title">
+                <div class="section-kicker">Manual control</div>
+                <h2 id="manual-fix-title">How to change the Audio MIDI Setup sample rate.</h2>
+                <p>The standard manual control point is Audio MIDI Setup. Open Audio MIDI Setup, select the active output device, and use the Format menu to choose a supported sample rate and bit depth. For Apple Music, that might mean switching between 44.1 kHz, 48 kHz, 88.2 kHz, 96 kHz, 176.4 kHz, or 192 kHz when your device exposes those rates.</p>
+                <p>If a rate is unavailable, the current device, output route, driver, or aggregate-device setup may not expose it to macOS. Check the device manual and confirm that the device is selected as the sound output device.</p>
+                <p>This can be fine for one album. It gets annoying when a queue jumps between CD-quality Lossless, 48 kHz masters, and Hi-Res Lossless tracks. It is also easy to forget that your Mac output is still pinned to a previous setting.</p>
+                <div class="guide-callout guide-callout-muted">
+                  <strong>Important limitation:</strong>
+                  <p>Changing Audio MIDI Setup does not make a non-Hi-Res track become Hi-Res. It only changes the output format selected for the device.</p>
+                </div>
+              </section>
+
+              <section id="trace" aria-labelledby="trace-title">
+                <div class="section-kicker">Audex Trace</div>
+                <h2 id="trace-title">Audex Trace helps you see what is playing now, and what is coming next.</h2>
+                <p>Audex Trace is a macOS Apple Music companion for listeners who care about Lossless and Hi-Res playback details. It does not modify, enhance, record, or upload audio. The free download includes Compatibility Check and a limited preview so you can test detection on your own Mac before paying.</p>
+                <p>Trace Pro keeps the current playback readout visible, including codec, bit depth, sample rate, and output match status. Pro also includes Playing Next, estimated queue quality, skip warnings, and experimental Auto Sample Rate Match for compatible output devices. That is useful when Apple Music's queue is about to move from 44.1 kHz to 96 kHz, or when the next track may not behave as expected.</p>
+                <div class="guide-cta">
+                  <div>
+                    <h3>Want to check your own Mac?</h3>
+                    <p>Download Audex Trace and run Compatibility Check before buying Pro.</p>
+                  </div>
+                  <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2&source=sample_rate_guide_download" data-track-download>Free Download</a>
+                </div>
+              </section>
+
+              <section aria-labelledby="references-title">
+                <div class="section-kicker">References</div>
+                <h2 id="references-title">Apple references used for this guide.</h2>
+                <ul class="guide-list">
+                  <li><a class="text-link" href="https://support.apple.com/en-us/118295">About lossless audio in Apple Music</a></li>
+                  <li><a class="text-link" href="https://support.apple.com/guide/music/play-lossless-audio-mus90b573cbb/mac">Play lossless audio in Music on Mac</a></li>
+                  <li><a class="text-link" href="https://support.apple.com/guide/audio-midi-setup/set-up-audio-devices-ams59f301fda/mac">Set up audio devices in Audio MIDI Setup on Mac</a></li>
+                </ul>
+              </section>
+
+              <section id="faq" aria-labelledby="guide-faq-title">
+                <div class="section-kicker">FAQ</div>
+                <h2 id="guide-faq-title">Common questions.</h2>
+                <div class="faq-list guide-faq-list">
+                  <article class="faq-item is-open">
+                    <button class="faq-question" type="button" id="guide-faq-dac" aria-expanded="true" aria-controls="guide-faq-dac-answer">Why does my DAC show 48 kHz when Apple Music says Hi-Res Lossless?</button>
+                    <section class="faq-answer" id="guide-faq-dac-answer" aria-labelledby="guide-faq-dac">
+                      <p>Your DAC may be showing the Mac output format rather than the Apple Music source track. Check Audio MIDI Setup and the current playback readout separately.</p>
+                    </section>
+                  </article>
+                  <article class="faq-item">
+                    <button class="faq-question" type="button" id="guide-faq-bit-perfect" aria-expanded="false" aria-controls="guide-faq-bit-perfect-answer">Does matching the sample rate guarantee bit-perfect Apple Music playback?</button>
+                    <section class="faq-answer" id="guide-faq-bit-perfect-answer" aria-labelledby="guide-faq-bit-perfect" aria-hidden="true">
+                      <p>No. Sample-rate matching is one signal. Device drivers, output routes, system processing, Music behavior, and track availability can also affect what reaches the output.</p>
+                    </section>
+                  </article>
+                  <article class="faq-item">
+                    <button class="faq-question" type="button" id="guide-faq-automatch" aria-expanded="false" aria-controls="guide-faq-automatch-answer">Can Audex Trace automatically change the Mac output sample rate?</button>
+                    <section class="faq-answer" id="guide-faq-automatch-answer" aria-labelledby="guide-faq-automatch" aria-hidden="true">
+                      <p>Audex Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates.</p>
+                    </section>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <span>Audex Trace</span>
+          <span>© 2026 Audex</span>
+        </div>
+        <nav aria-label="Footer links">
+          <a href="apple-music-sample-rate-mismatch-mac.html" aria-current="page">Sample Rate Guide</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="changelog.html">Changelog</a>
+          <a href="index.html#download">Download</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </footer>
+    </div>
+    <script src="script.js?v=20260530"></script>
+  </body>
+</html>

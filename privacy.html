@@ -23,7 +23,7 @@
     <title>Audex Trace Privacy</title>
     <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260527">
+    <link rel="stylesheet" href="styles.css?v=20260530">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -46,15 +46,23 @@
           <img class="brand-mark" src="assets/trace-mark.svg" alt="" aria-hidden="true">
           <span>Audex Trace</span>
         </a>
-        <nav class="site-nav" aria-label="Primary navigation">
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
           <a href="index.html#features">Features</a>
+          <a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate</a>
           <a href="index.html#pricing">Pricing</a>
           <a href="index.html#faq">FAQ</a>
           <a href="privacy.html" aria-current="page">Privacy</a>
           <a href="changelog.html">Changelog</a>
           <a href="index.html#download">Download</a>
         </nav>
-        <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2&source=privacy_header_download" data-track-download>Free Download</a>
+        <div class="header-actions">
+          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2&source=privacy_header_download" data-track-download>Free Download</a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </header>
 
       <main>
@@ -110,6 +118,7 @@
           <span>© 2026 Audex</span>
         </div>
         <nav aria-label="Footer links">
+          <a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate Guide</a>
           <a href="privacy.html">Privacy</a>
           <a href="index.html#pricing">Pricing</a>
           <a href="index.html#faq">FAQ</a>
@@ -119,6 +128,6 @@
         </nav>
       </footer>
     </div>
-    <script src="script.js?v=20260527"></script>
+    <script src="script.js?v=20260530"></script>
   </body>
 </html>
