@@ -23,7 +23,7 @@
     <title>Audex Trace Changelog</title>
     <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260530">
+    <link rel="stylesheet" href="styles.css?v=20260527">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -35,7 +35,7 @@
           "@type": "SoftwareApplication",
           "name": "Audex Trace",
           "operatingSystem": "macOS 15 or later",
-          "softwareVersion": "1.2",
+          "softwareVersion": "1.2.1",
           "url": "https://trace.audex.dev/"
         }
       }
@@ -48,23 +48,15 @@
           <img class="brand-mark" src="assets/trace-mark.svg" alt="" aria-hidden="true">
           <span>Audex Trace</span>
         </a>
-        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+        <nav class="site-nav" aria-label="Primary navigation">
           <a href="index.html#features">Features</a>
-          <a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate</a>
           <a href="index.html#pricing">Pricing</a>
           <a href="index.html#faq">FAQ</a>
           <a href="privacy.html">Privacy</a>
           <a href="changelog.html" aria-current="page">Changelog</a>
           <a href="index.html#download">Download</a>
         </nav>
-        <div class="header-actions">
-          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2&amp;source=changelog_header_download" data-track-download>Free Download</a>
-          <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
+        <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2.1&amp;source=changelog_header_download" data-track-download>Free Download</a>
       </header>
 
       <main>
@@ -73,8 +65,8 @@
           <h1 id="changelog-title">Audex Trace Changelog</h1>
           <p class="hero-subtitle">Signed and notarized macOS releases, generated from GitHub Releases.</p>
           <div class="download-actions">
-            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2&amp;source=changelog_download" data-track-download>Download 1.2</a>
-            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2">Latest GitHub Release</a>
+            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2.1&amp;source=changelog_download" data-track-download>Download 1.2.1</a>
+            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.1">Latest GitHub Release</a>
           </div>
         </section>
 
@@ -82,6 +74,33 @@
           <article class="changelog-entry">
             <div class="changelog-meta">
               <span class="price-label">Current release</span>
+              <h2>1.2.1</h2>
+              <p>June 3, 2026</p>
+              <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.1">GitHub Release</a>
+            </div>
+            <div class="changelog-details release-notes">
+              <p>Maintenance update for Audex Trace 1.2, focused on Playing Next reliability, playback format display consistency, and menu bar/notch interaction polish.</p>
+              <p>Download <code>AudexTrace-1.2.1.zip</code>, unzip it, and move <code>Audex Trace.app</code> to <code>/Applications</code>.</p>
+              <h3>Improvements</h3>
+              <ul>
+              <li>Improved Playing Next artwork handling for upcoming tracks when Apple Music does not provide enough identifier data.</li>
+              <li>Improved playback format detection around track changes, especially when queue and quality features are active.</li>
+              <li>Standardized playback format labels across the app, such as <code>ALAC 24-bit / 48 kHz</code> and <code>ALAC 24-bit / 96 kHz</code>.</li>
+              <li>Refined the expanded notch player with denser controls, better seek bar spacing, marquee text for long metadata, and more accurate hover areas.</li>
+              <li>Improved release metadata handling so download links and release references can point to the exact versioned build.</li>
+              </ul>
+              <h3>Fixes</h3>
+              <ul>
+              <li>Fixed menu bar popovers after changing UI scale.</li>
+              <li>Fixed keyboard input behavior around menu bar popovers.</li>
+              <li>Fixed queue/window layout behavior when the player is near screen edges.</li>
+              <li>Fixed expanded notch control hover feedback so the visible hover state matches the actual interactive area.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="price-label">Release</span>
               <h2>1.2</h2>
               <p>May 29, 2026</p>
               <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2">GitHub Release</a>
@@ -178,7 +197,6 @@
           <span>© 2026 Audex</span>
         </div>
         <nav aria-label="Footer links">
-          <a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate Guide</a>
           <a href="privacy.html">Privacy</a>
           <a href="index.html#pricing">Pricing</a>
           <a href="index.html#faq">FAQ</a>
@@ -188,6 +206,6 @@
         </nav>
       </footer>
     </div>
-    <script src="script.js?v=20260530"></script>
+    <script src="script.js?v=20260527"></script>
   </body>
 </html>
