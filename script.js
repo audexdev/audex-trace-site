@@ -102,16 +102,35 @@ syncFaqHeights();
 window.addEventListener("resize", syncFaqHeights);
 
 const trackingParamNames = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+const storagePrefix = "audexTrace.";
 const currentParams = new URLSearchParams(window.location.search);
 const currentTrackingParams = trackingParamNames
   .map((name) => [name, currentParams.get(name)])
   .filter((entry) => entry[1]);
 const currentPagePath = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+const currentRef = currentParams.get("ref");
+const currentReferrerHost = referrerHost(document.referrer);
+const localTrackingStorage = storage("localStorage");
+const sessionTrackingStorage = storage("sessionStorage");
+const anonymousId = persistentId("anonymousId", localTrackingStorage);
+const sessionId = persistentId("sessionId", sessionTrackingStorage);
+const firstTouch = loadFirstTouch();
+
+const commonTrackingParams = [
+  ["anonymous_id", anonymousId],
+  ["session_id", sessionId],
+  ["ref", currentRef || firstTouch.ref],
+  ["landing_page", firstTouch.landingPage],
+  ["first_ref", firstTouch.ref],
+  ["first_referrer_host", firstTouch.referrerHost],
+  ...trackingParamNames.map((name) => [name, currentParams.get(name)]),
+  ...trackingParamNames.map((name) => [`first_${name}`, firstTouch.utm[name]])
+].filter((entry) => entry[1]);
 
 document.querySelectorAll("a[data-track-download]").forEach((link) => {
   try {
     const url = new URL(link.href);
-    currentTrackingParams.forEach(([name, value]) => {
+    commonTrackingParams.forEach(([name, value]) => {
       if (!url.searchParams.has(name)) {
         url.searchParams.set(name, value);
       }
@@ -126,7 +145,7 @@ document.querySelectorAll("a[data-track-download]").forEach((link) => {
 });
 
 document.querySelectorAll("form[data-track-checkout]").forEach((form) => {
-  currentTrackingParams.forEach(([name, value]) => {
+  commonTrackingParams.forEach(([name, value]) => {
     setHiddenField(form, name, value);
   });
 
@@ -146,4 +165,80 @@ function setHiddenField(form, name, value) {
     form.appendChild(input);
   }
   input.value = value;
+}
+
+function loadFirstTouch() {
+  const stored = readJsonStorage(localTrackingStorage, "firstTouch");
+  if (stored?.landingPage) {
+    return {
+      landingPage: stored.landingPage,
+      ref: stored.ref || "",
+      referrerHost: stored.referrerHost || "",
+      utm: stored.utm || {}
+    };
+  }
+
+  const next = {
+    landingPage: currentPagePath,
+    ref: currentRef || "",
+    referrerHost: currentReferrerHost || "",
+    utm: Object.fromEntries(currentTrackingParams)
+  };
+  writeJsonStorage(localTrackingStorage, "firstTouch", next);
+  return next;
+}
+
+function persistentId(key, storage) {
+  const storageKey = `${storagePrefix}${key}`;
+  try {
+    const existing = storage.getItem(storageKey);
+    if (existing) return existing;
+    const value = window.crypto?.randomUUID ? window.crypto.randomUUID() : fallbackRandomId();
+    storage.setItem(storageKey, value);
+    return value;
+  } catch {
+    return fallbackRandomId();
+  }
+}
+
+function storage(name) {
+  try {
+    const value = window[name];
+    value.getItem(`${storagePrefix}storageTest`);
+    return value;
+  } catch {
+    return null;
+  }
+}
+
+function readJsonStorage(storage, key) {
+  if (!storage) return null;
+  try {
+    const value = storage.getItem(`${storagePrefix}${key}`);
+    return value ? JSON.parse(value) : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeJsonStorage(storage, key, value) {
+  if (!storage) return;
+  try {
+    storage.setItem(`${storagePrefix}${key}`, JSON.stringify(value));
+  } catch {
+    // Tracking remains best-effort when storage is unavailable.
+  }
+}
+
+function referrerHost(value) {
+  if (!value) return "";
+  try {
+    return new URL(value).host;
+  } catch {
+    return "";
+  }
+}
+
+function fallbackRandomId() {
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 12)}`;
 }
