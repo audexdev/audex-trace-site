@@ -44,7 +44,7 @@ Known limitations:
 
 Apple Music sample rate mismatch guide:
 - Explains why Apple Music on Mac can show Lossless or Hi-Res Lossless while the selected macOS output format in Audio MIDI Setup remains fixed.
-- Covers searches such as Apple Music sample rate mismatch Mac, Apple Music sample rate not changing, Audio MIDI Setup sample rate, DAC sample rate Mac, and Apple Music Hi-Res Lossless output.
+- Covers searches such as Apple Music sample rate mismatch Mac, Apple Music Lossless Mac sample rate, Apple Music Hi-Res Lossless external DAC Mac, Apple Music sample rate not changing, Audio MIDI Setup sample rate, Mac Apple Music 44.1 48 kHz output, Apple Music Lossless not working Mac, DAC sample rate Mac, and Apple Music Hi-Res Lossless output.
 - Clarifies that Apple Music playback format and Mac output sample rate are different layers.
 - Recommends checking Music audio quality settings, Audio MIDI Setup, output device support, and DAC or audio interface sample-rate displays.
 

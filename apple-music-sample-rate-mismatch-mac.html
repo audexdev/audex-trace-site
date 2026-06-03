@@ -48,7 +48,7 @@
               "@id": "https://audex.dev/#organization"
             },
             "datePublished": "2026-05-30T00:00:00+09:00",
-            "dateModified": "2026-05-30T00:00:00+09:00",
+            "dateModified": "2026-06-04T00:00:00+09:00",
             "mainEntityOfPage": "https://trace.audex.dev/apple-music-sample-rate-mismatch-mac.html"
           },
           {
@@ -79,6 +79,38 @@
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Your DAC may be showing the Mac output format rather than the detected Apple Music playback format. Check Audio MIDI Setup and the playback readout separately."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is my Mac output still 44.1 or 48 kHz when Apple Music plays Lossless?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "44.1 kHz or 48 kHz can be normal for many Lossless tracks. A mismatch is worth checking when the detected Apple Music playback format is different from the Mac output format selected in Audio MIDI Setup, especially for Hi-Res tracks at 96 kHz or 192 kHz."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need an external DAC for Apple Music Hi-Res Lossless on Mac?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "An external USB DAC or audio interface is often how Mac users expose and verify higher Hi-Res sample rates, unless your current output device already lists those rates. Device support still matters, so compare Audio MIDI Setup with the detected Apple Music playback format."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I change the Mac output sample rate for Apple Music in Audio MIDI Setup?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Open Audio MIDI Setup, select the active output device, and use the Format menu to choose a supported sample rate and bit depth. This changes the Mac output format, not the Apple Music track's source quality."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What should I check if Apple Music Lossless is not working on Mac?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If the label, detected playback format, and Mac output format do not line up, check Music's Lossless Audio setting, streaming or download quality, the current wired or wireless output route, track availability, Audio MIDI Setup, and transition features such as Crossfade, Song Transitions, or AutoMix."
                 }
               },
               {
@@ -136,7 +168,7 @@
             <h1 id="guide-title">Apple Music sample rate mismatch on Mac: why it may not change.</h1>
             <p class="hero-subtitle">If Apple Music says Lossless or Hi-Res Lossless but your DAC, Audio MIDI Setup, or macOS output still shows 44.1 kHz, 48 kHz, 96 kHz, or 192 kHz, you are probably looking at two different parts of the playback path.</p>
             <div class="guide-meta">
-              <span>Updated May 30, 2026</span>
+              <span>Updated June 4, 2026</span>
               <span aria-hidden="true">•</span>
               <span>For Apple Music on macOS</span>
             </div>
@@ -281,6 +313,30 @@
                     <button class="faq-question" type="button" id="guide-faq-dac" aria-expanded="true" aria-controls="guide-faq-dac-answer">Why does my DAC show 48 kHz when Apple Music says Hi-Res Lossless?</button>
                     <section class="faq-answer" id="guide-faq-dac-answer" aria-labelledby="guide-faq-dac">
                       <p>Your DAC may be showing the Mac output format rather than the detected Apple Music playback format. Check Audio MIDI Setup and the playback readout separately.</p>
+                    </section>
+                  </article>
+                  <article class="faq-item">
+                    <button class="faq-question" type="button" id="guide-faq-lossless-output" aria-expanded="false" aria-controls="guide-faq-lossless-output-answer">Why is my Mac output still 44.1 or 48 kHz when Apple Music plays Lossless?</button>
+                    <section class="faq-answer" id="guide-faq-lossless-output-answer" aria-labelledby="guide-faq-lossless-output" aria-hidden="true">
+                      <p>44.1 kHz or 48 kHz can be normal for many Lossless tracks. A mismatch is worth checking when the detected Apple Music playback format is different from the Mac output format selected in Audio MIDI Setup, especially for Hi-Res tracks at 96 kHz or 192 kHz.</p>
+                    </section>
+                  </article>
+                  <article class="faq-item">
+                    <button class="faq-question" type="button" id="guide-faq-external-dac" aria-expanded="false" aria-controls="guide-faq-external-dac-answer">Do I need an external DAC for Apple Music Hi-Res Lossless on Mac?</button>
+                    <section class="faq-answer" id="guide-faq-external-dac-answer" aria-labelledby="guide-faq-external-dac" aria-hidden="true">
+                      <p>An external USB DAC or audio interface is often how Mac users expose and verify higher Hi-Res sample rates, unless your current output device already lists those rates. Device support still matters, so compare Audio MIDI Setup with the detected Apple Music playback format.</p>
+                    </section>
+                  </article>
+                  <article class="faq-item">
+                    <button class="faq-question" type="button" id="guide-faq-audio-midi-setup" aria-expanded="false" aria-controls="guide-faq-audio-midi-setup-answer">How do I change the Mac output sample rate for Apple Music in Audio MIDI Setup?</button>
+                    <section class="faq-answer" id="guide-faq-audio-midi-setup-answer" aria-labelledby="guide-faq-audio-midi-setup" aria-hidden="true">
+                      <p>Open Audio MIDI Setup, select the active output device, and use the Format menu to choose a supported sample rate and bit depth. This changes the Mac output format, not the Apple Music track&rsquo;s source quality.</p>
+                    </section>
+                  </article>
+                  <article class="faq-item">
+                    <button class="faq-question" type="button" id="guide-faq-lossless-not-working" aria-expanded="false" aria-controls="guide-faq-lossless-not-working-answer">What should I check if Apple Music Lossless is not working on Mac?</button>
+                    <section class="faq-answer" id="guide-faq-lossless-not-working-answer" aria-labelledby="guide-faq-lossless-not-working" aria-hidden="true">
+                      <p>If the label, detected playback format, and Mac output format do not line up, check Music&rsquo;s Lossless Audio setting, streaming or download quality, the current wired or wireless output route, track availability, Audio MIDI Setup, and transition features such as Crossfade, Song Transitions, or AutoMix.</p>
                     </section>
                   </article>
                   <article class="faq-item">
