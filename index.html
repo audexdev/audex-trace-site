@@ -71,42 +71,50 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What is Audex Trace?",
+                "name": "Does Audex Trace work on my Mac?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Audex Trace is a macOS Apple Music companion that shows playback format details such as codec, bit depth, sample rate, output match status, and what is coming next in Playing Next."
+                  "text": "Audex Trace requires macOS 15 or later and the Apple Music app. Download it free and run Compatibility Check on your own Mac before buying Pro."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Does Audex Trace change Apple Music audio?",
+                "name": "Why should I run Compatibility Check before buying?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Audex Trace does not modify, enhance, record, or upload audio. Playback format detection runs locally on the Mac."
+                  "text": "Playback-format detection depends on macOS, Music settings, Apple Music behavior, and the output device. Compatibility Check lets you confirm detection on your setup first."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Can Audex Trace automatically match the Mac output sample rate?",
+                "name": "What does Apple Music's Lossless badge not show?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Audex Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates."
+                  "text": "The badge describes track availability or a playback label, but it does not clearly show the detected playback format and the Mac output sample rate together. Trace shows those layers side by side."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Which macOS version does Audex Trace require?",
+                "name": "Does Trace change my sample rate automatically?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Audex Trace requires macOS 15 or later and the Apple Music app."
+                  "text": "Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates. It depends on the device and route."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Where can I download Audex Trace?",
+                "name": "Does it work with DACs, AirPods, or Dolby Atmos?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Audex Trace is distributed through GitHub Releases from the official site at https://trace.audex.dev/."
+                  "text": "Trace is designed for Apple Music playback on the Mac and can show detected playback details across supported routes. Output matching and available sample rates depend on the device, route, and macOS support."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Audex Trace affiliated with Apple?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Audex Trace is an independent macOS app and is not affiliated with Apple. Apple Music and macOS are trademarks of Apple Inc."
                 }
               }
             ]
@@ -242,6 +250,35 @@
           </div>
         </section>
 
+        <!-- Manual comparison -->
+        <section class="manual content-band" aria-labelledby="manual-title">
+          <div class="section-kicker">Trace vs manual setup</div>
+          <h2 id="manual-title">Why Trace instead of doing it manually?</h2>
+          <p class="section-lede">Audio MIDI Setup is useful, but it was not built to be watched while your queue changes. Trace keeps the playback path visible while you listen, then Pro can reduce some of the manual switching when your output device supports it.</p>
+          <div class="manual-grid">
+            <article class="manual-card">
+              <h3>Manual checks</h3>
+              <ul>
+                <li>Open Audio MIDI Setup to inspect or change the Mac output format.</li>
+                <li>Interpret Apple Music badges without seeing every playback and output layer together.</li>
+                <li>Notice queue quality or skip issues only when playback reaches the track.</li>
+              </ul>
+            </article>
+            <article class="manual-card manual-card-trace">
+              <h3>With Trace</h3>
+              <ul>
+                <li>Keep codec, bit depth, sample rate, and output match status visible in a resident player.</li>
+                <li>Use experimental Auto Sample Rate Match in Pro to reduce manual changes on compatible devices.</li>
+                <li>Preview queue quality estimates and skip warnings before the next track interrupts playback.</li>
+              </ul>
+            </article>
+          </div>
+          <div class="section-actions">
+            <a class="repository-link" href="apple-music-sample-rate-mismatch-mac.html">Read the sample rate guide</a>
+            <a class="repository-link" href="#download">Download free and run Compatibility Check</a>
+          </div>
+        </section>
+
         <!-- Supported apps -->
         <section class="apps content-band" id="apps" aria-labelledby="apps-title">
           <div class="section-kicker">Apps</div>
@@ -259,6 +296,24 @@
               <span role="cell">Local files played in Music.app</span>
               <span role="cell">Experimental</span>
             </div>
+          </div>
+        </section>
+
+        <!-- Trust signals -->
+        <section class="trust content-band" aria-labelledby="trust-title">
+          <div class="section-kicker">Trust</div>
+          <h2 id="trust-title">Clear before you pay.</h2>
+          <div class="trust-grid" aria-label="Audex Trace trust signals">
+            <p><strong>Free Compatibility Check</strong><span>Confirm detection on your own Mac before buying Pro.</span></p>
+            <p><strong>One-time purchase</strong><span>Launch price $19.99, regular price $29.99, no subscription.</span></p>
+            <p><strong>Built for macOS and Apple Music</strong><span>Focused on Music.app playback on macOS 15 and later.</span></p>
+            <p><strong>Product Hunt launch</strong><span>Public launch build available now.</span></p>
+            <p><strong>Independent app</strong><span>Not affiliated with Apple.</span></p>
+            <p><strong>Support available</strong><span>Questions and compatibility issues can be sent through contact.</span></p>
+          </div>
+          <div class="section-actions">
+            <a class="repository-link" href="contact.html">Contact Support</a>
+            <a class="repository-link" href="#pricing">View Pro pricing</a>
           </div>
         </section>
 
@@ -362,39 +417,39 @@
           <h2 id="faq-title">Common questions about Audex Trace.</h2>
           <div class="faq-list">
             <article class="faq-item is-open">
-              <button class="faq-question" type="button" id="faq-question-trace" aria-expanded="true" aria-controls="faq-answer-trace">What is Audex Trace?</button>
-              <div class="faq-answer" id="faq-answer-trace" role="region" aria-labelledby="faq-question-trace">
-                <p>Audex Trace is a macOS Apple Music companion that shows playback format details such as codec, bit depth, sample rate, output match status, and what is coming next in Playing Next.</p>
+              <button class="faq-question" type="button" id="faq-question-works" aria-expanded="true" aria-controls="faq-answer-works">Does Audex Trace work on my Mac?</button>
+              <div class="faq-answer" id="faq-answer-works" role="region" aria-labelledby="faq-question-works">
+                <p>Audex Trace requires macOS 15 or later and the Apple Music app. Download it free and run Compatibility Check on your own Mac before buying Pro.</p>
               </div>
             </article>
             <article class="faq-item">
-              <button class="faq-question" type="button" id="faq-question-audio" aria-expanded="false" aria-controls="faq-answer-audio">Does Audex Trace change Apple Music audio?</button>
-              <div class="faq-answer" id="faq-answer-audio" role="region" aria-labelledby="faq-question-audio" aria-hidden="true">
-                <p>No. Audex Trace does not modify, enhance, record, or upload audio. Playback format detection runs locally on your Mac.</p>
+              <button class="faq-question" type="button" id="faq-question-compatibility" aria-expanded="false" aria-controls="faq-answer-compatibility">Why should I run Compatibility Check before buying?</button>
+              <div class="faq-answer" id="faq-answer-compatibility" role="region" aria-labelledby="faq-question-compatibility" aria-hidden="true">
+                <p>Playback-format detection depends on macOS, Music settings, Apple Music behavior, and the output device. Compatibility Check lets you confirm detection on your setup first.</p>
               </div>
             </article>
             <article class="faq-item">
-              <button class="faq-question" type="button" id="faq-question-rate" aria-expanded="false" aria-controls="faq-answer-rate">Can it match the Mac output sample rate automatically?</button>
+              <button class="faq-question" type="button" id="faq-question-badge" aria-expanded="false" aria-controls="faq-answer-badge">What does Apple Music&rsquo;s Lossless badge not show?</button>
+              <div class="faq-answer" id="faq-answer-badge" role="region" aria-labelledby="faq-question-badge" aria-hidden="true">
+                <p>The badge describes track availability or a playback label, but it does not clearly show the detected playback format and the Mac output sample rate together. Trace shows those layers side by side.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" id="faq-question-rate" aria-expanded="false" aria-controls="faq-answer-rate">Does Trace change my sample rate automatically?</button>
               <div class="faq-answer" id="faq-answer-rate" role="region" aria-labelledby="faq-question-rate" aria-hidden="true">
-                <p>Audex Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates.</p>
+                <p>Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates. It depends on the device and route.</p>
               </div>
             </article>
             <article class="faq-item">
-              <button class="faq-question" type="button" id="faq-question-macos" aria-expanded="false" aria-controls="faq-answer-macos">Which macOS version is required?</button>
-              <div class="faq-answer" id="faq-answer-macos" role="region" aria-labelledby="faq-question-macos" aria-hidden="true">
-                <p>Audex Trace requires macOS 15 or later with the Apple Music app installed. macOS 14 and earlier are not officially supported.</p>
+              <button class="faq-question" type="button" id="faq-question-routes" aria-expanded="false" aria-controls="faq-answer-routes">Does it work with DACs, AirPods, or Dolby Atmos?</button>
+              <div class="faq-answer" id="faq-answer-routes" role="region" aria-labelledby="faq-question-routes" aria-hidden="true">
+                <p>Trace is designed for Apple Music playback on the Mac and can show detected playback details across supported routes. Output matching and available sample rates depend on the device, route, and macOS support.</p>
               </div>
             </article>
             <article class="faq-item">
-              <button class="faq-question" type="button" id="faq-question-free" aria-expanded="false" aria-controls="faq-answer-free">Is it free?</button>
-              <div class="faq-answer" id="faq-answer-free" role="region" aria-labelledby="faq-question-free" aria-hidden="true">
-                <p>The app is a free download. Pro features are available through a one-time purchase, with no subscription.</p>
-              </div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" type="button" id="faq-question-distribution" aria-expanded="false" aria-controls="faq-answer-distribution">Where is Audex Trace distributed?</button>
-              <div class="faq-answer" id="faq-answer-distribution" role="region" aria-labelledby="faq-question-distribution" aria-hidden="true">
-                <p>Audex Trace is distributed outside the Mac App Store through the official site and GitHub Releases.</p>
+              <button class="faq-question" type="button" id="faq-question-affiliation" aria-expanded="false" aria-controls="faq-answer-affiliation">Is Audex Trace affiliated with Apple?</button>
+              <div class="faq-answer" id="faq-answer-affiliation" role="region" aria-labelledby="faq-question-affiliation" aria-hidden="true">
+                <p>No. Audex Trace is an independent macOS app and is not affiliated with Apple. Apple Music and macOS are trademarks of Apple Inc.</p>
               </div>
             </article>
           </div>
