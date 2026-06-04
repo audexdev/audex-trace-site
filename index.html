@@ -193,16 +193,61 @@
           </div>
         </section>
 
+        <!-- Playback examples -->
+        <section class="catches content-band" aria-labelledby="catches-title">
+          <div class="section-kicker">What Trace catches</div>
+          <h2 id="catches-title">Apple Music shows the badge. Trace shows what can still go wrong.</h2>
+          <p class="section-lede">Trace is built for the moments where the visible label is not enough: the track looks lossless, the route changes the result, or the next queue item may interrupt playback before you hear it.</p>
+          <div class="catch-grid">
+            <article class="catch-card">
+              <span class="card-icon" aria-hidden="true">01</span>
+              <h3>Lossless badge, but output differs</h3>
+              <p>Apple Music may play ALAC while the selected Mac output sample rate is still set to something else. Trace shows the detected playback format and Mac output sample rate together, then Trace Pro can reduce manual changes with experimental Auto Sample Rate Match on compatible devices.</p>
+            </article>
+            <article class="catch-card">
+              <span class="card-icon" aria-hidden="true">02</span>
+              <h3>Dolby Atmos/AAC route surprises</h3>
+              <p>Metadata alone can make it hard to tell which variant is active for the current route. Trace labels Dolby Atmos, AAC, Lossless, or Hi-Res states cautiously when Apple Music and the output route expose enough detail.</p>
+            </article>
+            <article class="catch-card">
+              <span class="card-icon" aria-hidden="true">03</span>
+              <h3>Queue item may skip before it plays</h3>
+              <p>Trace Pro can flag upcoming tracks that look likely to fail or skip before playback reaches them. That makes queue issues visible earlier, instead of only after the next track interrupts listening.</p>
+            </article>
+          </div>
+          <p class="catch-note">Detection depends on macOS, Apple Music settings, the output route, and device support. Run Compatibility Check on your Mac before buying Pro.</p>
+          <div class="section-actions">
+            <a class="repository-link" href="#download">Download free and run Compatibility Check</a>
+            <a class="repository-link" href="#pricing">Buy Pro</a>
+          </div>
+        </section>
+
         <!-- Problem -->
         <section class="problem content-band" aria-labelledby="problem-title">
           <div class="section-kicker">The gap</div>
-          <h2 id="problem-title">Music changes. macOS output often does not.</h2>
-          <div class="problem-grid">
-            <p>Apple Music can move between 44.1, 48, 96, and 192 kHz while the selected macOS output format stays fixed.</p>
-            <p>Manual switching in Audio MIDI Setup interrupts listening, and Apple Music’s own UI keeps technical playback details out of sight.</p>
+          <h2 id="problem-title">Manual setup checks one moment. Trace watches the session.</h2>
+          <p class="section-lede">Audio MIDI Setup is useful, but it was not built to follow Apple Music while your queue changes. Trace keeps the playback path visible in the background, then Pro can reduce some manual switching when your output device supports it.</p>
+          <div class="manual-grid">
+            <article class="manual-card">
+              <h3>Manual Audio MIDI Setup</h3>
+              <ul>
+                <li>Open a separate utility to inspect or change the Mac output format.</li>
+                <li>Check one device setting while Apple Music may move between 44.1, 48, 96, and 192 kHz.</li>
+                <li>Find queue quality or skip issues only when playback reaches the track.</li>
+              </ul>
+            </article>
+            <article class="manual-card manual-card-trace">
+              <h3>Trace Pro running in the background</h3>
+              <ul>
+                <li>In Pro, keep codec, bit depth, sample rate, and output match status visible in a resident player.</li>
+                <li>Use experimental Auto Sample Rate Match in Pro to reduce manual changes on compatible devices.</li>
+                <li>Preview queue quality estimates and skip warnings before the next track interrupts playback.</li>
+              </ul>
+            </article>
           </div>
           <div class="section-actions">
             <a class="repository-link" href="apple-music-sample-rate-mismatch-mac.html">Read the sample rate mismatch guide</a>
+            <a class="repository-link" href="#download">Download free and run Compatibility Check</a>
           </div>
         </section>
 
@@ -218,93 +263,35 @@
           </div>
           <div class="feature-grid">
             <article class="feature-card">
-              <span class="card-icon">PN</span>
+              <span class="card-icon" aria-hidden="true">PN</span>
               <h3>Playing Next Queue</h3>
               <p>Open a compact queue view and see up to 3 upcoming Apple Music tracks without leaving the player.</p>
             </article>
             <article class="feature-card">
-              <span class="card-icon">EQ</span>
+              <span class="card-icon" aria-hidden="true">EQ</span>
               <h3>Estimated Queue Quality</h3>
               <p>In Trace Pro, preview estimated Lossless, Hi-Res, or Dolby availability for queued tracks before playback reaches them.</p>
             </article>
             <article class="feature-card">
-              <span class="card-icon">SK</span>
+              <span class="card-icon" aria-hidden="true">SK</span>
               <h3>Skip Risk Detection</h3>
               <p>In Trace Pro, flag upcoming tracks that look likely to fail or skip, so playback issues are visible earlier.</p>
             </article>
             <article class="feature-card">
-              <span class="card-icon">AR</span>
+              <span class="card-icon" aria-hidden="true">AR</span>
               <h3>Actual Playback Readout</h3>
               <p>In Trace Pro, keep the current codec, bit depth, sample rate, and output match status visible while you listen.</p>
             </article>
             <article class="feature-card">
-              <span class="card-icon">SR</span>
+              <span class="card-icon" aria-hidden="true">SR</span>
               <h3>Auto Sample Rate Match</h3>
               <p>Experimental in Trace Pro: update compatible Mac output devices as Apple Music moves between Lossless and Hi-Res sample rates.</p>
             </article>
             <article class="feature-card">
-              <span class="card-icon">UI</span>
+              <span class="card-icon" aria-hidden="true">UI</span>
               <h3>Resident Player Views</h3>
               <p>Keep playback controls and track details close in the compact player, menu bar, or optional notch view.</p>
             </article>
-          </div>
-        </section>
-
-        <!-- Playback examples -->
-        <section class="catches content-band" aria-labelledby="catches-title">
-          <div class="section-kicker">What Trace catches</div>
-          <h2 id="catches-title">Apple Music shows the badge. Trace shows what is happening.</h2>
-          <p class="section-lede">Apple Music&rsquo;s badge does not always tell the full playback story. Trace puts the detected Apple Music playback format and the Mac output state in one place, so common surprises are easier to spot.</p>
-          <div class="catch-grid">
-            <article class="catch-card">
-              <span class="card-icon">01</span>
-              <h3>Lossless badge, mismatched output</h3>
-              <p>Apple Music may play ALAC while the selected Mac output sample rate is still set to something else. Trace shows the actual playback format and Mac output sample rate together. Trace Pro can reduce manual changes with experimental Auto Sample Rate Match on compatible devices.</p>
-            </article>
-            <article class="catch-card">
-              <span class="card-icon">02</span>
-              <h3>Dolby and route surprises</h3>
-              <p>Metadata alone can make it hard to tell which variant is active for the current route. Trace shows the detected playback format where available, and labels Dolby, AAC, Lossless, or Hi-Res states cautiously when Apple Music and the output route expose them.</p>
-            </article>
-            <article class="catch-card">
-              <span class="card-icon">03</span>
-              <h3>Playing Next surprises</h3>
-              <p>Trace Pro can show estimated quality and tracks that may skip before playback reaches them. That makes queue issues visible earlier, instead of only after the next track interrupts listening.</p>
-            </article>
-          </div>
-          <p class="catch-note">Detection depends on macOS, Apple Music settings, the output route, and device support. Run Compatibility Check on your Mac before buying Pro.</p>
-          <div class="section-actions">
-            <a class="repository-link" href="#download">Download free and run Compatibility Check</a>
-            <a class="repository-link" href="#pricing">Buy Pro</a>
-          </div>
-        </section>
-
-        <!-- Manual comparison -->
-        <section class="manual content-band" aria-labelledby="manual-title">
-          <div class="section-kicker">Trace vs manual setup</div>
-          <h2 id="manual-title">Why Trace instead of doing it manually?</h2>
-          <p class="section-lede">Audio MIDI Setup is useful, but it was not built to be watched while your queue changes. Trace keeps the playback path visible while you listen, then Pro can reduce some of the manual switching when your output device supports it.</p>
-          <div class="manual-grid">
-            <article class="manual-card">
-              <h3>Manual checks</h3>
-              <ul>
-                <li>Open Audio MIDI Setup to inspect or change the Mac output format.</li>
-                <li>Interpret Apple Music badges without seeing every playback and output layer together.</li>
-                <li>Notice queue quality or skip issues only when playback reaches the track.</li>
-              </ul>
-            </article>
-            <article class="manual-card manual-card-trace">
-              <h3>With Trace</h3>
-              <ul>
-                <li>In Pro, keep codec, bit depth, sample rate, and output match status visible in a resident player.</li>
-                <li>Use experimental Auto Sample Rate Match in Pro to reduce manual changes on compatible devices.</li>
-                <li>In Pro, preview queue quality estimates and skip warnings before the next track interrupts playback.</li>
-              </ul>
-            </article>
-          </div>
-          <div class="section-actions">
-            <a class="repository-link" href="apple-music-sample-rate-mismatch-mac.html">Read the sample rate guide</a>
-            <a class="repository-link" href="#download">Download free and run Compatibility Check</a>
           </div>
         </section>
 
