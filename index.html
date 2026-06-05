@@ -50,8 +50,8 @@
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "macOS 15 or later",
             "url": "https://trace.audex.dev/",
-            "downloadUrl": "https://trace-auth.audex.dev/download?version=1.2.1&source=software_schema",
-            "softwareVersion": "1.2.1",
+            "downloadUrl": "https://trace-auth.audex.dev/download?version=1.2.2&source=software_schema",
+            "softwareVersion": "1.2.2",
             "description": "Audex Trace is a macOS Apple Music companion for Lossless and Hi-Res listeners, with playback readout, output match status, Playing Next, queue quality estimates, skip warnings, and experimental sample-rate matching.",
             "image": "https://trace.audex.dev/assets/og-image.svg",
             "offers": {
@@ -74,7 +74,7 @@
                 "name": "Does Audex Trace work on my Mac?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Audex Trace requires macOS 15 or later and the Apple Music app. Download it free and run Compatibility Check on your own Mac before buying Pro."
+                  "text": "Audex Trace requires macOS 15 or later and the Apple Music app. Download it free, play a track in Apple Music, then run Compatibility Check on your own Mac before buying Pro."
                 }
               },
               {
@@ -82,7 +82,7 @@
                 "name": "Why should I run Compatibility Check before buying?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Playback-format detection depends on macOS, Music settings, Apple Music behavior, and the output device. Compatibility Check lets you confirm detection on your setup first."
+                  "text": "Playback-format detection depends on macOS, Music settings, Apple Music behavior, the active playback route, and the output device. Play a track in Apple Music first; Compatibility Check then lets you confirm detection on your setup."
                 }
               },
               {
@@ -142,7 +142,7 @@
           <a href="#download">Download</a>
         </nav>
         <div class="header-actions">
-          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2.1&source=header_download" data-track-download>Free Download</a>
+          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2.2&source=header_download" data-track-download>Free Download</a>
           <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
             <span></span>
             <span></span>
@@ -159,15 +159,15 @@
             <h1 id="hero-title">Trace what’s actually playing.</h1>
             <p class="hero-subtitle">Audex Trace is not just a mini player. It helps you see what Apple Music is doing now &mdash; and what&rsquo;s coming next.</p>
             <div class="hero-actions" role="group" aria-label="Audex Trace status actions">
-              <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2.1&source=hero_download" data-track-download>Free Download</a>
+              <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2.2&source=hero_download" data-track-download>Free Download</a>
               <form class="inline-checkout-form" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
                 <input type="hidden" name="source" value="hero_buy">
-                <input type="hidden" name="version" value="1.2.1">
+                <input type="hidden" name="version" value="1.2.2">
                 <input type="hidden" name="page_path" value="/">
                 <button class="secondary-cta" type="submit">Buy Pro for $19.99</button>
               </form>
             </div>
-            <p class="checkout-warning">Run Compatibility Check on your Mac before buying Pro.</p>
+            <p class="checkout-warning">After installing, play a track in Apple Music and run Compatibility Check before buying Pro.</p>
             <p class="status-badge">
               <span>Apple Music-first</span>
               <span aria-hidden="true">•</span>
@@ -215,7 +215,7 @@
               <p>Trace Pro can flag upcoming tracks that look likely to fail or skip before playback reaches them. That makes queue issues visible earlier, instead of only after the next track interrupts listening.</p>
             </article>
           </div>
-          <p class="catch-note">Detection depends on macOS, Apple Music settings, the output route, and device support. Run Compatibility Check on your Mac before buying Pro.</p>
+          <p class="catch-note">Detection depends on macOS, Apple Music settings, the output route, and device support. After installing, play a track in Apple Music and run Compatibility Check before buying Pro.</p>
           <div class="section-actions">
             <a class="repository-link" href="#download">Download free and run Compatibility Check</a>
             <a class="repository-link" href="#pricing">Buy Pro</a>
@@ -347,10 +347,10 @@
               </div>
               <div class="price-card-copy">
                 <p>One-time lifetime license for Audex Trace Pro. Unlocks estimated queue quality, skip warnings, playback readout, output match status, and experimental Auto Sample Rate Match. Playing Next itself is included in the free download.</p>
-                <p class="checkout-warning">Run Compatibility Check on your Mac before buying Pro.</p>
+                <p class="checkout-warning">After installing, play a track in Apple Music and run Compatibility Check before buying Pro.</p>
                 <form class="price-action" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
                   <input type="hidden" name="source" value="pricing_buy">
-                  <input type="hidden" name="version" value="1.2.1">
+                  <input type="hidden" name="version" value="1.2.2">
                   <input type="hidden" name="page_path" value="/#pricing">
                   <button class="primary-cta" type="submit">Buy for $19.99</button>
                 </form>
@@ -435,13 +435,13 @@
             <article class="faq-item is-open">
               <button class="faq-question" type="button" id="faq-question-works" aria-expanded="true" aria-controls="faq-answer-works">Does Audex Trace work on my Mac?</button>
               <div class="faq-answer" id="faq-answer-works" role="region" aria-labelledby="faq-question-works">
-                <p>Audex Trace requires macOS 15 or later and the Apple Music app. Download it free and run Compatibility Check on your own Mac before buying Pro.</p>
+                <p>Audex Trace requires macOS 15 or later and the Apple Music app. Download it free, play a track in Apple Music, then run Compatibility Check on your own Mac before buying Pro.</p>
               </div>
             </article>
             <article class="faq-item">
               <button class="faq-question" type="button" id="faq-question-compatibility" aria-expanded="false" aria-controls="faq-answer-compatibility">Why should I run Compatibility Check before buying?</button>
               <div class="faq-answer" id="faq-answer-compatibility" role="region" aria-labelledby="faq-question-compatibility" aria-hidden="true">
-                <p>Playback-format detection depends on macOS, Music settings, Apple Music behavior, and the output device. Compatibility Check lets you confirm detection on your setup first.</p>
+                <p>Playback-format detection depends on macOS, Music settings, Apple Music behavior, the active playback route, and the output device. Play a track in Apple Music first; Compatibility Check then lets you confirm detection on your setup.</p>
               </div>
             </article>
             <article class="faq-item">
@@ -484,12 +484,12 @@
         <!-- Download -->
         <section class="status content-band" id="download" aria-labelledby="download-title">
           <div class="section-kicker">Download</div>
-          <h2 id="download-title">Audex Trace 1.2.1 is available now.</h2>
+          <h2 id="download-title">Audex Trace 1.2.2 is available now.</h2>
           <p>Download the signed and notarized macOS app from GitHub Releases. Requires macOS 15 or later.</p>
-          <p>Before purchasing Pro, run the built-in Compatibility Check on your own Mac. Apple Music Song Transitions, AutoMix, or Crossfade can make playback-format detection delayed or unavailable around track changes.</p>
+          <p>After installing, open Audex Trace, play a track in Apple Music, then run the built-in Compatibility Check on your own Mac before purchasing Pro. Apple Music Song Transitions, AutoMix, or Crossfade can make playback-format detection delayed or unavailable around track changes.</p>
           <div class="download-actions">
-            <a class="repository-link" href="https://trace-auth.audex.dev/download?version=1.2.1&source=download_section" data-track-download>Free Download</a>
-            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.1">View GitHub Release</a>
+            <a class="repository-link" href="https://trace-auth.audex.dev/download?version=1.2.2&source=download_section" data-track-download>Free Download</a>
+            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.2">View GitHub Release</a>
             <a class="repository-link" href="changelog.html">View Changelog</a>
           </div>
         </section>

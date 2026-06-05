@@ -3,6 +3,15 @@
     <channel>
         <title>Audex Trace</title>
         <item>
+            <title>1.2.2</title>
+            <pubDate>Sat, 06 Jun 2026 00:42:48 +0900</pubDate>
+            <link>https://trace.audex.dev</link>
+            <sparkle:version>26</sparkle:version>
+            <sparkle:shortVersionString>1.2.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.2.2/AudexTrace-1.2.2.zip" length="6516623" type="application/octet-stream" sparkle:edSignature="JqN2HqXIEYnCEeimLQIbQ0GWWBOOqVQ1LnxszIrm6dY9e1L01B8AeFUBYEXSUpxWjAadW5mlVg0PfpgJuSc0AA=="/>
+        </item>
+        <item>
             <title>1.2.1</title>
             <pubDate>Wed, 03 Jun 2026 01:28:26 +0900</pubDate>
             <link>https://trace.audex.dev</link>
@@ -19,15 +28,6 @@
             <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.2/AudexTrace-1.2.zip" length="6359745" type="application/octet-stream" sparkle:edSignature="WuNDoClW4c6rrglkWxrO7DClrE7YEPcZjsl19yRKQhngUm8n1oR1jlnJ4XJN4SyLQf44hd44hSQWwbVlglfYDQ=="/>
-        </item>
-        <item>
-            <title>1.1</title>
-            <pubDate>Sun, 24 May 2026 03:02:32 +0900</pubDate>
-            <link>https://trace.audex.dev</link>
-            <sparkle:version>23</sparkle:version>
-            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.1/AudexTrace-1.1.zip" length="5903445" type="application/octet-stream" sparkle:edSignature="nMOZnjoEJGblp8Gyz5etpmqXNn976QOkydTLCkErGvO9hHL8JfpawqQRwD/27fH6Z/8ORtNNXbzJNtv/2hUBDw=="/>
         </item>
     </channel>
 </rss>
