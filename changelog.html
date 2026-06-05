@@ -63,7 +63,7 @@
         <section class="changelog-hero content-band" aria-labelledby="changelog-title">
           <div class="section-kicker">Release history</div>
           <h1 id="changelog-title">Audex Trace Changelog</h1>
-          <p class="hero-subtitle">Signed and notarized macOS releases, generated from GitHub Releases.</p>
+          <p class="hero-subtitle">Release notes for Audex Trace, including playback detection, queue, menu bar, notch, and compatibility updates.</p>
           <div class="download-actions">
             <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2.2&amp;source=changelog_download" data-track-download>Download 1.2.2</a>
             <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.2">Latest GitHub Release</a>
@@ -79,13 +79,28 @@
               <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.2">GitHub Release</a>
             </div>
             <div class="changelog-details release-notes">
-              <p>Signed and notarized release for macOS 15+.</p>
+              <p>Maintenance update for Audex Trace 1.2, focused on artwork background readability, clearer Preferences organization, and Compatibility Check polish.</p>
+              <p>Download <code>AudexTrace-1.2.2.zip</code>, unzip it, and move <code>Audex Trace.app</code> to <code>/Applications</code>.</p>
+              <h3>Improvements</h3>
               <ul>
-              <li>Refined compact player, menu bar, and notch interaction polish</li>
-              <li>Improved artwork and playback state transitions</li>
-              <li>Apple Music playback format display</li>
-              <li>Output match status</li>
-              <li>Experimental Auto Sample Rate Match</li>
+              <li>Added background style options for the player window and menu bar panel: Plain, Translucent, and Artwork.</li>
+              <li>Added separate Player Window and Menu Bar appearance settings so each surface can be tuned independently.</li>
+              <li>Improved dynamic artwork backgrounds and text contrast across the mini player, menu bar panel, and Playing Next panel.</li>
+              <li>Improved artwork background transitions when opening or closing Playing Next.</li>
+              <li>Reorganized Preferences into clearer sections for Player Window, Menu Bar, Notch, Playback, and Playing Next.</li>
+              <li>Improved Compatibility Check guidance when Apple Music is not currently playing a track.</li>
+              </ul>
+              <h3>Fixes</h3>
+              <ul>
+              <li>Fixed Compatibility Check guidance appearing for Pro users.</li>
+              <li>Fixed Compatibility Check scrolling while detection is running.</li>
+              <li>Fixed cases where Playing Next text could choose the wrong contrast color.</li>
+              <li>Fixed several small visual inconsistencies in preference labels, experimental badges, and artwork-backed controls.</li>
+              </ul>
+              <h3>Compatibility notes</h3>
+              <ul>
+              <li>Compatibility Check needs an active Apple Music playback session to detect the current playback format and sample-rate behavior on your Mac.</li>
+              <li>Auto Sample Rate Match depends on the output device exposing compatible macOS sample rates.</li>
               </ul>
             </div>
           </article>

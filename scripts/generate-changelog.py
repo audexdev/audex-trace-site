@@ -249,7 +249,7 @@ def render_changelog(releases: list[Release]) -> str:
         <section class="changelog-hero content-band" aria-labelledby="changelog-title">
           <div class="section-kicker">Release history</div>
           <h1 id="changelog-title">Audex Trace Changelog</h1>
-          <p class="hero-subtitle">Signed and notarized macOS releases, generated from GitHub Releases.</p>
+          <p class="hero-subtitle">Release notes for Audex Trace, including playback detection, queue, menu bar, notch, and compatibility updates.</p>
           <div class="download-actions">
             <a class="primary-cta" href="{html.escape(tracked_download_url(latest.version, "changelog_download"))}" data-track-download>Download {html.escape(latest.version)}</a>
             <a class="repository-link" href="{html.escape(latest.release_url)}">Latest GitHub Release</a>
