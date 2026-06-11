@@ -9,7 +9,7 @@
             <sparkle:version>27</sparkle:version>
             <sparkle:shortVersionString>1.2.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.2.3/AudexTrace-1.2.3.zip" length="6617097" type="application/octet-stream" sparkle:edSignature="j83CR9P/os4J2R+jZxYdCmMtO5pGd36+OHn9o1fmlZzZMkitQS5oG3DcSZBf5kvWTdHA/LTIs/zWU8qReF9YAA=="/>
+            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.2.3/AudexTrace-1.2.3.zip" length="6615182" type="application/octet-stream" sparkle:edSignature="DitgY2RWsXl8rJxUQ6xH0NNoJ/a6bh/WnFaF2tGUUDM1fNX0ZfXE9vxKKOJhAJEfdMwSYABvZNRa3Lj0G6AgAw=="/>
         </item>
         <item>
             <title>1.2.2</title>
