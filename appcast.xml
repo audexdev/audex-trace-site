@@ -3,6 +3,15 @@
     <channel>
         <title>Audex Trace</title>
         <item>
+            <title>1.2.3</title>
+            <pubDate>Thu, 11 Jun 2026 14:53:32 +0900</pubDate>
+            <link>https://trace.audex.dev</link>
+            <sparkle:version>27</sparkle:version>
+            <sparkle:shortVersionString>1.2.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.2.3/AudexTrace-1.2.3.zip" length="6617097" type="application/octet-stream" sparkle:edSignature="j83CR9P/os4J2R+jZxYdCmMtO5pGd36+OHn9o1fmlZzZMkitQS5oG3DcSZBf5kvWTdHA/LTIs/zWU8qReF9YAA=="/>
+        </item>
+        <item>
             <title>1.2.2</title>
             <pubDate>Sat, 06 Jun 2026 00:42:48 +0900</pubDate>
             <link>https://trace.audex.dev</link>
@@ -19,15 +28,6 @@
             <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.2.1/AudexTrace-1.2.1.zip" length="6375164" type="application/octet-stream" sparkle:edSignature="K5/F7jz9cuaO+ATT+bIrnYhGQJ49Q2iDxK/eBU0EEFdGF1bXG6lStUaIj5zXmO0asFOJwm1b5koC5lse10uxCw=="/>
-        </item>
-        <item>
-            <title>1.2</title>
-            <pubDate>Fri, 29 May 2026 15:38:24 +0900</pubDate>
-            <link>https://trace.audex.dev</link>
-            <sparkle:version>24</sparkle:version>
-            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.2/AudexTrace-1.2.zip" length="6359745" type="application/octet-stream" sparkle:edSignature="WuNDoClW4c6rrglkWxrO7DClrE7YEPcZjsl19yRKQhngUm8n1oR1jlnJ4XJN4SyLQf44hd44hSQWwbVlglfYDQ=="/>
         </item>
     </channel>
 </rss>
