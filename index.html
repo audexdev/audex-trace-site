@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Audex Trace shows Apple Music Lossless and Hi-Res listeners the live playback format, Mac output match status, and upcoming queue issues before they interrupt playback.">
+    <meta name="description" content="Audex Trace shows Apple Music Lossless and Hi-Res listeners the live playback format, Mac output match status, and possible queue issues before the next track skips or interrupts playback.">
     <meta name="theme-color" content="#07090d">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://trace.audex.dev/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Audex Trace">
     <meta property="og:title" content="Audex Trace">
-    <meta property="og:description" content="Apple Music's badge does not tell the whole story. See live playback format, Mac output match status, and upcoming queue issues.">
+    <meta property="og:description" content="Apple Music's badge does not tell the whole story. See live playback format, Mac output match status, and possible queue issues before the next track skips.">
     <meta property="og:url" content="https://trace.audex.dev/">
     <meta property="og:image" content="https://trace.audex.dev/assets/og-image.svg">
     <meta property="og:image:type" content="image/svg+xml">
@@ -18,7 +18,7 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Audex Trace">
-    <meta name="twitter:description" content="See live Apple Music playback format, Mac output match status, and upcoming queue issues.">
+    <meta name="twitter:description" content="See live Apple Music playback format, Mac output match status, and possible queue issues before the next track skips.">
     <meta name="twitter:image" content="https://trace.audex.dev/assets/og-image.svg">
     <title>Audex Trace - Apple Music playback format detection for macOS</title>
     <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
@@ -173,7 +173,7 @@
           <div class="hero-copy">
             <p class="eyebrow">Built first for Apple Music Lossless on Mac.</p>
             <h1 id="hero-title">Apple Music&rsquo;s badge doesn&rsquo;t tell the whole story.</h1>
-            <p class="hero-subtitle">Audex Trace shows the live playback format, your Mac output match status, and upcoming queue issues in one compact companion for Apple Music.</p>
+            <p class="hero-subtitle">Audex Trace shows the live playback format and your Mac output match status, then can surface possible queue issues before the next track skips or interrupts playback.</p>
             <div class="hero-actions" role="group" aria-label="Audex Trace status actions">
               <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2.3&amp;source=hero_download" data-track-download>Free Compatibility Check</a>
               <form class="inline-checkout-form" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
@@ -220,7 +220,7 @@
         <section class="catches content-band" aria-labelledby="catches-title">
           <div class="section-kicker">What Trace catches</div>
           <h2 id="catches-title">Apple Music shows the badge. Trace shows what can still go wrong.</h2>
-          <p class="section-lede">Trace is built for the moments where the visible label is not enough: the current playback format, the selected Mac output, and the next queue item all matter before the music reaches your ears.</p>
+          <p class="section-lede">Trace is built for the moments where the visible label is not enough: the current playback format, the selected Mac output, and signs that the next queued track may fail or skip all matter before the music reaches your ears.</p>
           <div class="catch-grid">
             <article class="catch-card">
               <span class="card-icon" aria-hidden="true">01</span>
@@ -234,8 +234,8 @@
             </article>
             <article class="catch-card">
               <span class="card-icon" aria-hidden="true">03</span>
-              <h3>Queue item may skip before it plays</h3>
-              <p>Trace Pro can flag upcoming tracks with best-effort skip risk signals before playback reaches them. That makes likely queue issues visible earlier, instead of only after the next track interrupts listening.</p>
+              <h3>Next track may fail or skip</h3>
+              <p>Trace Pro can flag some upcoming tracks with best-effort skip risk signals before playback reaches them. It makes likely queue issues visible earlier, but it is not a guaranteed skip-bug fix.</p>
             </article>
           </div>
           <p class="catch-note">Detection depends on macOS, Apple Music settings, the output route, and device support. After installing, play a track in Apple Music and run Compatibility Check before buying Pro.</p>
@@ -308,7 +308,7 @@
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">SK</span>
               <h3>Skip Risk Detection</h3>
-              <p>In Trace Pro, show best-effort warnings for tracks that may fail, become unavailable, or interrupt playback before they reach the player.</p>
+              <p>In Trace Pro, show Pro-only, best-effort warnings for some tracks that may fail, become unavailable, or interrupt playback before they reach the player.</p>
             </article>
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">UI</span>
@@ -316,10 +316,10 @@
               <p>Keep playback controls and track details close in the compact player, menu bar, or optional notch view.</p>
             </article>
           </div>
-          <p class="feature-boundary">Current playback is read live. Upcoming queue quality is estimated from available metadata until each track starts. Output match compares Apple Music playback with your Mac&rsquo;s current output device. Auto Sample Rate Match is optional and device-dependent.</p>
+          <p class="feature-boundary">Current playback is read live. Upcoming queue quality is estimated from available metadata until each track starts. Skip warnings are Pro-only, best-effort signals and may not appear unless your queue contains an item Trace can identify as risky. Output match compares Apple Music playback with your Mac&rsquo;s current output device. Auto Sample Rate Match is optional and device-dependent.</p>
           <div class="queue-demo-intro">
             <h3>Demo: Playing Next, estimated queue quality, and skip warnings</h3>
-            <p>See upcoming Apple Music tracks before they interrupt playback. Upcoming queue quality is estimated until playback starts, and skip warnings are best-effort signals.</p>
+            <p>See upcoming Apple Music tracks before they interrupt playback. Upcoming queue quality is estimated until playback starts, and skip warnings are best-effort signals, not a guarantee that every Apple Music skip will be detected.</p>
           </div>
           <div class="queue-demo" role="group" aria-label="Audex Trace Playing Next, estimated queue quality, and skip warnings demo">
             <video class="queue-demo-video" autoplay muted loop playsinline preload="metadata" poster="assets/trace-v12-queue-demo-poster.jpg" aria-label="Audex Trace showing Playing Next, estimated queue quality, and skip warnings">
@@ -379,7 +379,7 @@
                 <p class="price-regular">Launch price: $19.99 until the end of June. Regular price: $29.99. One-time purchase. No subscription.</p>
               </div>
               <div class="price-card-copy">
-                <p>One-time lifetime license for Audex Trace Pro. Unlocks live playback readout, output match status, optional Auto Sample Rate Match for compatible devices, estimated queue quality, and best-effort skip warnings. Playing Next itself is included in the free download.</p>
+                <p>One-time lifetime license for Audex Trace Pro. Unlocks live playback readout, output match status, optional Auto Sample Rate Match for compatible devices, estimated queue quality, and Pro-only best-effort skip warnings for some queued-track issues. Playing Next itself is included in the free download.</p>
                 <p class="purchase-confirmation"><strong>Have you run Compatibility Check on this Mac?</strong><span>Audex Trace depends on what macOS and Apple Music expose on your machine. Please install the free build, play an Apple Music track, and run Compatibility Check before buying Pro.</span></p>
                 <form class="price-action" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
                   <input type="hidden" name="source" value="pricing_buy">
@@ -416,7 +416,7 @@
               </ul>
             </div>
           </div>
-          <p class="purchase-note">Playback-format detection depends on your macOS version, Music settings, Apple Music behavior, and output device. For best real-time detection, turn off Song Transitions, AutoMix, or Crossfade in Music.</p>
+          <p class="purchase-note">Playback-format detection depends on your macOS version, Music settings, Apple Music behavior, and output device. For best real-time detection, turn off Song Transitions, AutoMix, or Crossfade in Music. Treat skip warnings as an added Pro signal, not the sole reason to buy.</p>
         </section>
 
         <!-- Requirements -->
