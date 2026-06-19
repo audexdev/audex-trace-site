@@ -184,17 +184,13 @@
               </form>
             </div>
             <p class="checkout-warning">Install Trace, play any Apple Music track, and run Compatibility Check before buying Pro.</p>
-            <p class="status-badge">
-              <span>No Apple Music sign-in</span>
-              <span aria-hidden="true">•</span>
-              <span>No audio upload</span>
-              <span aria-hidden="true">•</span>
-              <span>No listening history upload</span>
-              <span aria-hidden="true">•</span>
-              <span>Local Mac utility</span>
-              <span aria-hidden="true">•</span>
-              <span>macOS 15+</span>
-            </p>
+            <ul class="status-badge" aria-label="Audex Trace privacy and platform notes">
+              <li>No Apple Music sign-in</li>
+              <li>No audio upload</li>
+              <li>No listening history upload</li>
+              <li>Local Mac utility</li>
+              <li>macOS 15+</li>
+            </ul>
           </div>
 
           <!-- Product demo -->
@@ -310,13 +306,13 @@
               <h3>Skip Risk Detection</h3>
               <p>In Trace Pro, show Pro-only, best-effort warnings for some tracks that may fail, become unavailable, or interrupt playback before they reach the player.</p>
             </article>
-            <article class="feature-card">
-              <span class="card-icon" aria-hidden="true">UI</span>
-              <h3>Compact, Menu Bar, and Resident Views</h3>
-              <p>Keep playback controls and track details close in the compact player, menu bar, or optional notch view.</p>
-            </article>
           </div>
-          <p class="feature-boundary">Current playback is read live. Upcoming queue quality is estimated from available metadata until each track starts. Skip warnings are Pro-only, best-effort signals and may not appear unless your queue contains an item Trace can identify as risky. Output match compares Apple Music playback with your Mac&rsquo;s current output device. Auto Sample Rate Match is optional and device-dependent.</p>
+          <aside class="feature-supporting">
+            <span class="feature-supporting-label">Also included</span>
+            <h3>Compact, Menu Bar, and Resident Views</h3>
+            <p>Keep playback controls and track details close in the compact player, menu bar, or optional notch view.</p>
+          </aside>
+          <p class="feature-boundary">Current playback is read live. Queue quality and skip warnings are best-effort Pro signals until each track starts. Output match and Auto Sample Rate Match depend on the selected output device and route.</p>
           <div class="queue-demo-intro">
             <h3>Demo: Playing Next, estimated queue quality, and skip warnings</h3>
             <p>See upcoming Apple Music tracks before they interrupt playback. Upcoming queue quality is estimated until playback starts, and skip warnings are best-effort signals, not a guarantee that every Apple Music skip will be detected.</p>
@@ -375,7 +371,7 @@
             <article class="price-card price-card-featured">
               <div class="price-card-heading">
                 <span class="price-label">Launch offer</span>
-                <strong>$19.99</strong>
+                <strong class="price-amount">$19.99</strong>
                 <p class="price-regular">Launch price: $19.99 until the end of June. Regular price: $29.99. One-time purchase. No subscription.</p>
               </div>
               <div class="price-card-copy">
