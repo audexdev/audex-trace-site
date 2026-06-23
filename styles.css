@@ -227,6 +227,20 @@ h3 {
   margin-bottom: 20px;
 }
 
+.launch-offer {
+  display: inline-block;
+  max-width: 100%;
+  margin: -4px 0 20px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 217, 143, 0.26);
+  border-radius: 999px;
+  color: #ffe7b3;
+  background: rgba(255, 217, 143, 0.08);
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
 .primary-cta,
 .secondary-cta {
   display: inline-flex;
@@ -299,6 +313,7 @@ h3 {
 
 .inline-checkout-form {
   display: inline-flex;
+  max-width: 100%;
 }
 
 .inline-checkout-form button,
@@ -323,6 +338,8 @@ h3 {
   background: rgba(255, 255, 255, 0.035);
   font-weight: 650;
   cursor: pointer;
+  max-width: 100%;
+  white-space: normal;
 }
 
 .secondary-cta:hover,
@@ -819,6 +836,19 @@ h3 {
   font-size: 0.94rem;
 }
 
+.price-savings {
+  display: inline-flex;
+  margin: 0 0 12px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 217, 143, 0.3);
+  border-radius: 999px;
+  color: #ffe7b3;
+  background: rgba(255, 217, 143, 0.08);
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
 .price-card-copy {
   display: flex;
   flex-direction: column;
@@ -1113,6 +1143,12 @@ h3 {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 28px;
+}
+
+.download-price-note {
+  margin: -4px 0 16px;
+  color: #ffe7b3;
+  font-weight: 700;
 }
 
 .site-footer {
