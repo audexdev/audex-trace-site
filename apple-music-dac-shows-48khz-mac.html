@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Why a DAC can show 48 kHz while Apple Music says Lossless or Hi-Res Lossless on Mac, and how to compare Apple Music playback, Audio MIDI Setup, and output sample rate.">
+    <meta name="theme-color" content="#07090d">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://trace.audex.dev/apple-music-dac-shows-48khz-mac.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Audex Trace">
+    <meta property="og:title" content="Why Your DAC Shows 48 kHz When Apple Music Says Hi-Res Lossless">
+    <meta property="og:description" content="Why a DAC can show 48 kHz while Apple Music says Lossless or Hi-Res Lossless on Mac.">
+    <meta property="og:url" content="https://trace.audex.dev/apple-music-dac-shows-48khz-mac.html">
+    <meta property="og:image" content="https://trace.audex.dev/assets/og-image.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why Your DAC Shows 48 kHz When Apple Music Says Hi-Res Lossless">
+    <meta name="twitter:description" content="Compare Apple Music labels, detected playback, Audio MIDI Setup, and your DAC display.">
+    <meta name="twitter:image" content="https://trace.audex.dev/assets/og-image.svg">
+    <title>Why Your DAC Shows 48 kHz When Apple Music Says Hi-Res Lossless</title>
+    <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css?v=20260627">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          { "@type": "Organization", "@id": "https://audex.dev/#organization", "name": "Audex", "url": "https://audex.dev/" },
+          {
+            "@type": "Article",
+            "@id": "https://trace.audex.dev/apple-music-dac-shows-48khz-mac.html#article",
+            "headline": "Why Your DAC Shows 48 kHz When Apple Music Says Hi-Res Lossless",
+            "description": "Why a DAC can show 48 kHz while Apple Music says Lossless or Hi-Res Lossless on Mac, and how to compare Apple Music playback, Audio MIDI Setup, and output sample rate.",
+            "image": "https://trace.audex.dev/assets/og-image.svg",
+            "inLanguage": "en",
+            "author": { "@id": "https://audex.dev/#organization" },
+            "publisher": { "@id": "https://audex.dev/#organization" },
+            "datePublished": "2026-06-27T00:00:00+09:00",
+            "dateModified": "2026-06-27T00:00:00+09:00",
+            "mainEntityOfPage": "https://trace.audex.dev/apple-music-dac-shows-48khz-mac.html"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://trace.audex.dev/apple-music-dac-shows-48khz-mac.html#breadcrumb",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Audex Trace", "item": "https://trace.audex.dev/" },
+              { "@type": "ListItem", "position": 2, "name": "Why Your DAC Shows 48 kHz", "item": "https://trace.audex.dev/apple-music-dac-shows-48khz-mac.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://trace.audex.dev/apple-music-dac-shows-48khz-mac.html#faq",
+            "mainEntity": [
+              { "@type": "Question", "name": "Is my DAC wrong if it shows 48 kHz?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. The DAC may be accurately showing the current macOS output stream, even if Apple Music's track label or detected playback format is different." } },
+              { "@type": "Question", "name": "Why does Audio MIDI Setup still show 48 kHz?", "acceptedAnswer": { "@type": "Answer", "text": "Audio MIDI Setup shows the output format selected for the active Mac audio device. It may stay fixed until you change it, the route changes, or software changes it." } },
+              { "@type": "Question", "name": "Can Audex Trace fix a DAC stuck at 48 kHz?", "acceptedAnswer": { "@type": "Answer", "text": "Trace helps you see whether playback and output differ. Trace Pro can optionally change the Mac output sample rate on compatible devices, but device and route support still matter." } },
+              { "@type": "Question", "name": "Should I always set my DAC to 192 kHz?", "acceptedAnswer": { "@type": "Answer", "text": "No. Setting the output to the highest rate does not make every track Hi-Res and may not be the best practical check. Compare the actual playback and output layers." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" data-elevate>
+        <a class="brand" href="index.html#top" aria-label="Audex Trace home"><img class="brand-mark" src="assets/trace-mark.svg" alt="" aria-hidden="true"><span>Audex Trace</span></a>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation"><a href="index.html#features">Features</a><a href="index.html#apps">Apps</a><a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="privacy.html">Privacy</a><a href="changelog.html">Changelog</a><a href="index.html#download">Download</a></nav>
+        <div class="header-actions"><a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2.3&amp;source=dac_48khz_header_download" data-track-download>Free Download</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button></div>
+      </header>
+
+      <main>
+        <article>
+          <section class="changelog-hero content-band guide-hero" aria-labelledby="guide-title">
+            <div class="section-kicker">Apple Music DAC checks</div>
+            <h1 id="guide-title">Why your DAC shows 48 kHz when Apple Music says Hi-Res Lossless.</h1>
+            <p class="hero-subtitle">A DAC sample-rate display is useful, but it usually shows the Mac output stream, not the whole Apple Music playback path.</p>
+            <div class="guide-meta"><span>Updated June 27, 2026</span><span aria-hidden="true">•</span><span>For Apple Music on macOS</span></div>
+          </section>
+
+          <section class="content-band guide-layout" aria-label="DAC 48 kHz guide">
+            <aside class="guide-aside" aria-label="On this page"><h2>On this page</h2><a href="#quick-answer">Quick answer</a><a href="#layers">Layers</a><a href="#check">How to check</a><a href="#fixes">Fixes</a><a href="#trace">How Trace helps</a><a href="#faq">FAQ</a></aside>
+            <div class="guide-copy">
+              <section id="quick-answer" aria-labelledby="quick-answer-title">
+                <div class="section-kicker">Quick answer</div>
+                <h2 id="quick-answer-title">Your DAC is probably showing macOS output, not the full Apple Music source.</h2>
+                <p>Your DAC is usually showing the sample rate of the signal it receives from macOS, not a full report of Apple Music's source track. If macOS output is set to 48.0 kHz, your DAC can keep showing 48 kHz even while Apple Music is playing a track labeled Hi-Res Lossless.</p>
+                <div class="guide-callout"><strong>Short answer:</strong><p>Compare three layers: Apple Music label, detected playback format, and macOS output format. A 48 kHz DAC display can be normal for a fixed Mac output route, even when the Apple Music track itself is different.</p></div>
+              </section>
+
+              <section id="layers" aria-labelledby="layers-title">
+                <div class="section-kicker">Layers</div>
+                <h2 id="layers-title">The DAC display is one layer, not the whole story.</h2>
+                <div class="guide-table-wrap"><table class="guide-comparison-table"><thead><tr><th scope="col">Where you look</th><th scope="col">What it shows</th><th scope="col">Possible reading</th></tr></thead><tbody><tr><th scope="row">Apple Music</th><td data-label="What it shows">Track label or availability</td><td data-label="Possible reading">Hi-Res Lossless</td></tr><tr><th scope="row">Trace playback readout</th><td data-label="What it shows">Detected current playback</td><td data-label="Possible reading">ALAC 24-bit / 96 kHz</td></tr><tr><th scope="row">Audio MIDI Setup</th><td data-label="What it shows">Selected macOS output format</td><td data-label="Possible reading">2ch 24-bit / 48 kHz</td></tr><tr><th scope="row">DAC display</th><td data-label="What it shows">Incoming signal from the Mac</td><td data-label="Possible reading">48 kHz</td></tr></tbody></table></div>
+              </section>
+
+              <section id="check" aria-labelledby="check-title">
+                <div class="section-kicker">Check</div>
+                <h2 id="check-title">What to do before assuming Apple Music is broken.</h2>
+                <ol class="guide-steps"><li><strong>Confirm the active output device.</strong><span>Make sure the DAC or interface is actually selected as the Mac output route.</span></li><li><strong>Check Audio MIDI Setup.</strong><span>Select the device and look at the Format menu. This is often what your DAC display reflects.</span></li><li><strong>Play a Hi-Res Lossless track.</strong><span>Use a track that clearly shows Hi-Res Lossless in Apple Music.</span></li><li><strong>Compare playback and output.</strong><span>Use Trace to compare the detected Apple Music playback format with the Mac output sample rate.</span></li></ol>
+              </section>
+
+              <section id="fixes" aria-labelledby="fixes-title">
+                <div class="section-kicker">Fixes</div>
+                <h2 id="fixes-title">When to change Audio MIDI Setup.</h2>
+                <p>If Trace or another playback readout shows a higher sample rate than your Mac output, and your DAC supports that rate, you can try changing the device format manually in Audio MIDI Setup. Trace Pro can also optionally match sample rate for compatible output devices.</p>
+                <p>Do not change settings blindly. Some tracks are genuinely 44.1 kHz or 48 kHz, and some devices or routes do not expose every sample rate to macOS.</p>
+              </section>
+
+              <section id="trace" aria-labelledby="trace-title">
+                <div class="section-kicker">Audex Trace</div>
+                <h2 id="trace-title">Check playback and output on your own Mac.</h2>
+                <p>Audex Trace is a macOS Apple Music companion that shows live playback details, including codec, bit depth, sample rate, Mac output sample rate, and output match status. The free download includes Compatibility Check so you can test your own setup before buying Pro.</p>
+                <div class="guide-cta"><div><h3>Run the free Compatibility Check.</h3><p>Play a track in Apple Music, open Trace, and confirm detection on your Mac.</p></div><a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2.3&amp;source=dac_48khz_download" data-track-download>Free Download</a></div>
+              </section>
+
+              <section id="related-guides" aria-labelledby="related-guides-title"><div class="section-kicker">Related guides</div><h2 id="related-guides-title">Continue checking Apple Music on Mac.</h2><ul class="guide-list"><li><a class="text-link" href="apple-music-sample-rate-mismatch-mac.html">Apple Music sample rate mismatch on Mac</a></li><li><a class="text-link" href="apple-music-bit-depth-sample-rate-mac.html">How to check Apple Music bit depth and sample rate on Mac</a></li><li><a class="text-link" href="apple-music-exclusive-mode-mac.html">Does Apple Music have exclusive mode on Mac?</a></li><li><a class="text-link" href="audex-trace-fact-sheet.html">Audex Trace fact sheet</a></li></ul></section>
+
+              <section id="faq" aria-labelledby="faq-title"><div class="section-kicker">FAQ</div><h2 id="faq-title">Common questions.</h2><div class="faq-list guide-faq-list"><article class="faq-item is-open"><button class="faq-question" type="button" id="faq-1" aria-expanded="true" aria-controls="faq-1-answer">Is my DAC wrong if it shows 48 kHz?</button><section class="faq-answer" id="faq-1-answer" aria-labelledby="faq-1"><p>Not necessarily. The DAC may be accurately showing the current macOS output stream, even if Apple Music's track label or detected playback format is different.</p></section></article><article class="faq-item"><button class="faq-question" type="button" id="faq-2" aria-expanded="false" aria-controls="faq-2-answer">Why does Audio MIDI Setup still show 48 kHz?</button><section class="faq-answer" id="faq-2-answer" aria-labelledby="faq-2" aria-hidden="true"><p>Audio MIDI Setup shows the output format selected for the active Mac audio device. It may stay fixed until you change it, the route changes, or software changes it.</p></section></article><article class="faq-item"><button class="faq-question" type="button" id="faq-3" aria-expanded="false" aria-controls="faq-3-answer">Can Audex Trace fix a DAC stuck at 48 kHz?</button><section class="faq-answer" id="faq-3-answer" aria-labelledby="faq-3" aria-hidden="true"><p>Trace helps you see whether playback and output differ. Trace Pro can optionally change the Mac output sample rate on compatible devices, but device and route support still matter.</p></section></article><article class="faq-item"><button class="faq-question" type="button" id="faq-4" aria-expanded="false" aria-controls="faq-4-answer">Should I always set my DAC to 192 kHz?</button><section class="faq-answer" id="faq-4-answer" aria-labelledby="faq-4" aria-hidden="true"><p>No. Setting the output to the highest rate does not make every track Hi-Res and may not be the best practical check. Compare the actual playback and output layers.</p></section></article></div></section>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer class="site-footer"><div class="footer-brand"><span>Audex Trace</span><span>© 2026 Audex</span></div><nav aria-label="Footer links"><a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate Guide</a><a href="apple-music-bit-depth-sample-rate-mac.html">Bit Depth Guide</a><a href="audex-trace-fact-sheet.html">Fact Sheet</a><a href="privacy.html">Privacy</a><a href="index.html#pricing">Pricing</a><a href="changelog.html">Changelog</a><a href="contact.html">Contact</a></nav></footer>
+    </div>
+    <script src="script.js?v=20260604"></script>
+  </body>
+</html>
