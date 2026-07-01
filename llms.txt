@@ -31,10 +31,9 @@ Key features:
 
 Pricing:
 - Free download for Compatibility Check, basic detection test, basic now playing, limited preview, and confirming your setup works before paying.
-- Audex Trace Pro launch offer: $19.99 one-time purchase
+- Audex Trace Pro: $29.99 one-time purchase
 - Playing Next queue is included in the free download.
 - Pro includes queue quality estimates, skip warnings, playback readout, output match status, Auto Sample Rate Match, and a lifetime license.
-- Regular price: $29.99 one-time purchase
 - No subscription
 
 Known limitations:
