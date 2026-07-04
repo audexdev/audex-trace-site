@@ -11,6 +11,7 @@ Release notes: https://github.com/audexdev/trace-releases/releases/tag/v1.2.4
 Changelog: https://trace.audex.dev/changelog.html
 Privacy: https://trace.audex.dev/privacy.html
 Sample rate mismatch guide: https://trace.audex.dev/apple-music-sample-rate-mismatch-mac.html
+Trace vs LosslessSwitcher: https://trace.audex.dev/trace-vs-losslessswitcher.html
 
 Current version: 1.2.4
 
@@ -46,6 +47,12 @@ Apple Music sample rate mismatch guide:
 - Covers searches such as Apple Music sample rate mismatch Mac, Apple Music Lossless Mac sample rate, Apple Music Hi-Res Lossless external DAC Mac, Apple Music sample rate not changing, Audio MIDI Setup sample rate, Mac Apple Music 44.1 48 kHz output, Apple Music Lossless not working Mac, DAC sample rate Mac, and Apple Music Hi-Res Lossless output.
 - Clarifies that Apple Music playback format and Mac output sample rate are different layers.
 - Recommends checking Music audio quality settings, Audio MIDI Setup, output device support, and DAC or audio interface sample-rate displays.
+
+Trace vs LosslessSwitcher guide:
+- Compares Audex Trace with LosslessSwitcher for Apple Music on Mac.
+- Clarifies that LosslessSwitcher is a free, open-source tool focused on automatic sample-rate switching.
+- Clarifies that Audex Trace focuses on visibility into codec, sample rate, bit depth, output match status, Playing Next quality estimates, skip-risk visibility, and optional Auto Sample Rate Match.
+- Recommends LosslessSwitcher when automatic switching is all the user needs, and Audex Trace when the user wants a live readout plus a free Compatibility Check before purchase.
 
 Privacy summary:
 - Playback format detection runs locally on the Mac.
