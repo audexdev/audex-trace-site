@@ -60,7 +60,7 @@ Privacy summary:
 - License verification, update checks, purchase checkout, artwork fallback, and minimal website download/checkout counts may use the network.
 - No listening history is uploaded for audio-quality detection.
 - No Apple Music account sign-in or cloud library API access is required.
-- Website download and checkout events may be counted with minimal, non-audio attribution data such as source/ref/UTM parameters, anonymous browser/session IDs, release version, landing page, referrer host, coarse country, optional salted IP hash, and Stripe Checkout session ID.
+- Website download and checkout events may be counted with minimal, non-audio attribution data such as source/ref/UTM parameters, anonymous browser/session IDs, release version, landing page, referrer host, coarse country, optional salted IP hash, User-Agent class, burst duplicate flag, and Stripe Checkout session ID.
 
 FAQ:
 
