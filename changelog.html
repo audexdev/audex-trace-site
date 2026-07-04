@@ -35,7 +35,7 @@
           "@type": "SoftwareApplication",
           "name": "Audex Trace",
           "operatingSystem": "macOS 15 or later",
-          "softwareVersion": "1.2.3",
+          "softwareVersion": "1.2.4",
           "url": "https://trace.audex.dev/"
         }
       }
@@ -56,7 +56,7 @@
           <a href="changelog.html" aria-current="page">Changelog</a>
           <a href="index.html#download">Download</a>
         </nav>
-        <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2.3&amp;source=changelog_header_download" data-track-download>Free Download</a>
+        <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2.4&amp;source=changelog_header_download" data-track-download>Free Download</a>
       </header>
 
       <main>
@@ -65,8 +65,8 @@
           <h1 id="changelog-title">Audex Trace Changelog</h1>
           <p class="hero-subtitle">Release notes for Audex Trace, including playback detection, queue, menu bar, notch, and compatibility updates.</p>
           <div class="download-actions">
-            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2.3&amp;source=changelog_download" data-track-download>Download 1.2.3</a>
-            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.3">Latest GitHub Release</a>
+            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2.4&amp;source=changelog_download" data-track-download>Download 1.2.4</a>
+            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.4">Latest GitHub Release</a>
           </div>
         </section>
 
@@ -74,6 +74,29 @@
           <article class="changelog-entry">
             <div class="changelog-meta">
               <span class="price-label">Current release</span>
+              <h2>1.2.4</h2>
+              <p>July 4, 2026</p>
+              <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.4">GitHub Release</a>
+            </div>
+            <div class="changelog-details release-notes">
+              <ul>
+              <li>Improved Compatibility Check playback-format detection when Apple Music takes longer to start playback or report fresh format information.</li>
+              <li>Added clearer Compatibility Check results when playback is unavailable, Automation access is disabled, or the check cannot complete.</li>
+              <li>Improved Playing Next quality estimates and controls, especially for downloaded or local queue items.</li>
+              <li>Improved playback display polish, including labels, contrast, and compact player details.</li>
+              <li>Improved playback state stability around brief zero-position or duration updates from Apple Music.</li>
+              </ul>
+              <p>Download <code>AudexTrace-1.2.4.zip</code>, unzip it, and move <code>Audex Trace.app</code> to <code>/Applications</code>.</p>
+              <h3>Compatibility notes</h3>
+              <ul>
+              <li>Requires macOS 15 or later.</li>
+              <li>For best real-time playback-format detection, turn off Song Transitions, AutoMix, or Crossfade in Music.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="price-label">Release</span>
               <h2>1.2.3</h2>
               <p>June 11, 2026</p>
               <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.3">GitHub Release</a>
@@ -85,7 +108,6 @@
               <li>Fixed an issue where Audex Trace could unexpectedly launch or relaunch Apple Music while monitoring playback.</li>
               <li>Improved the empty/waiting state when Apple Music is not currently running.</li>
               <li>Improved Music access recovery when macOS Automation permission needs attention.</li>
-              <li>Removed an unnecessary Apple Music media library permission prompt from the release build.</li>
               </ul>
               <p>Download <code>AudexTrace-1.2.3.zip</code>, unzip it, and move <code>Audex Trace.app</code> to <code>/Applications</code>.</p>
               <h3>Compatibility notes</h3>

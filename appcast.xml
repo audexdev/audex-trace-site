@@ -3,6 +3,15 @@
     <channel>
         <title>Audex Trace</title>
         <item>
+            <title>1.2.4</title>
+            <pubDate>Sat, 04 Jul 2026 22:25:43 +0900</pubDate>
+            <link>https://trace.audex.dev</link>
+            <sparkle:version>28</sparkle:version>
+            <sparkle:shortVersionString>1.2.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.2.4/AudexTrace-1.2.4.zip" length="6918133" type="application/octet-stream" sparkle:edSignature="3M4+Wg62ZPzcnoTIuWqbDVAH7KMCqaFPiNxNflHGWtaJM74kUy5S37HNc0ULMx4lcf/MwAGlyeIxAvJdG+BaCw=="/>
+        </item>
+        <item>
             <title>1.2.3</title>
             <pubDate>Thu, 11 Jun 2026 14:53:32 +0900</pubDate>
             <link>https://trace.audex.dev</link>
@@ -19,15 +28,6 @@
             <sparkle:shortVersionString>1.2.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.2.2/AudexTrace-1.2.2.zip" length="6516623" type="application/octet-stream" sparkle:edSignature="JqN2HqXIEYnCEeimLQIbQ0GWWBOOqVQ1LnxszIrm6dY9e1L01B8AeFUBYEXSUpxWjAadW5mlVg0PfpgJuSc0AA=="/>
-        </item>
-        <item>
-            <title>1.2.1</title>
-            <pubDate>Wed, 03 Jun 2026 01:28:26 +0900</pubDate>
-            <link>https://trace.audex.dev</link>
-            <sparkle:version>25</sparkle:version>
-            <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.2.1/AudexTrace-1.2.1.zip" length="6375164" type="application/octet-stream" sparkle:edSignature="K5/F7jz9cuaO+ATT+bIrnYhGQJ49Q2iDxK/eBU0EEFdGF1bXG6lStUaIj5zXmO0asFOJwm1b5koC5lse10uxCw=="/>
         </item>
     </channel>
 </rss>
