@@ -87,6 +87,14 @@
               },
               {
                 "@type": "Question",
+                "name": "Can I use one Trace Pro license on more than one Mac?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. One Trace Pro license covers all Macs you personally use. Enter the same license key on each Mac; first-time activation and key changes require an internet connection."
+                }
+              },
+              {
+                "@type": "Question",
                 "name": "What does Apple Music's Lossless badge not show?",
                 "acceptedAnswer": {
                   "@type": "Answer",
@@ -98,7 +106,7 @@
                 "name": "Does Trace change my sample rate automatically?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Trace Pro includes optional Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates. It depends on the device and route, and affects the selected macOS output device, not only Apple Music."
+                  "text": "Trace Pro includes optional Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates. It depends on the device and route, and affects the selected macOS output device, not only Apple Music. Switching a device's sample rate can briefly interrupt audio on some output devices. This is inherent to changing the device rate on macOS and applies to any tool that switches rates. In our testing, FiiO KA11 shows a brief gap during the switch; built-in speakers do not."
                 }
               },
               {
@@ -368,7 +376,7 @@
                 <p class="price-regular">$29.99 one-time purchase. No subscription.</p>
               </div>
               <div class="price-card-copy">
-                <p>One-time lifetime license for Audex Trace Pro. Unlocks live playback readout, output match status, Auto Sample Rate Match, queue quality estimates, and skip warnings. Playing Next itself is included in the free download.</p>
+                <p>One-time lifetime license for Audex Trace Pro. One license covers all Macs you personally use; enter the same license key on each Mac for online verification. Unlocks live playback readout, output match status, Auto Sample Rate Match, queue quality estimates, and skip warnings. Playing Next itself is included in the free download.</p>
                 <p class="purchase-confirmation">Run Compatibility Check first. If Trace does not detect playback format on your Mac, don't buy Pro.</p>
                 <form class="price-action" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
                   <input type="hidden" name="source" value="pricing_buy">
@@ -399,7 +407,7 @@
                 <li>Auto Sample Rate Match</li>
                 <li>Queue quality estimates</li>
                 <li>Skip warnings</li>
-                <li>Lifetime license</li>
+                <li>Lifetime license for all Macs you personally use</li>
               </ul>
             </div>
           </div>
@@ -411,7 +419,7 @@
           <h2 id="requirements-title">Designed for recent macOS and Apple Music.</h2>
           <div class="requirements-list">
             <p>Requires macOS 15 or later with the Apple Music app installed.</p>
-            <p>Tested on macOS 15.4, 26.3, 26.3.1, 26.4.1, and 26.5.</p>
+            <p>Tested on macOS 15.4, 26.3, 26.3.1, 26.4.1, and 26.5. <a class="text-link" href="tested-setups.html">See tested setups</a>.</p>
             <p>macOS 14 and earlier are not officially supported.</p>
             <p>Local Apple Music playback on the Mac.</p>
             <p>One-time purchase with no subscription.</p>
@@ -464,6 +472,12 @@
               </div>
             </article>
             <article class="faq-item">
+              <button class="faq-question" type="button" id="faq-question-license-macs" aria-expanded="false" aria-controls="faq-answer-license-macs">Can I use one Trace Pro license on more than one Mac?</button>
+              <div class="faq-answer" id="faq-answer-license-macs" role="region" aria-labelledby="faq-question-license-macs" aria-hidden="true">
+                <p>Yes. One Trace Pro license covers all Macs you personally use. Enter the same license key on each Mac; first-time activation and key changes require an internet connection.</p>
+              </div>
+            </article>
+            <article class="faq-item">
               <button class="faq-question" type="button" id="faq-question-badge" aria-expanded="false" aria-controls="faq-answer-badge">What does Apple Music&rsquo;s Lossless badge not show?</button>
               <div class="faq-answer" id="faq-answer-badge" role="region" aria-labelledby="faq-question-badge" aria-hidden="true">
                 <p>The badge describes track availability or a playback label, but it does not clearly show the detected playback format and the Mac output sample rate together. Trace shows those layers side by side.</p>
@@ -472,7 +486,7 @@
             <article class="faq-item">
               <button class="faq-question" type="button" id="faq-question-rate" aria-expanded="false" aria-controls="faq-answer-rate">Does Trace change my sample rate automatically?</button>
               <div class="faq-answer" id="faq-answer-rate" role="region" aria-labelledby="faq-question-rate" aria-hidden="true">
-                <p>Trace Pro includes optional Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates. It depends on the device and route, and affects the selected macOS output device, not only Apple Music.</p>
+                <p>Trace Pro includes optional Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates. It depends on the device and route, and affects the selected macOS output device, not only Apple Music. Switching a device&rsquo;s sample rate can briefly interrupt audio on some output devices. This is inherent to changing the device rate on macOS and applies to any tool that switches rates. In our testing, FiiO KA11 shows a brief gap during the switch; built-in speakers do not.</p>
               </div>
             </article>
             <article class="faq-item">
@@ -508,6 +522,7 @@
           <h2 id="policy-title">A narrow refund policy for compatibility.</h2>
           <div class="policy-grid">
             <p><strong>7-day compatibility refund.</strong> If Audex Trace cannot detect Apple Music playback format on a supported macOS version, contact <a href="mailto:support@audex.dev">support@audex.dev</a> within 7 days.</p>
+            <p><strong>Personal Mac license.</strong> One Trace Pro license covers all Macs you personally use. Enter the same license key on each Mac; first-time activation and key changes require an internet connection.</p>
             <p><strong>Known limitation.</strong> Future macOS or Apple Music updates may require Audex Trace updates.</p>
           </div>
         </section>
