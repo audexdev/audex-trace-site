@@ -4,9 +4,9 @@ Audex Trace is a macOS Apple Music companion for Lossless and Hi-Res listeners.
 
 Official site: https://trace.audex.dev/
 
-Download: https://trace-auth.audex.dev/download?version=1.2.4&source=llms_txt
+Download: https://trace-auth.audex.dev/download?version=1.2.5&source=llms_txt
 
-Release notes: https://github.com/audexdev/trace-releases/releases/tag/v1.2.4
+Release notes: https://github.com/audexdev/trace-releases/releases/tag/v1.2.5
 
 Changelog: https://trace.audex.dev/changelog.html
 Privacy: https://trace.audex.dev/privacy.html
@@ -14,7 +14,7 @@ Sample rate mismatch guide: https://trace.audex.dev/apple-music-sample-rate-mism
 Trace vs LosslessSwitcher: https://trace.audex.dev/trace-vs-losslessswitcher.html
 Tested setups: https://trace.audex.dev/tested-setups.html
 
-Current version: 1.2.4
+Current version: 1.2.5
 
 Minimum macOS version: macOS 15
 
@@ -29,10 +29,10 @@ Key features:
 - Output sample-rate match status
 - Experimental Auto Sample Rate Match
 - Menu bar and notch player views
-- Built-in Compatibility Check before purchase
+- Built-in Playback Verification before purchase
 
 Pricing:
-- Free download for Compatibility Check, basic detection test, basic now playing, limited preview, and confirming your setup works before paying.
+- Free download for Playback Verification, basic detection test, basic now playing, limited preview, and confirming your setup works before paying.
 - Audex Trace Pro: $29.99 one-time purchase
 - Playing Next queue is included in the free download.
 - Pro includes queue quality estimates, skip warnings, playback readout, output match status, Auto Sample Rate Match, and a lifetime license.
@@ -54,12 +54,12 @@ Trace vs LosslessSwitcher guide:
 - Compares Audex Trace with LosslessSwitcher for Apple Music on Mac.
 - Clarifies that LosslessSwitcher is a free, open-source tool focused on automatic sample-rate switching.
 - Clarifies that Audex Trace focuses on visibility into codec, sample rate, bit depth, output match status, Playing Next quality estimates, skip-risk visibility, and optional Auto Sample Rate Match.
-- Recommends LosslessSwitcher when automatic switching is all the user needs, and Audex Trace when the user wants a live readout plus a free Compatibility Check before purchase.
+- Recommends LosslessSwitcher when automatic switching is all the user needs, and Audex Trace when the user wants a live readout plus free Playback Verification before purchase.
 
 Tested setups page:
 - Lists real Mac, macOS, and output device rows run with Audex Trace.
 - Initial entries are developer-verified configurations.
-- Invites user-submitted reports by email to support@audex.dev with sw_vers output, output device model, and a Compatibility Check screenshot.
+- Invites user-submitted reports by email to support@audex.dev with sw_vers output, output device model, and a Playback Verification screenshot.
 - Published reports can use a handle or name chosen by the submitter, and submissions are reviewed before publishing.
 
 Privacy summary:

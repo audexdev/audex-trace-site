@@ -35,7 +35,7 @@
           "@type": "SoftwareApplication",
           "name": "Audex Trace",
           "operatingSystem": "macOS 15 or later",
-          "softwareVersion": "1.2.4",
+          "softwareVersion": "1.2.5",
           "url": "https://trace.audex.dev/"
         }
       }
@@ -56,7 +56,7 @@
           <a href="changelog.html" aria-current="page">Changelog</a>
           <a href="index.html#download">Download</a>
         </nav>
-        <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2.4&amp;source=changelog_header_download" data-track-download>Free Download</a>
+        <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2.5&amp;source=changelog_header_download" data-track-download>Free Download</a>
       </header>
 
       <main>
@@ -65,8 +65,8 @@
           <h1 id="changelog-title">Audex Trace Changelog</h1>
           <p class="hero-subtitle">Release notes for Audex Trace, including playback detection, queue, menu bar, notch, and compatibility updates.</p>
           <div class="download-actions">
-            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2.4&amp;source=changelog_download" data-track-download>Download 1.2.4</a>
-            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.4">Latest GitHub Release</a>
+            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2.5&amp;source=changelog_download" data-track-download>Download 1.2.5</a>
+            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.5">Latest GitHub Release</a>
           </div>
         </section>
 
@@ -74,6 +74,31 @@
           <article class="changelog-entry">
             <div class="changelog-meta">
               <span class="price-label">Current release</span>
+              <h2>1.2.5</h2>
+              <p>July 10, 2026</p>
+              <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.5">GitHub Release</a>
+            </div>
+            <div class="changelog-details release-notes">
+              <p>Compatibility Check is now Playback Verification. Same feature, clearer name: it verifies what Apple Music is actually playing on your Mac before you buy Pro. All functionality is unchanged.</p>
+              <h3>Improvements</h3>
+              <ul>
+              <li>Menu, preferences, and verification window labels now use Verify Playback and Verify Sample Rate (previously Run Check and Run Match Check).</li>
+              <li>Output sample-rate details now show the current Device format when available, matching the wording used by Audio MIDI Setup. Output matched is still based on sample rate only.</li>
+              <li>The notch expanded view now shows the output sample rate next to the playback format (for example, ALAC 24/96 → 96).</li>
+              <li>License verification now includes an anonymous device identifier generated randomly by Audex Trace and hashed on your Mac. It does not use hardware serial numbers, device names, or personal information, and is only sent as part of the standard license check.</li>
+              <li>Minor visual refinements to notch controls and button highlights.</li>
+              </ul>
+              <p>Download <code>AudexTrace-1.2.5.zip</code>, unzip it, and move <code>Audex Trace.app</code> to <code>/Applications</code>.</p>
+              <h3>Compatibility notes</h3>
+              <ul>
+              <li>Requires macOS 15 or later.</li>
+              <li>For best real-time playback-format detection, turn off Song Transitions, AutoMix, or Crossfade in Music.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="price-label">Release</span>
               <h2>1.2.4</h2>
               <p>July 4, 2026</p>
               <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.4">GitHub Release</a>
