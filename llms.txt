@@ -32,7 +32,7 @@ Key features:
 - Built-in Playback Verification before purchase
 
 Pricing:
-- Free download for Playback Verification, basic detection test, basic now playing, limited preview, and confirming your setup works before paying.
+- Free forever: Now Playing with playback controls, track metadata and artwork, Playing Next, and Playback Verification. No time limit.
 - Audex Trace Pro: $29.99 one-time purchase
 - Playing Next queue is included in the free download.
 - Pro includes queue quality estimates, skip warnings, playback readout, output match status, Auto Sample Rate Match, and a lifetime license.
