@@ -4,9 +4,9 @@ Audex Trace is a macOS Apple Music companion for Lossless and Hi-Res listeners.
 
 Official site: https://trace.audex.dev/
 
-Download: https://trace-auth.audex.dev/download?version=1.2.5&source=llms_txt
+Download: https://trace-auth.audex.dev/download?version=1.3&source=llms_txt
 
-Release notes: https://github.com/audexdev/trace-releases/releases/tag/v1.2.5
+Release notes: https://github.com/audexdev/trace-releases/releases/tag/v1.3
 
 Changelog: https://trace.audex.dev/changelog.html
 Privacy: https://trace.audex.dev/privacy.html
@@ -14,7 +14,7 @@ Sample rate mismatch guide: https://trace.audex.dev/apple-music-sample-rate-mism
 Trace vs LosslessSwitcher: https://trace.audex.dev/trace-vs-losslessswitcher.html
 Tested setups: https://trace.audex.dev/tested-setups.html
 
-Current version: 1.2.5
+Current version: 1.3
 
 Minimum macOS version: macOS 15
 

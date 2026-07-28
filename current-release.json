@@ -1,9 +1,9 @@
 {
-  "version": "1.2.5",
-  "build": "29",
-  "tag": "v1.2.5",
-  "assetName": "AudexTrace-1.2.5.zip",
-  "releaseUrl": "https://github.com/audexdev/trace-releases/releases/tag/v1.2.5",
-  "downloadUrl": "https://github.com/audexdev/trace-releases/releases/download/v1.2.5/AudexTrace-1.2.5.zip",
-  "publishedAt": "2026-07-09T15:26:39Z"
+  "version": "1.3",
+  "build": "30",
+  "tag": "v1.3",
+  "assetName": "AudexTrace-1.3.zip",
+  "releaseUrl": "https://github.com/audexdev/trace-releases/releases/tag/v1.3",
+  "downloadUrl": "https://github.com/audexdev/trace-releases/releases/download/v1.3/AudexTrace-1.3.zip",
+  "publishedAt": "2026-07-28T07:38:54Z"
 }

@@ -50,8 +50,8 @@
             "applicationCategory": "MultimediaApplication",
             "operatingSystem": "macOS 15 or later",
             "url": "https://trace.audex.dev/",
-            "downloadUrl": "https://trace-auth.audex.dev/download?version=1.2.5&source=software_schema",
-            "softwareVersion": "1.2.5",
+            "downloadUrl": "https://trace-auth.audex.dev/download?version=1.3&source=software_schema",
+            "softwareVersion": "1.3",
             "description": "Audex Trace is a macOS Apple Music companion for Lossless and Hi-Res listeners, with live playback readout, output match status, Playing Next, queue quality estimates, skip-risk warnings, and optional sample-rate matching for compatible output devices.",
             "image": "https://trace.audex.dev/assets/og-image.svg",
             "offers": {
@@ -119,6 +119,14 @@
               },
               {
                 "@type": "Question",
+                "name": "Are playback quality suggestions the format currently playing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Suggestions are best-effort availability information about other formats or releases in Apple Music. They do not change playback automatically. You choose whether to open an alternate release in Music. The Playback details panel shows the format currently detected on your Mac."
+                }
+              },
+              {
+                "@type": "Question",
                 "name": "Who is Audex Trace for?",
                 "acceptedAnswer": {
                   "@type": "Answer",
@@ -166,7 +174,7 @@
           <a href="#download">Download</a>
         </nav>
         <div class="header-actions">
-          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.2.5&amp;source=header_download" data-track-download>Free Check</a>
+          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.3&amp;source=header_download" data-track-download>Free Check</a>
           <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
             <span></span>
             <span></span>
@@ -183,10 +191,10 @@
             <h1 id="hero-title">Apple Music says Lossless. Output may not match.</h1>
             <p class="hero-subtitle">Audex Trace lets you verify what Apple Music is actually playing on your Mac — live codec, bit depth, and sample rate — and whether your Mac output matches.</p>
             <div class="hero-actions" role="group" aria-label="Audex Trace status actions">
-              <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.2.5&amp;source=hero_download" data-track-download>Verify Playback — Free</a>
+              <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.3&amp;source=hero_download" data-track-download>Verify Playback — Free</a>
               <form class="inline-checkout-form" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
                 <input type="hidden" name="source" value="hero_buy">
-                <input type="hidden" name="version" value="1.2.5">
+                <input type="hidden" name="version" value="1.3">
                 <input type="hidden" name="page_path" value="/">
                 <button class="secondary-cta" type="submit">Already checked? Buy Pro for $29.99</button>
               </form>
@@ -275,22 +283,27 @@
         <section class="features content-band" id="features" aria-labelledby="features-title">
           <div class="section-kicker">Solution</div>
           <h2 id="features-title">Start with what is actually playing.</h2>
-          <p class="section-lede">Audex Trace is for Apple Music listeners who want to know what their Mac is really doing: live playback format first, output match next, then queue estimates and warnings before the next track arrives.</p>
+          <p class="section-lede">Audex Trace is for Apple Music listeners who want to understand current playback, playback quality suggestions, output matching, and upcoming queue quality before the next track arrives.</p>
           <div class="feature-grid">
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">AR</span>
               <h3>Actual Playback Readout</h3>
-              <p>In Trace Pro, read the current Apple Music playback format live, including codec, bit depth, and sample rate while you listen.</p>
+              <p>In Trace Pro, open Playback details to inspect the detected codec, bit depth, sample rate, and channels.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-icon" aria-hidden="true">PQ</span>
+              <h3>Playback Quality Suggestions</h3>
+              <p>In Trace Pro, see when another format or release may offer a higher-quality option for the current track. Open alternate releases directly in Music.</p>
             </article>
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">OM</span>
               <h3>Output Match Status</h3>
-              <p>Compare Apple Music playback with your Mac&rsquo;s current output device so a Hi-Res track and a mismatched output setting are visible together.</p>
+              <p>In Trace Pro, see the output device format, its current and supported sample rates, and whether it matches detected playback.</p>
             </article>
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">SR</span>
               <h3>Auto Sample Rate Match</h3>
-              <p>Trace Pro switches supported output devices to match what is playing.</p>
+              <p>Trace Pro switches supported output devices to match what is playing. You can optionally include lossy and Dolby playback.</p>
             </article>
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">PN</span>
@@ -300,7 +313,7 @@
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">EQ</span>
               <h3>Estimated Queue Quality</h3>
-              <p>In Trace Pro, preview Lossless, Hi-Res, or Dolby availability for each queued track before it starts.</p>
+              <p>In Trace Pro, preview Lossless, Hi-Res, or Dolby availability for upcoming tracks, including Apple Lossless bit depth and sample rate when available.</p>
             </article>
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">SK</span>
@@ -376,11 +389,11 @@
                 <p class="price-regular">$29.99 one-time purchase. No subscription.</p>
               </div>
               <div class="price-card-copy">
-                <p>One-time lifetime license for Audex Trace Pro. One license covers all Macs you personally use; enter the same license key on each Mac for online verification. Unlocks live playback readout, output match status, Auto Sample Rate Match, queue quality estimates, and skip warnings. Playing Next itself is included in the free download.</p>
+                <p>One-time lifetime license for Audex Trace Pro. One license covers all Macs you personally use; enter the same license key on each Mac for online verification. Unlocks live playback readout, playback quality suggestions, output match status, Auto Sample Rate Match, queue quality estimates, and skip warnings. Playing Next itself is included in the free download.</p>
                 <p class="purchase-confirmation">Verify playback first. If Trace does not detect playback format on your Mac, don't buy Pro.</p>
                 <form class="price-action" action="https://trace-auth.audex.dev/api/checkout/redirect" method="post" data-track-checkout>
                   <input type="hidden" name="source" value="pricing_buy">
-                  <input type="hidden" name="version" value="1.2.5">
+                  <input type="hidden" name="version" value="1.3">
                   <input type="hidden" name="page_path" value="/#pricing">
                   <button class="primary-cta" type="submit">I already checked &mdash; continue to checkout</button>
                 </form>
@@ -403,6 +416,7 @@
               <p>Unlock the full listening companion.</p>
               <ul>
                 <li>Actual playback readout</li>
+                <li>Playback quality suggestions</li>
                 <li>Output match status</li>
                 <li>Auto Sample Rate Match</li>
                 <li>Queue quality estimates</li>
@@ -496,6 +510,12 @@
               </div>
             </article>
             <article class="faq-item">
+              <button class="faq-question" type="button" id="faq-question-suggestions" aria-expanded="false" aria-controls="faq-answer-suggestions">Are playback quality suggestions the format currently playing?</button>
+              <div class="faq-answer" id="faq-answer-suggestions" role="region" aria-labelledby="faq-question-suggestions" aria-hidden="true">
+                <p>No. Suggestions are best-effort availability information about other formats or releases in Apple Music. They do not change playback automatically. You choose whether to open an alternate release in Music. The Playback details panel shows the format currently detected on your Mac.</p>
+              </div>
+            </article>
+            <article class="faq-item">
               <button class="faq-question" type="button" id="faq-question-routes" aria-expanded="false" aria-controls="faq-answer-routes">Does it work with DACs, AirPods, or Dolby Atmos?</button>
               <div class="faq-answer" id="faq-answer-routes" role="region" aria-labelledby="faq-question-routes" aria-hidden="true">
                 <p>Trace is designed for Apple Music playback on the Mac and shows detected playback details across supported routes. Format labels, output matching, and available sample rates depend on the device, route, and macOS support.</p>
@@ -530,13 +550,13 @@
         <!-- Download -->
         <section class="status content-band" id="download" aria-labelledby="download-title">
           <div class="section-kicker">Download</div>
-          <h2 id="download-title">Audex Trace 1.2.5 is available now.</h2>
+          <h2 id="download-title">Audex Trace 1.3 is available now.</h2>
           <p>Download the signed and notarized macOS app from GitHub Releases. Requires macOS 15 or later.</p>
           <p class="download-price-note">Trace Pro is $29.99 as a one-time purchase.</p>
           <p>The free version has no time limit. After installing, use Now Playing and Playing Next as usual, and verify playback before purchasing Pro if you want playback format readout.</p>
           <div class="download-actions">
-            <a class="repository-link" href="https://trace-auth.audex.dev/download?version=1.2.5&amp;source=download_section" data-track-download>Free Download</a>
-            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.2.5">View GitHub Release</a>
+            <a class="repository-link" href="https://trace-auth.audex.dev/download?version=1.3&amp;source=download_section" data-track-download>Free Download</a>
+            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.3">View GitHub Release</a>
             <a class="repository-link" href="changelog.html">View Changelog</a>
           </div>
         </section>
