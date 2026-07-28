@@ -483,14 +483,6 @@ h3 {
   transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
 }
 
-.feature-card:nth-last-child(1):nth-child(3n + 1) {
-  grid-column: 3 / span 2;
-}
-
-.feature-card:nth-last-child(2):nth-child(3n + 1) {
-  grid-column: 2 / span 2;
-}
-
 .feature-card:hover {
   border-color: rgba(119, 215, 255, 0.26);
   background: var(--panel-strong);
@@ -1460,15 +1452,6 @@ h3 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .feature-card:nth-last-child(1):nth-child(3n + 1),
-  .feature-card:nth-last-child(2):nth-child(3n + 1) {
-    grid-column: span 2;
-  }
-
-  .feature-card:nth-last-child(1):nth-child(2n + 1) {
-    grid-column: 2 / span 2;
-  }
-
   .feature-supporting {
     grid-template-columns: minmax(120px, 0.28fr) minmax(0, 1fr);
   }
@@ -1546,10 +1529,7 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .feature-card,
-  .feature-card:nth-last-child(1):nth-child(3n + 1),
-  .feature-card:nth-last-child(2):nth-child(3n + 1),
-  .feature-card:nth-last-child(1):nth-child(2n + 1) {
+  .feature-card {
     grid-column: auto;
   }
 
