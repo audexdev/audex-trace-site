@@ -198,18 +198,18 @@ def render_changelog(releases: list[Release]) -> str:
     <meta property="og:title" content="Audex Trace Changelog">
     <meta property="og:description" content="Release history for Audex Trace.">
     <meta property="og:url" content="https://trace.audex.dev/changelog.html">
-    <meta property="og:image" content="https://trace.audex.dev/assets/og-image.svg">
-    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image" content="https://trace.audex.dev/assets/og-image.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Audex Trace Changelog">
     <meta name="twitter:description" content="Release history for Audex Trace.">
-    <meta name="twitter:image" content="https://trace.audex.dev/assets/og-image.svg">
+    <meta name="twitter:image" content="https://trace.audex.dev/assets/og-image.png">
     <title>Audex Trace Changelog</title>
     <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260527">
+    <link rel="stylesheet" href="styles.css?v=20260731">
     <script type="application/ld+json">
       {{
         "@context": "https://schema.org",
@@ -229,23 +229,33 @@ def render_changelog(releases: list[Release]) -> str:
   </head>
   <body>
     <div class="page-shell">
+      <a class="skip-link" href="#main">Skip to content</a>
       <header class="site-header" data-elevate>
         <a class="brand" href="index.html#top" aria-label="Audex Trace home">
           <img class="brand-mark" src="assets/trace-mark.svg" alt="" aria-hidden="true">
           <span>Audex Trace</span>
         </a>
-        <nav class="site-nav" aria-label="Primary navigation">
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
           <a href="index.html#features">Features</a>
+          <a href="index.html#apps">Apps</a>
+          <a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate</a>
           <a href="index.html#pricing">Pricing</a>
           <a href="index.html#faq">FAQ</a>
           <a href="privacy.html">Privacy</a>
           <a href="changelog.html" aria-current="page">Changelog</a>
           <a href="index.html#download">Download</a>
         </nav>
-        <a class="header-cta" href="{html.escape(tracked_download_url(latest.version, "changelog_header_download"))}" data-track-download>Free Download</a>
+        <div class="header-actions">
+          <a class="header-cta" href="{html.escape(tracked_download_url(latest.version, "changelog_header_download"), quote=True)}" data-track-download>Free Download</a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </header>
 
-      <main>
+      <main id="main">
         <section class="changelog-hero content-band" aria-labelledby="changelog-title">
           <div class="section-kicker">Release history</div>
           <h1 id="changelog-title">Audex Trace Changelog</h1>
@@ -267,16 +277,21 @@ def render_changelog(releases: list[Release]) -> str:
           <span>© 2026 Audex</span>
         </div>
         <nav aria-label="Footer links">
+          <a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate Guide</a>
+          <a href="apple-music-bit-depth-sample-rate-mac.html">Bit Depth Guide</a>
+          <a href="tested-setups.html">Tested Setups</a>
+          <a href="trace-vs-losslessswitcher.html">Trace vs LosslessSwitcher</a>
+          <a href="audex-trace-fact-sheet.html">Fact Sheet</a>
           <a href="privacy.html">Privacy</a>
           <a href="index.html#pricing">Pricing</a>
           <a href="index.html#faq">FAQ</a>
-          <a href="changelog.html">Changelog</a>
+          <a href="changelog.html" aria-current="page">Changelog</a>
           <a href="index.html#download">Download</a>
           <a href="contact.html">Contact</a>
         </nav>
       </footer>
     </div>
-    <script src="script.js?v=20260527"></script>
+    <script src="script.js?v=20260731"></script>
   </body>
 </html>
 """

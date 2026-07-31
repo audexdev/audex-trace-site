@@ -12,18 +12,18 @@
     <meta property="og:title" content="Audex Trace">
     <meta property="og:description" content="See the live Apple Music playback format and your Mac output sample rate before buying Pro.">
     <meta property="og:url" content="https://trace.audex.dev/">
-    <meta property="og:image" content="https://trace.audex.dev/assets/og-image.svg">
-    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image" content="https://trace.audex.dev/assets/og-image.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Audex Trace">
     <meta name="twitter:description" content="See the live Apple Music playback format and your Mac output sample rate before buying Pro.">
-    <meta name="twitter:image" content="https://trace.audex.dev/assets/og-image.svg">
+    <meta name="twitter:image" content="https://trace.audex.dev/assets/og-image.png">
     <title>Audex Trace - Apple Music playback format detection for macOS</title>
     <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260610">
+    <link rel="stylesheet" href="styles.css?v=20260731">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -53,7 +53,7 @@
             "downloadUrl": "https://trace-auth.audex.dev/download?version=1.3&source=software_schema",
             "softwareVersion": "1.3",
             "description": "Audex Trace is a macOS Apple Music companion for Lossless and Hi-Res listeners, with live playback readout, output match status, Playing Next, queue quality estimates, skip-risk warnings, and optional sample-rate matching for compatible output devices.",
-            "image": "https://trace.audex.dev/assets/og-image.svg",
+            "image": "https://trace.audex.dev/assets/og-image.png",
             "offers": {
               "@type": "Offer",
               "price": "29.99",
@@ -155,8 +155,9 @@
       }
     </script>
   </head>
-  <body>
+  <body id="top">
     <div class="page-shell">
+      <a class="skip-link" href="#main">Skip to content</a>
       <!-- Header -->
       <header class="site-header" data-elevate>
         <a class="brand" href="#top" aria-label="Audex Trace home">
@@ -183,7 +184,7 @@
         </div>
       </header>
 
-      <main id="top">
+      <main id="main">
         <!-- Hero -->
         <section class="hero section-grid" aria-labelledby="hero-title">
           <div class="hero-copy">
@@ -326,8 +327,8 @@
             <p>See upcoming Apple Music tracks, their queue quality estimates, and skip warnings before they interrupt playback.</p>
           </div>
           <div class="queue-demo" role="group" aria-label="Audex Trace Playing Next, estimated queue quality, and skip warnings demo">
-            <video class="queue-demo-video" autoplay muted loop playsinline preload="metadata" poster="assets/trace-v12-queue-demo-poster.jpg" aria-label="Audex Trace showing Playing Next, estimated queue quality, and skip warnings">
-              <source src="assets/trace-v12-queue-demo.mp4" type="video/mp4">
+            <video class="queue-demo-video" muted loop playsinline preload="none" poster="assets/trace-v12-queue-demo-poster.jpg" aria-label="Audex Trace showing Playing Next, estimated queue quality, and skip warnings" data-lazy-video>
+              <source data-src="assets/trace-v12-queue-demo.mp4" type="video/mp4">
             </video>
           </div>
         </section>
@@ -575,6 +576,6 @@
         </nav>
       </footer>
     </div>
-    <script src="script.js?v=20260604"></script>
+    <script src="script.js?v=20260731"></script>
   </body>
 </html>

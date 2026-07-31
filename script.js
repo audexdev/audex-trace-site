@@ -42,11 +42,60 @@ menuToggle?.addEventListener("click", () => {
   setMenuOpen(!header?.classList.contains("is-menu-open"));
 });
 
+const currentPageAnchor = (link) => {
+  const url = new URL(link.href, window.location.href);
+
+  if (
+    url.origin !== window.location.origin
+    || url.pathname !== window.location.pathname
+    || url.search !== window.location.search
+    || !url.hash
+  ) {
+    return null;
+  }
+
+  try {
+    const target = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+    return target ? { hash: url.hash, target } : null;
+  } catch {
+    return null;
+  }
+};
+
+const navigateToPageAnchor = ({ hash, target }) => {
+  if (window.location.hash === hash) {
+    target.scrollIntoView();
+    return;
+  }
+
+  window.location.hash = hash;
+};
+
 primaryNav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    if (mobileNavQuery.matches) {
+  link.addEventListener("click", (event) => {
+    if (!mobileNavQuery.matches) return;
+
+    const anchor = currentPageAnchor(link);
+    if (!anchor) {
       setMenuOpen(false);
+      return;
     }
+
+    event.preventDefault();
+
+    const finishNavigation = (transitionEvent) => {
+      if (transitionEvent.target !== primaryNav || transitionEvent.propertyName !== "max-height") {
+        return;
+      }
+
+      primaryNav.removeEventListener("transitionend", finishNavigation);
+      primaryNav.removeEventListener("transitioncancel", finishNavigation);
+      navigateToPageAnchor(anchor);
+    };
+
+    primaryNav.addEventListener("transitionend", finishNavigation);
+    primaryNav.addEventListener("transitioncancel", finishNavigation);
+    setMenuOpen(false);
   });
 });
 
@@ -100,6 +149,68 @@ faqItems.forEach((item) => {
 
 syncFaqHeights();
 window.addEventListener("resize", syncFaqHeights);
+
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+const attachVideoSource = (video) => {
+  const source = video.querySelector("source[data-src]");
+
+  if (!source) return;
+
+  source.src = source.dataset.src;
+  source.removeAttribute("data-src");
+  video.load();
+};
+
+const lazyVideos = Array.from(document.querySelectorAll("video[data-lazy-video]"));
+const nearbyLazyVideos = new WeakSet();
+
+const syncLazyVideo = (video) => {
+  if (reducedMotionQuery.matches || !nearbyLazyVideos.has(video)) {
+    video.pause();
+    return;
+  }
+
+  attachVideoSource(video);
+  const playRequest = video.play();
+  playRequest?.catch(() => {});
+};
+
+const syncLazyVideos = () => {
+  lazyVideos.forEach(syncLazyVideo);
+};
+
+if (lazyVideos.length > 0 && "IntersectionObserver" in window) {
+  const lazyVideoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          nearbyLazyVideos.add(video);
+        } else {
+          nearbyLazyVideos.delete(video);
+        }
+        syncLazyVideo(video);
+      });
+    },
+    { rootMargin: "200px 0px" }
+  );
+
+  lazyVideos.forEach((video) => lazyVideoObserver.observe(video));
+} else {
+  // No observer support: keep preloaded autoplay behavior for the affected videos.
+  lazyVideos.forEach((video) => {
+    nearbyLazyVideos.add(video);
+    video.autoplay = true;
+    syncLazyVideo(video);
+  });
+}
+
+if (typeof reducedMotionQuery.addEventListener === "function") {
+  reducedMotionQuery.addEventListener("change", syncLazyVideos);
+} else {
+  reducedMotionQuery.addListener(syncLazyVideos);
+}
 
 const trackingParamNames = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
 const storagePrefix = "audexTrace.";
