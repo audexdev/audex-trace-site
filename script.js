@@ -155,61 +155,72 @@ const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
 const attachVideoSource = (video) => {
   const source = video.querySelector("source[data-src]");
 
-  if (!source) return;
+  if (!source?.dataset.src) return false;
 
   source.src = source.dataset.src;
   source.removeAttribute("data-src");
   video.load();
+  return true;
 };
 
-const lazyVideos = Array.from(document.querySelectorAll("video[data-lazy-video]"));
-const nearbyLazyVideos = new WeakSet();
+const videoHasPlayableSource = (video) => {
+  if (video.currentSrc) return true;
+  return Array.from(video.querySelectorAll("source")).some((source) => {
+    return Boolean(source.src || source.dataset.src);
+  });
+};
 
-const syncLazyVideo = (video) => {
-  if (reducedMotionQuery.matches || !nearbyLazyVideos.has(video)) {
-    video.pause();
-    return;
-  }
+const tourVideos = Array.from(document.querySelectorAll("video[data-tour-video]"));
+const tourVideoPlayed = new WeakSet();
+
+const playTourVideoOnce = (video) => {
+  if (reducedMotionQuery.matches || tourVideoPlayed.has(video)) return;
+  if (!videoHasPlayableSource(video)) return;
 
   attachVideoSource(video);
+  tourVideoPlayed.add(video);
+  video.loop = false;
+
   const playRequest = video.play();
-  playRequest?.catch(() => {});
+  playRequest?.catch(() => {
+    tourVideoPlayed.delete(video);
+  });
 };
 
-const syncLazyVideos = () => {
-  lazyVideos.forEach(syncLazyVideo);
-};
-
-if (lazyVideos.length > 0 && "IntersectionObserver" in window) {
-  const lazyVideoObserver = new IntersectionObserver(
+if (tourVideos.length > 0 && "IntersectionObserver" in window) {
+  const tourVideoObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        const video = entry.target;
-        if (entry.isIntersecting) {
-          nearbyLazyVideos.add(video);
-        } else {
-          nearbyLazyVideos.delete(video);
-        }
-        syncLazyVideo(video);
+        if (!entry.isIntersecting) return;
+        playTourVideoOnce(entry.target);
       });
     },
-    { rootMargin: "200px 0px" }
+    { rootMargin: "120px 0px", threshold: 0.35 }
   );
 
-  lazyVideos.forEach((video) => lazyVideoObserver.observe(video));
+  tourVideos.forEach((video) => {
+    video.loop = false;
+    tourVideoObserver.observe(video);
+  });
 } else {
-  // No observer support: keep preloaded autoplay behavior for the affected videos.
-  lazyVideos.forEach((video) => {
-    nearbyLazyVideos.add(video);
-    video.autoplay = true;
-    syncLazyVideo(video);
+  tourVideos.forEach((video) => {
+    video.loop = false;
+    playTourVideoOnce(video);
   });
 }
 
 if (typeof reducedMotionQuery.addEventListener === "function") {
-  reducedMotionQuery.addEventListener("change", syncLazyVideos);
+  reducedMotionQuery.addEventListener("change", () => {
+    if (reducedMotionQuery.matches) {
+      tourVideos.forEach((video) => video.pause());
+    }
+  });
 } else {
-  reducedMotionQuery.addListener(syncLazyVideos);
+  reducedMotionQuery.addListener(() => {
+    if (reducedMotionQuery.matches) {
+      tourVideos.forEach((video) => video.pause());
+    }
+  });
 }
 
 const trackingParamNames = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];

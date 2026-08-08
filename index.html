@@ -23,7 +23,7 @@
     <title>Audex Trace - Apple Music playback format detection for macOS</title>
     <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260731">
+    <link rel="stylesheet" href="styles.css?v=20260808">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -147,6 +147,14 @@
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "No. Audex Trace is an independent macOS app and is not affiliated with Apple. Apple Music and macOS are trademarks of Apple Inc."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why does Trace suggest a different release instead of switching to it?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Trace opens the release in Music and leaves your playback alone. What is playing now and what is queued after it do not change. You decide whether to switch."
                 }
               }
             ]
@@ -285,16 +293,11 @@
           <div class="section-kicker">Solution</div>
           <h2 id="features-title">Start with what is actually playing.</h2>
           <p class="section-lede">Audex Trace is for Apple Music listeners who want to understand current playback, playback quality suggestions, output matching, and upcoming queue quality before the next track arrives.</p>
-          <div class="feature-grid">
+          <div class="feature-grid feature-grid-core">
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">AR</span>
               <h3>Actual Playback Readout</h3>
               <p>In Trace Pro, open Playback details to inspect the detected codec, bit depth, sample rate, and channels.</p>
-            </article>
-            <article class="feature-card">
-              <span class="card-icon" aria-hidden="true">PQ</span>
-              <h3>Playback Quality Suggestions</h3>
-              <p>In Trace Pro, see when another format or release may offer a higher-quality option for the current track. Open alternate releases directly in Music.</p>
             </article>
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">OM</span>
@@ -306,30 +309,65 @@
               <h3>Auto Sample Rate Match</h3>
               <p>Trace Pro switches supported output devices to match what is playing. You can optionally include lossy and Dolby playback.</p>
             </article>
-            <article class="feature-card">
-              <span class="card-icon" aria-hidden="true">PN</span>
-              <h3>Playing Next Preview</h3>
-              <p>Open a compact view of up to 3 upcoming Apple Music tracks. In Trace Pro, preview Lossless, Hi-Res, Dolby, and exact Apple Lossless bit depth and sample rate when available.</p>
-            </article>
+          </div>
+
+          <article class="feature-detail" id="views" aria-labelledby="views-title">
+            <div class="feature-detail-copy">
+              <h3 id="views-title">Where Trace lives</h3>
+              <p>Trace is a player as well as a monitor, so it can stay open while you work.</p>
+              <ul class="feature-detail-list">
+                <li><strong>Player Window:</strong> a floating mini player that stays above your other windows, optionally over full-screen apps, with the current artwork as a blurred background if you want it. Horizontal trackpad swipes can move to the previous or next track.</li>
+                <li><strong>Menu Bar:</strong> current track, controls, volume, and the Playing Next queue without leaving what you are doing.</li>
+                <li><strong>Notch:</strong> the same track and controls in the display cutout, expanded only when you want them.</li>
+              </ul>
+              <p class="feature-boundary">The views are all in the free version. The playback details shown inside them are Pro.</p>
+            </div>
+            <figure class="feature-media">
+              <div class="feature-video-slot" role="group" aria-label="Audex Trace Player Window, Menu Bar, and Notch views demo">
+                <video class="feature-video" muted playsinline preload="none" poster="assets/video-slot-placeholder.svg" aria-label="Audex Trace views overview" data-tour-video></video>
+              </div>
+              <figcaption class="feature-video-caption">Shown with Pro enabled.</figcaption>
+            </figure>
+          </article>
+
+          <article class="feature-detail" id="playing-next" aria-labelledby="playing-next-title">
+            <div class="feature-detail-copy">
+              <h3 id="playing-next-title">Quality before the track starts</h3>
+              <p>Playing Next shows what is queued. Trace estimates the quality of those tracks before they play: Lossless, Hi-Res Lossless, or Dolby, with a best effort bit depth and sample rate where the catalog exposes it.</p>
+              <p>Apple Music tells you about the track you are hearing. Trace also tells you about the ones after it.</p>
+              <p>Tracks that look likely to fail or skip are marked, so a gap in the queue is not a surprise.</p>
+              <p class="feature-boundary">The queue itself is free. Quality estimates and skip-risk warnings are Pro. These are catalog estimates, not confirmed playback, and Trace labels them that way.</p>
+            </div>
+            <figure class="feature-media">
+              <div class="feature-video-slot" role="group" aria-label="Audex Trace Playing Next queue demo">
+                <video class="feature-video" muted playsinline preload="none" poster="assets/video-slot-placeholder.svg" aria-label="Audex Trace Playing Next quality estimates" data-tour-video></video>
+              </div>
+            </figure>
+          </article>
+
+          <article class="feature-detail" id="suggestions" aria-labelledby="suggestions-title">
+            <div class="feature-detail-copy">
+              <h3 id="suggestions-title">A better version may already be in the catalog</h3>
+              <p>Apple Music can play a lower quality version of a track while a higher resolution release of the same recording sits in the catalog. Apple Music does not show you that comparison while you are listening to the current release.</p>
+              <p>While a track is playing, Trace checks for alternate releases. When it finds one, it shows what it found and can open it in Music. It suggests. It does not switch for you.</p>
+              <p>The catalog can change after you save music. A Lossless or Dolby Atmos version can appear on a release you never opened, and you would have no reason to check again.</p>
+              <p class="feature-boundary">Playback quality suggestions are a Pro feature. Availability is a catalog estimate, so Trace tells you what it found rather than what Music will play.</p>
+            </div>
+            <figure class="feature-media">
+              <div class="feature-video-slot" role="group" aria-label="Audex Trace Playback Quality Suggestions demo">
+                <video class="feature-video" muted playsinline preload="none" poster="assets/trace-suggestions-demo-poster.jpg" aria-label="Audex Trace showing Playback Quality Suggestions" data-tour-video>
+                  <source data-src="assets/trace-suggestions-demo.mp4" type="video/mp4">
+                </video>
+              </div>
+            </figure>
+          </article>
+
+          <div class="feature-grid feature-grid-tail">
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">SK</span>
               <h3>Skip Risk Detection</h3>
               <p>In Trace Pro, get warnings for queued tracks that may fail, become unavailable, or interrupt playback, before they reach the player.</p>
             </article>
-          </div>
-          <aside class="feature-supporting">
-            <span class="feature-supporting-label">Also included</span>
-            <h3>Compact, Menu Bar, and Resident Views</h3>
-            <p>Keep playback controls and track details close in the compact player, menu bar, or optional notch view.</p>
-          </aside>
-          <div class="queue-demo-intro">
-            <h3>Demo: Playing Next, estimated queue quality, and skip warnings</h3>
-            <p>See upcoming Apple Music tracks, their queue quality estimates, and skip warnings before they interrupt playback.</p>
-          </div>
-          <div class="queue-demo" role="group" aria-label="Audex Trace Playing Next, estimated queue quality, and skip warnings demo">
-            <video class="queue-demo-video" muted loop playsinline preload="none" poster="assets/trace-v12-queue-demo-poster.jpg" aria-label="Audex Trace showing Playing Next, estimated queue quality, and skip warnings" data-lazy-video>
-              <source data-src="assets/trace-v12-queue-demo.mp4" type="video/mp4">
-            </video>
           </div>
         </section>
 
@@ -421,6 +459,7 @@
               </ul>
             </div>
           </div>
+          <p class="purchase-check plan-compare-note">Verify playback first. If Trace does not detect playback format on your Mac, don't buy Pro.</p>
         </section>
 
         <!-- Requirements -->
@@ -529,6 +568,12 @@
                 <p>No. Audex Trace is an independent macOS app and is not affiliated with Apple. Apple Music and macOS are trademarks of Apple Inc.</p>
               </div>
             </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" id="faq-question-suggest-switch" aria-expanded="false" aria-controls="faq-answer-suggest-switch">Why does Trace suggest a different release instead of switching to it?</button>
+              <div class="faq-answer" id="faq-answer-suggest-switch" role="region" aria-labelledby="faq-question-suggest-switch" aria-hidden="true">
+                <p>Trace opens the release in Music and leaves your playback alone. What is playing now and what is queued after it do not change. You decide whether to switch.</p>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -576,6 +621,6 @@
         </nav>
       </footer>
     </div>
-    <script src="script.js?v=20260731"></script>
+    <script src="script.js?v=20260808"></script>
   </body>
 </html>
