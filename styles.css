@@ -490,16 +490,8 @@ h3 {
   gap: 14px;
 }
 
-.feature-grid-core .feature-card {
-  grid-column: span 2;
-}
-
-.feature-grid-tail {
-  margin-top: 8px;
-}
-
-.feature-grid-tail .feature-card {
-  grid-column: span 2;
+.feature-grid-overview {
+  margin-top: 28px;
 }
 
 .feature-card {
@@ -1633,11 +1625,6 @@ h3 {
   }
 
   .feature-card {
-    grid-column: auto;
-  }
-
-  .feature-grid-core .feature-card,
-  .feature-grid-tail .feature-card {
     grid-column: auto;
   }
 

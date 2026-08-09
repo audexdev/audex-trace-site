@@ -152,75 +152,50 @@ window.addEventListener("resize", syncFaqHeights);
 
 const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-const attachVideoSource = (video) => {
-  const source = video.querySelector("source[data-src]");
-
-  if (!source?.dataset.src) return false;
-
-  source.src = source.dataset.src;
-  source.removeAttribute("data-src");
-  video.load();
-  return true;
-};
-
-const videoHasPlayableSource = (video) => {
-  if (video.currentSrc) return true;
-  return Array.from(video.querySelectorAll("source")).some((source) => {
-    return Boolean(source.src || source.dataset.src);
-  });
-};
-
 const tourVideos = Array.from(document.querySelectorAll("video[data-tour-video]"));
-const tourVideoPlayed = new WeakSet();
+const activeTourVideos = new WeakSet();
 
-const playTourVideoOnce = (video) => {
-  if (reducedMotionQuery.matches || tourVideoPlayed.has(video)) return;
-  if (!videoHasPlayableSource(video)) return;
+const syncTourVideo = (video) => {
+  video.autoplay = !reducedMotionQuery.matches;
 
-  attachVideoSource(video);
-  tourVideoPlayed.add(video);
-  video.loop = false;
+  if (reducedMotionQuery.matches || !activeTourVideos.has(video)) {
+    video.pause();
+    return;
+  }
 
   const playRequest = video.play();
-  playRequest?.catch(() => {
-    tourVideoPlayed.delete(video);
-  });
+  playRequest?.catch(() => {});
 };
+
+const syncTourVideos = () => tourVideos.forEach(syncTourVideo);
 
 if (tourVideos.length > 0 && "IntersectionObserver" in window) {
   const tourVideoObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        playTourVideoOnce(entry.target);
+        if (entry.isIntersecting) {
+          activeTourVideos.add(entry.target);
+        } else {
+          activeTourVideos.delete(entry.target);
+        }
+        syncTourVideo(entry.target);
       });
     },
     { rootMargin: "120px 0px", threshold: 0.35 }
   );
 
-  tourVideos.forEach((video) => {
-    video.loop = false;
-    tourVideoObserver.observe(video);
-  });
+  tourVideos.forEach((video) => tourVideoObserver.observe(video));
 } else {
   tourVideos.forEach((video) => {
-    video.loop = false;
-    playTourVideoOnce(video);
+    activeTourVideos.add(video);
+    syncTourVideo(video);
   });
 }
 
 if (typeof reducedMotionQuery.addEventListener === "function") {
-  reducedMotionQuery.addEventListener("change", () => {
-    if (reducedMotionQuery.matches) {
-      tourVideos.forEach((video) => video.pause());
-    }
-  });
+  reducedMotionQuery.addEventListener("change", syncTourVideos);
 } else {
-  reducedMotionQuery.addListener(() => {
-    if (reducedMotionQuery.matches) {
-      tourVideos.forEach((video) => video.pause());
-    }
-  });
+  reducedMotionQuery.addListener(syncTourVideos);
 }
 
 const trackingParamNames = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];

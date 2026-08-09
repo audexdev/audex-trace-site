@@ -23,7 +23,7 @@
     <title>Audex Trace - Apple Music playback format detection for macOS</title>
     <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260808">
+    <link rel="stylesheet" href="styles.css?v=20260809">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -293,24 +293,6 @@
           <div class="section-kicker">Solution</div>
           <h2 id="features-title">Start with what is actually playing.</h2>
           <p class="section-lede">Audex Trace is for Apple Music listeners who want to understand current playback, playback quality suggestions, output matching, and upcoming queue quality before the next track arrives.</p>
-          <div class="feature-grid feature-grid-core">
-            <article class="feature-card">
-              <span class="card-icon" aria-hidden="true">AR</span>
-              <h3>Actual Playback Readout</h3>
-              <p>In Trace Pro, open Playback details to inspect the detected codec, bit depth, sample rate, and channels.</p>
-            </article>
-            <article class="feature-card">
-              <span class="card-icon" aria-hidden="true">OM</span>
-              <h3>Output Match Status</h3>
-              <p>In Trace Pro, see the output device format, its current and supported sample rates, and whether it matches detected playback.</p>
-            </article>
-            <article class="feature-card">
-              <span class="card-icon" aria-hidden="true">SR</span>
-              <h3>Auto Sample Rate Match</h3>
-              <p>Trace Pro switches supported output devices to match what is playing. You can optionally include lossy and Dolby playback.</p>
-            </article>
-          </div>
-
           <article class="feature-detail" id="views" aria-labelledby="views-title">
             <div class="feature-detail-copy">
               <h3 id="views-title">Where Trace lives</h3>
@@ -324,24 +306,11 @@
             </div>
             <figure class="feature-media">
               <div class="feature-video-slot" role="group" aria-label="Audex Trace Player Window, Menu Bar, and Notch views demo">
-                <video class="feature-video" muted playsinline preload="none" poster="assets/video-slot-placeholder.svg" aria-label="Audex Trace views overview" data-tour-video></video>
+                <video class="feature-video" autoplay muted loop playsinline controls preload="metadata" poster="assets/trace-views-demo-poster.jpg" aria-label="Audex Trace views overview" data-tour-video>
+                  <source src="assets/trace-views-demo.mp4" type="video/mp4">
+                </video>
               </div>
               <figcaption class="feature-video-caption">Shown with Pro enabled.</figcaption>
-            </figure>
-          </article>
-
-          <article class="feature-detail" id="playing-next" aria-labelledby="playing-next-title">
-            <div class="feature-detail-copy">
-              <h3 id="playing-next-title">Quality before the track starts</h3>
-              <p>Playing Next shows what is queued. Trace estimates the quality of those tracks before they play: Lossless, Hi-Res Lossless, or Dolby, with a best effort bit depth and sample rate where the catalog exposes it.</p>
-              <p>Apple Music tells you about the track you are hearing. Trace also tells you about the ones after it.</p>
-              <p>Tracks that look likely to fail or skip are marked, so a gap in the queue is not a surprise.</p>
-              <p class="feature-boundary">The queue itself is free. Quality estimates and skip-risk warnings are Pro. These are catalog estimates, not confirmed playback, and Trace labels them that way.</p>
-            </div>
-            <figure class="feature-media">
-              <div class="feature-video-slot" role="group" aria-label="Audex Trace Playing Next queue demo">
-                <video class="feature-video" muted playsinline preload="none" poster="assets/video-slot-placeholder.svg" aria-label="Audex Trace Playing Next quality estimates" data-tour-video></video>
-              </div>
             </figure>
           </article>
 
@@ -355,14 +324,39 @@
             </div>
             <figure class="feature-media">
               <div class="feature-video-slot" role="group" aria-label="Audex Trace Playback Quality Suggestions demo">
-                <video class="feature-video" muted playsinline preload="none" poster="assets/trace-suggestions-demo-poster.jpg" aria-label="Audex Trace showing Playback Quality Suggestions" data-tour-video>
-                  <source data-src="assets/trace-suggestions-demo.mp4" type="video/mp4">
+                <video class="feature-video" autoplay muted loop playsinline controls preload="metadata" poster="assets/trace-suggestions-demo-poster.jpg" aria-label="Audex Trace showing Playback Quality Suggestions" data-tour-video>
+                  <source src="assets/trace-suggestions-demo.mp4" type="video/mp4">
                 </video>
               </div>
             </figure>
           </article>
 
-          <div class="feature-grid feature-grid-tail">
+          <div class="feature-grid feature-grid-overview">
+            <article class="feature-card">
+              <span class="card-icon" aria-hidden="true">AR</span>
+              <h3>Actual Playback Readout</h3>
+              <p>In Trace Pro, open Playback details to inspect the detected codec, bit depth, sample rate, and channels.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-icon" aria-hidden="true">PQ</span>
+              <h3>Playback Quality Suggestions</h3>
+              <p>In Trace Pro, see when another format or release may offer a higher-quality option for the current track. Open alternate releases directly in Music.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-icon" aria-hidden="true">OM</span>
+              <h3>Output Match Status</h3>
+              <p>In Trace Pro, see the output device format, its current and supported sample rates, and whether it matches detected playback.</p>
+            </article>
+            <article class="feature-card">
+              <span class="card-icon" aria-hidden="true">SR</span>
+              <h3>Auto Sample Rate Match</h3>
+              <p>Trace Pro switches supported output devices to match what is playing. You can optionally include lossy and Dolby playback.</p>
+            </article>
+            <article class="feature-card" id="playing-next" aria-labelledby="playing-next-title">
+              <span class="card-icon" aria-hidden="true">PN</span>
+              <h3 id="playing-next-title">Playing Next Preview</h3>
+              <p>Open a compact view of up to 3 upcoming Apple Music tracks for free. Trace Pro adds Lossless, Hi-Res, Dolby, and exact Apple Lossless bit depth and sample rate estimates when available.</p>
+            </article>
             <article class="feature-card">
               <span class="card-icon" aria-hidden="true">SK</span>
               <h3>Skip Risk Detection</h3>
@@ -621,6 +615,6 @@
         </nav>
       </footer>
     </div>
-    <script src="script.js?v=20260808"></script>
+    <script src="script.js?v=20260809"></script>
   </body>
 </html>

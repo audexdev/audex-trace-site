@@ -209,7 +209,7 @@ def render_changelog(releases: list[Release]) -> str:
     <title>Audex Trace Changelog</title>
     <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260731">
+    <link rel="stylesheet" href="styles.css?v=20260809">
     <script type="application/ld+json">
       {{
         "@context": "https://schema.org",
@@ -291,7 +291,7 @@ def render_changelog(releases: list[Release]) -> str:
         </nav>
       </footer>
     </div>
-    <script src="script.js?v=20260731"></script>
+    <script src="script.js?v=20260809"></script>
   </body>
 </html>
 """
