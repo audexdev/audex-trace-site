@@ -254,6 +254,32 @@ h3 {
   line-height: 1.28;
 }
 
+.hero-requirement {
+  max-width: 640px;
+  margin: 0 0 20px;
+  padding: 13px 15px;
+  border: 1px solid rgba(255, 179, 107, 0.32);
+  border-radius: var(--radius);
+  background: rgba(255, 179, 107, 0.09);
+}
+
+.hero-requirement strong,
+.hero-requirement span {
+  display: block;
+}
+
+.hero-requirement strong {
+  margin-bottom: 3px;
+  color: #ffd2a6;
+  font-size: 0.92rem;
+}
+
+.hero-requirement span {
+  color: #cdd2db;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1188,6 +1214,20 @@ h3 {
   margin: -4px 0 16px;
   color: #ffe7b3;
   font-weight: 700;
+}
+
+.status .download-requirement {
+  max-width: 780px;
+  margin: 20px 0;
+  padding: 12px 14px;
+  border-left: 3px solid rgba(255, 179, 107, 0.72);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: #cdd2db;
+  background: rgba(255, 179, 107, 0.08);
+}
+
+.download-requirement strong {
+  color: #ffd2a6;
 }
 
 .site-footer {
