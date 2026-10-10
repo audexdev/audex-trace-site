@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Apple Music prepares the next track early and logs its format. Log-based switchers can change your DAC's rate mid-song. What happens, and how to check it.">
+    <meta name="theme-color" content="#07090d">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://trace.audex.dev/apple-music-sample-rate-switches-mid-track-mac.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Audex Trace">
+    <meta property="og:title" content="Why the Sample Rate Switches Mid-Track to the Next Track on Mac">
+    <meta property="og:description" content="Apple Music prepares the next track early and logs its format. Log-based switchers can change your DAC's rate mid-song. What happens, and how to check it.">
+    <meta property="og:url" content="https://trace.audex.dev/apple-music-sample-rate-switches-mid-track-mac.html">
+    <meta property="og:image" content="https://trace.audex.dev/assets/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why the Sample Rate Switches Mid-Track to the Next Track on Mac">
+    <meta name="twitter:description" content="Apple Music prepares the next track early and logs its format. Log-based switchers can change your DAC's rate mid-song.">
+    <meta name="twitter:image" content="https://trace.audex.dev/assets/og-image.png">
+    <title>Why the Sample Rate Switches Mid-Track to the Next Track on Mac</title>
+    <link rel="icon" type="image/svg+xml" href="assets/trace-mark.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css?v=20260809">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          { "@type": "Organization", "@id": "https://audex.dev/#organization", "name": "Audex", "url": "https://audex.dev/" },
+          {
+            "@type": "Article",
+            "@id": "https://trace.audex.dev/apple-music-sample-rate-switches-mid-track-mac.html#article",
+            "headline": "Why the Sample Rate Switches Mid-Track to the Next Track on Mac",
+            "description": "Apple Music prepares the next track early and logs its format. Log-based switchers can change your DAC's rate mid-song. What happens, and how to check it.",
+            "image": "https://trace.audex.dev/assets/og-image.png",
+            "inLanguage": "en",
+            "author": { "@id": "https://audex.dev/#organization" },
+            "publisher": { "@id": "https://audex.dev/#organization" },
+            "datePublished": "2026-10-10T00:00:00+09:00",
+            "dateModified": "2026-10-10T00:00:00+09:00",
+            "mainEntityOfPage": "https://trace.audex.dev/apple-music-sample-rate-switches-mid-track-mac.html"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://trace.audex.dev/apple-music-sample-rate-switches-mid-track-mac.html#breadcrumb",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Audex Trace", "item": "https://trace.audex.dev/" },
+              { "@type": "ListItem", "position": 2, "name": "Why the Sample Rate Switches Mid-Track to the Next Track on Mac", "item": "https://trace.audex.dev/apple-music-sample-rate-switches-mid-track-mac.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://trace.audex.dev/apple-music-sample-rate-switches-mid-track-mac.html#faq",
+            "mainEntity": [
+              {"@type": "Question", "name": "Is this a macOS 27 bug?", "acceptedAnswer": {"@type": "Answer", "text": "No single version. Reports exist from January 2025 and September 2026; macOS 27 is the most recent. The mechanism, Music preparing the next item, has existed for years."}},
+              {"@type": "Question", "name": "Does turning off AutoMix fix it in LosslessSwitcher?", "acceptedAnswer": {"@type": "Answer", "text": "It removes the overlap at the boundary, but the next item is still prepared before the current one ends, so a newest-line switcher can still switch early. Turning the overlap features off is still recommended for any log-based tool."}},
+              {"@type": "Question", "name": "Does Trace switch at exactly the track boundary?", "acceptedAnswer": {"@type": "Answer", "text": "It applies the switch when Music reports the track change and a format line for that track is attributed. The device re-lock gap at the switch still exists."}},
+              {"@type": "Question", "name": "Why does Trace need an administrator account?", "acceptedAnswer": {"@type": "Answer", "text": "The playback logs are readable only by administrator accounts on macOS; standard accounts cannot run Playback Verification or live detection."}}
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <a class="skip-link" href="#main">Skip to content</a>
+      <header class="site-header" data-elevate>
+        <a class="brand" href="index.html#top" aria-label="Audex Trace home"><img class="brand-mark" src="assets/trace-mark.svg" alt="" aria-hidden="true"><span>Audex Trace</span></a>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation"><a href="index.html#features">Features</a><a href="index.html#apps">Apps</a><a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="privacy.html">Privacy</a><a href="changelog.html">Changelog</a><a href="index.html#download">Download</a></nav>
+        <div class="header-actions"><a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.3.1&amp;source=mid_track_header_download" data-track-download>Free Download</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button></div>
+      </header>
+
+      <main id="main">
+        <article>
+          <section class="changelog-hero content-band guide-hero" aria-labelledby="guide-title">
+            <div class="section-kicker">Mid-track sample rate switch</div>
+            <h1 id="guide-title">Why the sample rate switches mid-track to the next track on Mac.</h1>
+            <p class="hero-subtitle">Apple Music prepares the next track before the current one ends. The prepared player writes its own format line to the macOS unified log while the current track is still playing. A switcher that treats the newest format line as what is playing now switches early.</p>
+            <div class="guide-meta"><span>Updated October 10, 2026</span><span aria-hidden="true">•</span><span>For Apple Music on macOS</span></div>
+          </section>
+
+          <section class="content-band guide-layout" aria-label="Mid-track sample rate switch guide">
+            <aside class="guide-aside" aria-label="On this page"><h2>On this page</h2><a href="#quick-answer">Quick answer</a><a href="#symptom">What it looks like</a><a href="#cause">Why it happens</a><a href="#reports">Reports</a><a href="#worse">What makes it worse</a><a href="#trace">What Trace does</a><a href="#not-fixed">Not fixed</a><a href="#check">Check it</a><a href="#faq">FAQ</a></aside>
+            <div class="guide-copy">
+              <section id="quick-answer" aria-labelledby="quick-answer-title">
+                <div class="section-kicker">Quick answer</div>
+                <h2 id="quick-answer-title">Quick answer.</h2>
+                <ul class="guide-list"><li><strong>The symptom:</strong> Your output device's rate is right at the start of a track, then changes partway through the same track to the next track's rate. You hear a short interruption, and the rest of the track plays at the wrong rate.</li><li><strong>The cause:</strong> Apple Music prepares the next track before the current one ends. The prepared player writes its own format line to the macOS unified log while the current track is still playing. A switcher that treats the newest format line as what is playing now switches early.</li><li><strong>Scope:</strong> This behavior is not specific to one macOS version or one tool. It was reported against LosslessSwitcher in January 2025 and again in September 2026, and reproduced on a fork.</li><li><strong>Audex Trace:</strong> Audex Trace attributes each format line to the player instance that wrote it and to the track Apple Music says is playing, so a line from a prepared next track is held back until the track actually changes.</li></ul>
+              </section>
+
+              <section id="symptom" aria-labelledby="symptom-title">
+                <div class="section-kicker">What it looks like</div>
+                <h2 id="symptom-title">What it looks like.</h2>
+                <p>Consider a 44.1 kHz track followed by a 96 kHz track in your queue. At the start of the first track, your DAC shows 44.1 kHz. Somewhere during that track, sometimes in the middle and sometimes in the last few seconds, the DAC jumps to 96 kHz. The music drops out for a moment while the DAC re-locks, and the rest of the 44.1 kHz track is played with the output at 96 kHz, so macOS resamples it. When the 96 kHz track starts, nothing changes because the device is already at 96 kHz, so the switch looks correct again.</p>
+                <p>You see Audio MIDI Setup's sample rate for the output device, the DAC's own display, and the switcher's menu bar readout all move at the same moment.</p>
+                <p>The timing is unpredictable because it depends on when Apple Music decides to prepare the next item, which depends on buffering, track length, and queue changes.</p>
+              </section>
+
+              <section id="cause" aria-labelledby="cause-title">
+                <div class="section-kicker">Why it happens</div>
+                <h2 id="cause-title">Why it happens.</h2>
+                <p>Apple Music on macOS plays each item in your queue through a player instance. Before the current item ends, it creates and prepares the next one so playback continues without a gap. The prepared instance decodes the beginning of the next track.</p>
+                <p>When an instance decodes, Music writes format lines (codec, bit depth, sample rate) to the unified log. The prepared instance writes its lines while the current instance is still playing.</p>
+                <p>A switcher that reads the log and applies the newest format line applies the next track's rate when the next track is prepared, not when it starts.</p>
+                <p>Anything that makes Music refresh its player state mid-track can trigger the same read: queue edits, Play Next, metadata or artwork updates. A contributor describing LosslessSwitcher's code in issue #231 on 2026-10-09 wrote that its track-change handler runs on every MediaRemote callback, including mid-track updates for the same track, and then applies the newest decoder log entry.</p>
+              </section>
+
+              <section id="reports" aria-labelledby="reports-title">
+                <div class="section-kicker">Reports</div>
+                <h2 id="reports-title">Where it has been reported.</h2>
+                <ul class="guide-list"><li>vincentneo/LosslessSwitcher issue #159, opened 2025-01-09: switches to the next track's rate instead of the current track's. <a class="text-link" href="https://github.com/vincentneo/LosslessSwitcher/issues/159">https://github.com/vincentneo/LosslessSwitcher/issues/159</a></li><li>vincentneo/LosslessSwitcher issue #231, opened 2026-09-29: macOS 27.0 (build 26A428), Music 1.7, LosslessSwitcher 2.0 and the horikei525 fork 4.4.2, iFi Go Bar. Correct switch at the start of the track, then a second switch partway through to the next track's rate; the reporter could not predict the timing. A contributor's comment on 2026-10-09 attributes it to Music preloading the next track and points to pull request #225 (opened 2026-09-20), which only runs detection on a real track change, resume, or seek and picks the log entry closest to that event. As of 2026-10-10 that pull request is open and not in a release. <a class="text-link" href="https://github.com/vincentneo/LosslessSwitcher/issues/231">https://github.com/vincentneo/LosslessSwitcher/issues/231</a></li></ul>
+                <p>These are two documented reports, not a measurement of how many people are affected.</p>
+              </section>
+
+              <section id="worse" aria-labelledby="worse-title">
+                <div class="section-kicker">Overlap features</div>
+                <h2 id="worse-title">What makes it worse.</h2>
+                <p>Apple Music's overlap features, Song Transitions, AutoMix, and Crossfade, keep two player instances active around every track boundary on purpose. With them on, two instances can decode at once, and no log-based tool, Trace included, can promise an exact readout around the boundary.</p>
+                <p>Trace's Playback Verification screen states: "Turn off Song Transitions, AutoMix, or Crossfade. They can make detection delayed or unavailable around track changes."</p>
+                <p>The settings are in Music &gt; Settings &gt; Playback. AutoMix may be on by default on recent macOS versions, so check rather than assume it is off.</p>
+              </section>
+
+              <section id="trace" aria-labelledby="trace-title">
+                <div class="section-kicker">Audex Trace</div>
+                <h2 id="trace-title">What Audex Trace does.</h2>
+                <p>Trace reads the same category of Music log lines but keeps track of which player instance wrote each line.</p>
+                <p>Trace keeps a current-track anchor from Apple Music's own now-playing state. While that anchor has not changed, a format line from a different player instance is treated as a possible preload of the next track and is not applied to the readout or to Auto Sample Rate Match. It becomes eligible only after Music reports that the track changed.</p>
+                <p>Lines from the same player instance do update the readout, so a format change within the same item is still reflected.</p>
+                <p>Upcoming tracks are shown separately in Playing Next, with their estimated format in Pro (queue quality estimates), so next is displayed as next rather than mixed into now.</p>
+                <p>In the developer's testing with Song Transitions, AutoMix, and Crossfade off, on macOS 15.4, 26.3, 26.3.1, 26.4.1, and 26.5, the readout and the automatic switch followed the playing track. With those features on, detection around track changes is best effort.</p>
+                <p>Trace is signed and notarized, needs no logging configuration profile, and requires a macOS administrator account because standard accounts cannot read the playback logs.</p>
+              </section>
+
+              <section id="not-fixed" aria-labelledby="not-fixed-title">
+                <div class="section-kicker">What Trace does not fix</div>
+                <h2 id="not-fixed-title">What Trace does not fix.</h2>
+                <p>The brief dropout when a DAC changes sample rate is the device re-locking to a new clock. Trace changes the device rate the same way other switchers do, so that gap exists with Trace too. This page is about switching at the wrong time, not about the gap.</p>
+                <p>With the overlap features on, Trace does not promise an exact readout at the boundary.</p>
+                <p>Trace does not take exclusive control of the output device and does not claim bit-perfect output.</p>
+              </section>
+
+              <section id="check" aria-labelledby="check-title">
+                <div class="section-kicker">Check it yourself</div>
+                <h2 id="check-title">Check it on your own Mac.</h2>
+                <p>You can run this check on your own Mac:</p>
+                <ol class="guide-steps"><li><strong>In Music &gt; Settings &gt; Playback, turn off Song Transitions, AutoMix, and Crossfade.</strong></li><li><strong>Queue a 44.1 kHz track followed by a 96 kHz track, or any two different rates.</strong></li><li><strong>Open Audio MIDI Setup and watch the output device's sample rate during the first track.</strong></li><li><strong>If the rate changes before the first track ends, you are seeing the preload switch.</strong></li><li><strong><a class="text-link" href="index.html#download">Download Audex Trace</a> and run the free Playback Verification.</strong><span>It shows the detected track format, the current output format, and whether Trace can match them on this device. It changes nothing unless you press the apply button.</span></li></ol>
+                <p>To compare tools and setups, read <a class="text-link" href="trace-vs-losslessswitcher.html">Audex Trace vs LosslessSwitcher</a> and check <a class="text-link" href="tested-setups.html">tested setups</a>. For the separate case where the rate never changes at all, see the <a class="text-link" href="apple-music-sample-rate-mismatch-mac.html">sample rate mismatch guide</a>.</p>
+                <div class="guide-cta"><div><h3>Verify playback for free.</h3><p>Play a track in Apple Music, open Trace, and confirm detection on your Mac.</p></div><a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.3.1&amp;source=mid_track_download" data-track-download>Free Download</a></div>
+              </section>
+
+
+              <section id="related-guides" aria-labelledby="related-guides-title"><div class="section-kicker">Related guides</div><h2 id="related-guides-title">Continue checking Apple Music on Mac.</h2><ul class="guide-list"><li><a class="text-link" href="apple-music-sample-rate-mismatch-mac.html">Apple Music sample rate mismatch on Mac</a></li><li><a class="text-link" href="apple-music-bit-depth-sample-rate-mac.html">How to check Apple Music bit depth and sample rate on Mac</a></li><li><a class="text-link" href="apple-music-dac-shows-48khz-mac.html">Why your DAC shows 48 kHz when Apple Music says Hi-Res Lossless</a></li><li><a class="text-link" href="apple-music-exclusive-mode-mac.html">Does Apple Music have exclusive mode on Mac?</a></li><li><a class="text-link" href="trace-vs-losslessswitcher.html">Audex Trace vs LosslessSwitcher</a></li><li><a class="text-link" href="tested-setups.html">Tested setups</a></li></ul></section>
+
+              <section id="faq" aria-labelledby="faq-title"><div class="section-kicker">FAQ</div><h2 id="faq-title">Common questions.</h2><div class="faq-list guide-faq-list"><article class="faq-item is-open"><button class="faq-question" type="button" id="faq-1" aria-expanded="true" aria-controls="faq-1-answer">Is this a macOS 27 bug?</button><section class="faq-answer" id="faq-1-answer" aria-labelledby="faq-1"><p>No single version. Reports exist from January 2025 and September 2026; macOS 27 is the most recent. The mechanism, Music preparing the next item, has existed for years.</p></section></article><article class="faq-item"><button class="faq-question" type="button" id="faq-2" aria-expanded="false" aria-controls="faq-2-answer">Does turning off AutoMix fix it in LosslessSwitcher?</button><section class="faq-answer" id="faq-2-answer" aria-labelledby="faq-2" aria-hidden="true"><p>It removes the overlap at the boundary, but the next item is still prepared before the current one ends, so a newest-line switcher can still switch early. Turning the overlap features off is still recommended for any log-based tool.</p></section></article><article class="faq-item"><button class="faq-question" type="button" id="faq-3" aria-expanded="false" aria-controls="faq-3-answer">Does Trace switch at exactly the track boundary?</button><section class="faq-answer" id="faq-3-answer" aria-labelledby="faq-3" aria-hidden="true"><p>It applies the switch when Music reports the track change and a format line for that track is attributed. The device re-lock gap at the switch still exists.</p></section></article><article class="faq-item"><button class="faq-question" type="button" id="faq-4" aria-expanded="false" aria-controls="faq-4-answer">Why does Trace need an administrator account?</button><section class="faq-answer" id="faq-4-answer" aria-labelledby="faq-4" aria-hidden="true"><p>The playback logs are readable only by administrator accounts on macOS; standard accounts cannot run Playback Verification or live detection.</p></section></article></div></section>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer class="site-footer"><div class="footer-brand"><span>Audex Trace</span><span>© 2026 Audex</span></div><nav aria-label="Footer links"><a href="apple-music-sample-rate-mismatch-mac.html">Sample Rate Guide</a><a href="apple-music-bit-depth-sample-rate-mac.html">Bit Depth Guide</a><a href="tested-setups.html">Tested Setups</a><a href="trace-vs-losslessswitcher.html">Trace vs LosslessSwitcher</a><a href="audex-trace-fact-sheet.html">Fact Sheet</a><a href="privacy.html">Privacy</a><a href="index.html#pricing">Pricing</a><a href="changelog.html">Changelog</a><a href="contact.html">Contact</a></nav></footer>
+    </div>
+    <script src="script.js?v=20260809"></script>
+  </body>
+</html>
