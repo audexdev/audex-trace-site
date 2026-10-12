@@ -35,7 +35,7 @@
           "@type": "SoftwareApplication",
           "name": "Audex Trace",
           "operatingSystem": "macOS 15 or later",
-          "softwareVersion": "1.3.1",
+          "softwareVersion": "1.3.2",
           "url": "https://trace.audex.dev/"
         }
       }
@@ -60,7 +60,7 @@
           <a href="index.html#download">Download</a>
         </nav>
         <div class="header-actions">
-          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.3.1&amp;source=changelog_header_download" data-track-download>Free Download</a>
+          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.3.2&amp;source=changelog_header_download" data-track-download>Free Download</a>
           <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
             <span></span>
             <span></span>
@@ -75,8 +75,8 @@
           <h1 id="changelog-title">Audex Trace Changelog</h1>
           <p class="hero-subtitle">Release notes for Audex Trace, including playback detection, queue, menu bar, notch, and compatibility updates.</p>
           <div class="download-actions">
-            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.3.1&amp;source=changelog_download" data-track-download>Download 1.3.1</a>
-            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.3.1">Latest GitHub Release</a>
+            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.3.2&amp;source=changelog_download" data-track-download>Download 1.3.2</a>
+            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.3.2">Latest GitHub Release</a>
           </div>
         </section>
 
@@ -84,6 +84,52 @@
           <article class="changelog-entry">
             <div class="changelog-meta">
               <span class="price-label">Current release</span>
+              <h2>1.3.2</h2>
+              <p>October 13, 2026</p>
+              <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.3.2">GitHub Release</a>
+            </div>
+            <div class="changelog-details release-notes">
+              <p>This update adds trackpad gestures to the menu bar player, improves the readability and accessibility of the player interface, and makes the menu bar panel, playback details, and quality suggestions more reliable.</p>
+              <h3>Improvements</h3>
+              <ul>
+              <li>Swipe horizontally on a trackpad over the menu bar player to move to the previous or next track. The gesture and its direction can be adjusted in Preferences.</li>
+              <li>Playing Next now follows queue changes made in Music more promptly.</li>
+              <li>The menu bar player now preserves the expanded Playing Next panel when opening and returning from Playback / Output details.</li>
+              <li>The menu bar panel now draws a shadow around all of its edges and follows the rounded corners of the panel.</li>
+              <li>The playing indicator in the menu bar now animates smoothly, keeps a stable width so the menu bar does not shift, and stops or resumes as soon as Reduce Motion changes.</li>
+              <li>Improved readability in the compact player and menu bar panel: titles, artist, album, and footer text use consistent weights, the time labels no longer crowd the playback quality label, and the expanded Playing Next card sizes to its content.</li>
+              <li>For VoiceOver users, transport controls now announce their names and current state, including Shuffle, Previous, Play or Pause, Next, and Repeat with its mode.</li>
+              <li>The playback position and volume controls are now recognized as adjustable sliders, so VoiceOver increment and decrement work, and the buttons that open playback and output details announce the current status.</li>
+              <li>For people who use Differentiate Without Color, shuffle and repeat now show a non-color active indicator, and sample-rate status uses distinct shapes instead of a colored dot.</li>
+              <li>Increase Contrast is now honored in the compact player and menu bar panel, and the album line no longer appears brighter than the title.</li>
+              <li>Reduce Motion is now honored by the notch play or pause change and by the play or pause animation in the compact player, and track changes cross-fade the artwork, the blurred backdrop, and the background colors as one transition.</li>
+              <li>Playback details now update more reliably during rapid track changes and while Music finishes loading a track.</li>
+              <li>Prevented playback details from the previous track from appearing on the next track.</li>
+              <li>Playback details now recover when the connection to Music is interrupted, so the last known track stays visible while Trace reconnects instead of resetting.</li>
+              <li>Playback quality suggestions now appear as soon as the current release has been checked, and suggestions for the same recording on other Apple Music releases, such as an album, single, EP, or compilation, are added as they are found.</li>
+              <li>Temporary failures while looking up suggestions now retry automatically with increasing delays, and suggestions already found stay visible while other sources retry.</li>
+              <li>Playback quality suggestions now recover more reliably after rapid track changes and remain available when pausing and resuming the same track.</li>
+              <li>Improved Dolby Atmos suggestions when Music provides incomplete playback information.</li>
+              <li>Playback Verification now explains that playback-format detection requires a macOS administrator account, because standard user accounts cannot access the local playback logs Trace needs, and that the checks are unavailable until you sign in to an administrator account.</li>
+              <li>Clarified Preferences to distinguish the free Playback Verification feature from the additional features included with Trace Pro.</li>
+              <li>Reduced unnecessary repeated work while monitoring playback and refreshing the player interface, including during playback position updates.</li>
+              <li>Fixed the notch player sometimes disappearing after display configuration changes such as waking from sleep or connecting or disconnecting a display, where the overlay stayed in place and gestures still worked but no content was drawn.</li>
+              <li>Fixed the app sometimes quitting unexpectedly, typically after the Mac had been asleep, when a background helper that reads playback information stopped responding in time.</li>
+              <li>Fixed Audex Trace quitting unexpectedly on macOS 15 as soon as playback started. The playing indicator in the menu bar was drawn with a corner radius larger than its bars, which macOS 15 treats as a fatal drawing error.</li>
+              <li>The anonymous app launch event now includes the macOS version, so compatibility problems on a specific macOS version can be noticed sooner. As before, these events are only sent for free installations without a stored Pro license key.</li>
+              <li>When Audex Trace is opened from the folder it was downloaded to, it now explains that macOS runs it from a temporary read-only copy there, which blocks automatic updates, and asks you to move it to the Applications folder with the Finder.</li>
+              </ul>
+              <p>Download <code>AudexTrace-1.3.2.zip</code>, unzip it, and move <code>Audex Trace.app</code> to <code>/Applications</code>.</p>
+              <h3>Compatibility notes</h3>
+              <ul>
+              <li>Requires macOS 15 or later.</li>
+              <li>For best real-time playback-format detection, turn off Song Transitions, AutoMix, or Crossfade in Music.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="price-label">Release</span>
               <h2>1.3.1</h2>
               <p>August 1, 2026</p>
               <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.3.1">GitHub Release</a>
@@ -113,11 +159,11 @@
               <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.3">GitHub Release</a>
             </div>
             <div class="changelog-details release-notes">
-              <p>Audex Trace 1.3 helps you understand what Apple Music is playing now, what’s coming next, and whether another format or release may be available at a higher bit depth or sample rate, or in Dolby Atmos. It adds playback quality suggestions, more precise Playing Next estimates, and a unified view of playback and output details.</p>
+              <p>Audex Trace 1.3 helps you understand what Apple Music is playing now, what’s coming next, and whether another format or release may offer a higher-quality option. It adds playback quality suggestions, more precise Playing Next estimates, and a unified view of playback and output details.</p>
               <h3>Improvements</h3>
               <ul>
               <li>For Pro users, added playback quality suggestions for Apple Music tracks. A sparkles button reveals up to two relevant formats available on the current release or another release in the compact player and menu bar, while the expanded notch can show them below the playback controls. When available, Apple Lossless suggestions include best-effort bit depth and sample-rate details such as ALAC 24-bit / 96 kHz.</li>
-              <li>Added suggestion controls in Preferences for Dolby and Spatial Audio, Lossless, and higher-resolution Apple Lossless alternatives, including an option to limit Dolby suggestions to supported outputs.</li>
+              <li>Added suggestion controls in Preferences for Dolby and Spatial Audio, Lossless, and higher-quality Apple Lossless alternatives, including an option to limit Dolby suggestions to supported outputs.</li>
               <li>Playing Next now stays prepared in the background, including artwork, so opening it shows the current queue immediately. For Pro users, its quality estimates are also prepared in advance; when enough information is available, best-effort Apple Lossless estimates include bit depth and sample rate, while otherwise the broader Lossless or Hi-Res Lossless label is preserved.</li>
               <li>The compact player now opens a combined Playback and Output details panel when you click either the playback-format label or the output-status label.</li>
               <li>Playback details can show the codec, bit depth, sample rate, and channel count. AAC downmix playback is identified when that information is available, and estimated playback information is clearly marked.</li>
