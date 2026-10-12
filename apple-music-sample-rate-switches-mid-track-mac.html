@@ -88,7 +88,7 @@
               <section id="quick-answer" aria-labelledby="quick-answer-title">
                 <div class="section-kicker">Quick answer</div>
                 <h2 id="quick-answer-title">Quick answer.</h2>
-                <ul class="guide-list"><li><strong>The symptom:</strong> Your output device's rate is right at the start of a track, then changes partway through the same track to the next track's rate. You hear a short interruption, and the rest of the track plays at the wrong rate.</li><li><strong>The cause:</strong> Apple Music prepares the next track before the current one ends. The prepared player writes its own format line to the macOS unified log while the current track is still playing. A switcher that treats the newest format line as what is playing now switches early.</li><li><strong>Scope:</strong> This behavior is not specific to one macOS version or one tool. It was reported against LosslessSwitcher in January 2025 and again in September 2026, and reproduced on a fork.</li><li><strong>Audex Trace:</strong> Audex Trace attributes each format line to the player instance that wrote it and to the track Apple Music says is playing, so a line from a prepared next track is held back until the track actually changes.</li></ul>
+                <ul class="guide-list"><li><strong>The symptom:</strong> Your output device's rate is right at the start of a track, then changes partway through the same track to the next track's rate. You hear a short interruption, and the rest of the track plays at the wrong rate.</li><li><strong>The cause:</strong> Apple Music prepares the next track before the current one ends. The prepared player writes its own format line to the macOS unified log while the current track is still playing. A switcher that treats the newest format line as what is playing now switches early.</li><li><strong>Scope:</strong> This behavior is not specific to one macOS version or one tool. It was reported against LosslessSwitcher in January 2025 and again in September 2026, and reproduced on a fork.</li><li><strong>Audex Trace:</strong> Audex Trace attributes each format line to the player instance that wrote it and to the track Apple Music says is playing, so a line from a prepared next track is normally held back until the track actually changes. This is best effort rather than a guarantee.</li></ul>
               </section>
 
               <section id="symptom" aria-labelledby="symptom-title">
@@ -102,8 +102,8 @@
               <section id="cause" aria-labelledby="cause-title">
                 <div class="section-kicker">Why it happens</div>
                 <h2 id="cause-title">Why it happens.</h2>
-                <p>Apple Music on macOS plays each item in your queue through a player instance. Before the current item ends, it creates and prepares the next one so playback continues without a gap. The prepared instance decodes the beginning of the next track.</p>
-                <p>When an instance decodes, Music writes format lines (codec, bit depth, sample rate) to the unified log. The prepared instance writes its lines while the current instance is still playing.</p>
+                <p>Apple Music on macOS prepares the next item before the current one ends so playback continues without a gap. Exactly what it prepares is not documented, but the effect is visible in the log.</p>
+                <p>Music writes format lines (codec, bit depth, sample rate) to the unified log, and each line is tagged with the player instance that wrote it. While the current track is still playing, lines for the prepared next track appear under a different player instance than the one that is playing.</p>
                 <p>A switcher that reads the log and applies the newest format line applies the next track's rate when the next track is prepared, not when it starts.</p>
                 <p>Anything that makes Music refresh its player state mid-track can trigger the same read: queue edits, Play Next, metadata or artwork updates. A contributor describing LosslessSwitcher's code in issue #231 on 2026-10-09 wrote that its track-change handler runs on every MediaRemote callback, including mid-track updates for the same track, and then applies the newest decoder log entry.</p>
               </section>
@@ -118,7 +118,7 @@
               <section id="worse" aria-labelledby="worse-title">
                 <div class="section-kicker">Overlap features</div>
                 <h2 id="worse-title">What makes it worse.</h2>
-                <p>Apple Music's overlap features, Song Transitions, AutoMix, and Crossfade, keep two player instances active around every track boundary on purpose. With them on, two instances can decode at once, and no log-based tool, Trace included, can promise an exact readout around the boundary.</p>
+                <p>Apple Music's overlap features, Song Transitions, AutoMix, and Crossfade, keep two player instances active around every track boundary on purpose. With them on, the prepared track's format lines appear far more often while the current track is still playing, and no log-based tool, Trace included, can promise an exact readout around the boundary.</p>
                 <p>Trace's Playback Verification screen states: "Turn off Song Transitions, AutoMix, or Crossfade. They can make detection delayed or unavailable around track changes."</p>
                 <p>The settings are in Music &gt; Settings &gt; Playback. AutoMix may be on by default on recent macOS versions, so check rather than assume it is off.</p>
               </section>
@@ -127,10 +127,10 @@
                 <div class="section-kicker">Audex Trace</div>
                 <h2 id="trace-title">What Audex Trace does.</h2>
                 <p>Trace reads the same category of Music log lines but keeps track of which player instance wrote each line.</p>
-                <p>Trace keeps a current-track anchor from Apple Music's own now-playing state. While that anchor has not changed, a format line from a different player instance is treated as a possible preload of the next track and is not applied to the readout or to Auto Sample Rate Match. It becomes eligible only after Music reports that the track changed.</p>
+                <p>Trace keeps a current-track anchor from Apple Music's own now-playing state. While that anchor has not changed, a format line from a different player instance is treated as a possible preload of the next track and is normally not applied to the readout or to Auto Sample Rate Match. It becomes eligible after Music reports that the track changed. This handling is best effort rather than a guarantee.</p>
                 <p>Lines from the same player instance do update the readout, so a format change within the same item is still reflected.</p>
                 <p>Upcoming tracks are shown separately in Playing Next, with their estimated format in Pro (queue quality estimates), so next is displayed as next rather than mixed into now.</p>
-                <p>In the developer's testing with Song Transitions, AutoMix, and Crossfade off, on macOS 15.4, 26.3, 26.3.1, 26.4.1, and 26.5, the readout and the automatic switch followed the playing track. With those features on, detection around track changes is best effort.</p>
+                <p>In the developer's testing with Song Transitions, AutoMix, and Crossfade off, on macOS 26.3, 26.3.1, 26.4.1, and 26.5, and with earlier builds on macOS 15.4, the readout and the automatic switch followed the playing track. With those features on, detection around track changes is best effort.</p>
                 <p>Trace is signed and notarized, needs no logging configuration profile, and requires a macOS administrator account because standard accounts cannot read the playback logs.</p>
               </section>
 
