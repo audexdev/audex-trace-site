@@ -74,7 +74,7 @@
                 "name": "Does Audex Trace work on my Mac?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Audex Trace requires macOS 15 or later and the Apple Music app. Playback-format detection currently requires a macOS administrator account; Playback Verification and live playback-format detection are unavailable in standard user accounts. Download it free, play a track in Apple Music, then verify playback on your own Mac before buying Pro."
+                  "text": "Audex Trace requires macOS 15 or later and the Apple Music app. Playback-format detection currently requires a macOS administrator account; Playback Verification and live playback-format detection are unavailable in standard user accounts. The requirement is that the macOS user account you are logged in with is an administrator account, not that Trace runs as an administrator; Trace does not run with elevated privileges and never asks for an administrator password. It is a macOS restriction on reading the system log, not something Trace adds, and it applies to any tool that reads Apple Music playback format from that log; LosslessSwitcher's README states the same requirement. Download it free, play a track in Apple Music, then verify playback on your own Mac before buying Pro."
                 }
               },
               {
@@ -466,7 +466,7 @@
           <h2 id="requirements-title">Designed for recent macOS and Apple Music.</h2>
           <div class="requirements-list">
             <p>Requires macOS 15 or later with the Apple Music app installed.</p>
-            <p>Playback-format detection currently requires a macOS administrator account. Standard user accounts cannot access the local playback logs Trace needs, so Playback Verification and live playback-format detection are unavailable.</p>
+            <p>Playback-format detection currently requires a macOS administrator account. Standard user accounts cannot access the local playback logs Trace needs, so Playback Verification and live playback-format detection are unavailable. The requirement is that the macOS user account you are logged in with is an administrator account, not that Trace runs as an administrator; Trace does not run with elevated privileges and never asks for an administrator password. It is a macOS restriction on reading the system log, not something Trace adds, and it applies to any tool that reads Apple Music playback format from that log; LosslessSwitcher's README states the same requirement.</p>
             <p>Tested on macOS 26.3, 26.3.1, 26.4.1, and 26.5. Automated tests run on macOS 15 before each release, and a user confirmed 1.3.2 on macOS 15.8 after the crash fix. <a class="text-link" href="tested-setups.html">See tested setups</a>.</p>
             <p>macOS 14 and earlier are not officially supported.</p>
             <p>Local Apple Music playback on the Mac.</p>
@@ -510,7 +510,7 @@
             <article class="faq-item is-open">
               <button class="faq-question" type="button" id="faq-question-works" aria-expanded="true" aria-controls="faq-answer-works">Does Audex Trace work on my Mac?</button>
               <div class="faq-answer" id="faq-answer-works" role="region" aria-labelledby="faq-question-works">
-                <p>Audex Trace requires macOS 15 or later and the Apple Music app. Playback-format detection currently requires a macOS administrator account; Playback Verification and live playback-format detection are unavailable in standard user accounts. Download it free, play a track in Apple Music, then verify playback on your own Mac before buying Pro.</p>
+                <p>Audex Trace requires macOS 15 or later and the Apple Music app. Playback-format detection currently requires a macOS administrator account; Playback Verification and live playback-format detection are unavailable in standard user accounts. The requirement is that the macOS user account you are logged in with is an administrator account, not that Trace runs as an administrator; Trace does not run with elevated privileges and never asks for an administrator password. It is a macOS restriction on reading the system log, not something Trace adds, and it applies to any tool that reads Apple Music playback format from that log; LosslessSwitcher's README states the same requirement. Download it free, play a track in Apple Music, then verify playback on your own Mac before buying Pro.</p>
               </div>
             </article>
             <article class="faq-item">
