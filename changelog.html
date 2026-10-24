@@ -35,7 +35,7 @@
           "@type": "SoftwareApplication",
           "name": "Audex Trace",
           "operatingSystem": "macOS 15 or later",
-          "softwareVersion": "1.3.2",
+          "softwareVersion": "1.4",
           "url": "https://trace.audex.dev/"
         }
       }
@@ -60,7 +60,7 @@
           <a href="index.html#download">Download</a>
         </nav>
         <div class="header-actions">
-          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.3.2&amp;source=changelog_header_download" data-track-download>Free Download</a>
+          <a class="header-cta" href="https://trace-auth.audex.dev/download?version=1.4&amp;source=changelog_header_download" data-track-download>Free Download</a>
           <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
             <span></span>
             <span></span>
@@ -75,8 +75,8 @@
           <h1 id="changelog-title">Audex Trace Changelog</h1>
           <p class="hero-subtitle">Release notes for Audex Trace, including playback detection, queue, menu bar, notch, and compatibility updates.</p>
           <div class="download-actions">
-            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.3.2&amp;source=changelog_download" data-track-download>Download 1.3.2</a>
-            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.3.2">Latest GitHub Release</a>
+            <a class="primary-cta" href="https://trace-auth.audex.dev/download?version=1.4&amp;source=changelog_download" data-track-download>Download 1.4</a>
+            <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.4">Latest GitHub Release</a>
           </div>
         </section>
 
@@ -84,6 +84,37 @@
           <article class="changelog-entry">
             <div class="changelog-meta">
               <span class="price-label">Current release</span>
+              <h2>1.4</h2>
+              <p>October 24, 2026</p>
+              <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.4">GitHub Release</a>
+            </div>
+            <div class="changelog-details release-notes">
+              <p>This update makes the playback-format display follow the track that is actually audible when Music overlaps tracks, adds a Quality Only player window layout, configurable keyboard shortcuts, and an estimated playback format while a confirmed one is not available yet, and improves Playback Verification, Auto Sample Rate Match, and Playing Next.</p>
+              <h3>Improvements</h3>
+              <ul>
+              <li>The playback-format display now follows the track that is actually audible when Song Transitions, AutoMix, or Crossfade is on, instead of switching to the next track&#x27;s preloaded format early.</li>
+              <li>When no confirmed playback format is available yet, Trace Pro now shows an estimated format taken from the stream Music selected (codec, bit depth, and sample rate), marked as an estimate. A confirmed format replaces it.</li>
+              <li>Auto Sample Rate Match now waits until Music has finished handing over the previous track before changing the output device&#x27;s sample rate. With Song Transitions, AutoMix, or Crossfade on, the switch can land a few seconds after the track change, and up to about 20 seconds in the worst case.</li>
+              <li>Auto Sample Rate Match now follows the playback format that Trace displays, so the output device&#x27;s sample rate is matched to that format when a track change is reported while the previous track was paused, when the output device changes while playback is paused and playback resumes, and in similar cases where the output device previously stayed at the previous track&#x27;s rate until Music reported the format again.</li>
+              <li>Playing Next now clears a stale &quot;Will skip&quot; badge when Music rebuilds the queue and prepares the track successfully.</li>
+              <li>Playback Verification now reads the live playback log stream with a small forward nudge of the playback position instead of searching the log history, so it can detect the playback format even when macOS has stopped returning Music&#x27;s older log lines. Its timeout was reduced from 10 seconds to 6 seconds, and the format-timeout message now suggests quitting and reopening Music.</li>
+              <li>The player window has a new Quality Only layout that shows only the playback-quality line, optionally with the output status line under it when Show output status is on. Choose it with the Layout picker in Preferences &gt; Player Window &gt; Appearance; it requires the Pro audio quality display, and otherwise the window stays Compact. The window sizes to fit the quality line and, when shown, the longest output status, and it keeps the same always-on-top behavior, background styles, and keyboard shortcuts as the Compact layout. You can drag the window from anywhere on it except the quality and output status text, which open their details when clicked.</li>
+              <li>A new Keyboard Shortcuts section in Preferences lets you change or remove the key for Play/Pause, Repeat, Shuffle, Next Track, and Previous Track, with Change and Remove on each row and a Reset to Defaults button. By default, Play/Pause is Space, Repeat is R, Shuffle is S, and Next Track and Previous Track are unbound. The shortcuts work while the player window or the menu bar panel is active and no text field is being edited, and they can also work while other apps are active.</li>
+              <li>The Also work in other apps toggle in Preferences &gt; Keyboard Shortcuts (off by default) lets the shortcuts work while another app is in front. The caption under the toggle lists any bound key that has no modifier, because other apps stop receiving that key while the toggle is on. Trace does not ask for Accessibility permission. The shortcuts are registered with the system only while the toggle is on and are paused while a key is being recorded; if the system refuses to register a key, its row shows a note and the shortcut keeps working in the player window.</li>
+              <li>Shortcut key labels in Preferences follow the active keyboard layout, so a binding recorded on one layout shows the character the current layout produces for that key. Special keys keep their names.</li>
+              <li>Fixed the app sometimes quitting unexpectedly when the helper process that runs AppleScript for Music exited before reading its input.</li>
+              </ul>
+              <p>Download <code>AudexTrace-1.4.zip</code>, unzip it, and move <code>Audex Trace.app</code> to <code>/Applications</code>.</p>
+              <h3>Compatibility notes</h3>
+              <ul>
+              <li>Requires macOS 15 or later.</li>
+              <li>With Song Transitions, AutoMix, or Crossfade enabled in Music, Auto Sample Rate Match waits for Music to finish handing over the previous track, so the sample-rate switch can land a few seconds after the track change and up to about 20 seconds in the worst case.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="price-label">Release</span>
               <h2>1.3.2</h2>
               <p>October 13, 2026</p>
               <a class="repository-link" href="https://github.com/audexdev/trace-releases/releases/tag/v1.3.2">GitHub Release</a>
