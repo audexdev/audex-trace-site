@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Audex Trace">
+  <defs>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="1.25" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="cyan" x1="12" y1="18" x2="52" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5fefff"/>
+      <stop offset="0.54" stop-color="#17e4ed"/>
+      <stop offset="1" stop-color="#33b9ff"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#cyan)" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <circle cx="32" cy="32" r="25.5" stroke-width="3.1"/>
+    <g stroke-width="2.6">
+      <path d="M32 6.5v5.4"/>
+      <path d="M32 52.1v5.4"/>
+      <path d="M6.5 32h5.4"/>
+      <path d="M52.1 32h5.4"/>
+      <path d="M14 14l3.8 3.8"/>
+      <path d="M46.2 46.2 50 50"/>
+      <path d="M50 14l-3.8 3.8"/>
+      <path d="M17.8 46.2 14 50"/>
+    </g>
+    <g stroke-width="2.4" opacity="0.72">
+      <path d="M23.5 27v10"/>
+      <path d="M27.8 21v22"/>
+      <path d="M32 14.5v35"/>
+      <path d="M36.2 21v22"/>
+      <path d="M40.5 27v10"/>
+    </g>
+    <path d="M15.5 32c3.6 0 3.6-2.7 6.6-2.7 3.5 0 3.6 5.4 7 5.4 3.7 0 3.7-9.5 7.5-9.5 3.8 0 3.8 9.5 7.5 9.5 3.4 0 3.5-5.4 7-5.4 3 0 3 2.7 6.6 2.7" stroke-width="3.8"/>
+  </g>
+</svg>

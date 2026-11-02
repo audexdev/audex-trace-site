@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Video placeholder">
+  <rect width="1600" height="900" fill="#10141c"/>
+  <rect x="48" y="48" width="1504" height="804" rx="28" fill="none" stroke="#2a3342" stroke-width="2"/>
+  <circle cx="800" cy="430" r="54" fill="none" stroke="#5f728a" stroke-width="3"/>
+  <path d="M788 400 L788 460 L836 430 Z" fill="#5f728a"/>
+  <text x="800" y="560" text-anchor="middle" fill="#8b9bb0" font-family="system-ui, -apple-system, sans-serif" font-size="28">Demo clip coming soon</text>
+</svg>

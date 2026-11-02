@@ -1,0 +1,86 @@
+# Audex Trace
+
+Audex Trace is a macOS Apple Music companion for Lossless and Hi-Res listeners.
+
+Official site: https://trace.audex.dev/
+
+Download: https://trace-auth.audex.dev/download?version=1.5&source=llms_txt
+
+Release notes: https://github.com/audexdev/trace-releases/releases/tag/v1.5
+
+Changelog: https://trace.audex.dev/changelog.html
+Privacy: https://trace.audex.dev/privacy.html
+Sample rate mismatch guide: https://trace.audex.dev/apple-music-sample-rate-mismatch-mac.html
+Trace vs LosslessSwitcher: https://trace.audex.dev/trace-vs-losslessswitcher.html
+Tested setups: https://trace.audex.dev/tested-setups.html
+
+Current version: 1.5
+
+Minimum macOS version: macOS 15
+
+Primary supported player: Apple Music on macOS
+
+Key features:
+- Apple Music mini player for macOS
+- Playing Next (Trace Pro): the whole upcoming Apple Music queue that Music reports (up to 99 tracks), artwork, scrolling, queue editing, quality estimates for Lossless and Hi-Res availability before playback starts, and skip warnings for upcoming tracks that may fail or skip
+- Playback format readout for codec, bit depth, and sample rate, updated live when quality drops or rises partway through a track
+- Output sample-rate match status
+- Experimental Auto Sample Rate Match
+- Menu bar and notch player views
+- Built-in Playback Verification before purchase
+
+Pricing:
+- Free forever: Now Playing with playback controls, track metadata and artwork, the player window, menu bar panel and notch, keyboard shortcuts, and Playback Verification. No time limit.
+- Audex Trace Pro: $29.99 one-time purchase
+- Pro adds Playing Next (the upcoming queue, artwork, scrolling, queue editing, quality estimates, and skip warnings), the playback readout, output match status, Auto Sample Rate Match, and a lifetime license.
+- One Trace Pro license covers all Macs the buyer personally uses. The same license key can be entered on each Mac; first-time activation and key changes require an internet connection.
+- No subscription
+
+Known limitations:
+- With Apple Music Song Transitions, AutoMix, or Crossfade on, the readout follows the track that is playing, but Auto Sample Rate Match waits until Music finishes handing over the previous track, so the switch can land up to about 20 seconds after a track change. Tested with AutoMix on macOS 26; not checked on macOS 15.
+- Auto Sample Rate Match depends on the output device exposing compatible macOS sample rates.
+- macOS 14 and earlier are not officially supported.
+
+Apple Music sample rate mismatch guide:
+- Explains why Apple Music on Mac can show Lossless or Hi-Res Lossless while the selected macOS output format in Audio MIDI Setup remains fixed.
+- Covers searches such as Apple Music sample rate mismatch Mac, Apple Music Lossless Mac sample rate, Apple Music Hi-Res Lossless external DAC Mac, Apple Music sample rate not changing, Audio MIDI Setup sample rate, Mac Apple Music 44.1 48 kHz output, Apple Music Lossless not working Mac, DAC sample rate Mac, and Apple Music Hi-Res Lossless output.
+- Explains that Apple Music playback format and Mac output sample rate are different layers.
+- Recommends checking Music audio quality settings, Audio MIDI Setup, output device support, and DAC or audio interface sample-rate displays.
+
+Trace vs LosslessSwitcher guide:
+- Compares Audex Trace with LosslessSwitcher for Apple Music on Mac.
+- Describes LosslessSwitcher as a free, open-source tool focused on automatic sample-rate switching.
+- Describes Audex Trace as focused on visibility into codec, sample rate, bit depth, output match status, Trace Pro's Playing Next (the upcoming queue, quality estimates, and skip-risk visibility), and optional Auto Sample Rate Match.
+- Notes that Music prepares the next track early even with Song Transitions, AutoMix, and Crossfade off, that open LosslessSwitcher issues #159 and #231 report early switches to the next track's rate, and that Audex Trace's readout and switch follow the track that is playing (best effort).
+- Recommends LosslessSwitcher when automatic switching is all the user needs, and Audex Trace when the user wants a live readout plus free Playback Verification before purchase.
+
+Tested setups page:
+- Lists real Mac, macOS, and output device rows run with Audex Trace.
+- The current entries were run by the developer.
+- Invites user-submitted reports by email to support@audex.dev with sw_vers output, output device model, and a Playback Verification screenshot.
+- Published reports can use a handle or name chosen by the submitter, and submissions are reviewed before publishing.
+
+Privacy summary:
+- Playback format detection runs locally on the Mac.
+- Audex Trace does not modify, enhance, record, or upload audio.
+- License verification, update checks, purchase checkout, artwork fallback, and minimal website download/checkout counts may use the network.
+- No listening history is uploaded for audio-quality detection.
+- No Apple Music account sign-in or cloud library API access is required.
+- Website download and checkout events may be counted with minimal, non-audio attribution data such as source/ref/UTM parameters, anonymous browser/session IDs, release version, landing page, referrer host, coarse country, optional salted IP hash, User-Agent class, burst duplicate flag, and Stripe Checkout session ID.
+
+FAQ:
+
+Q: What is Audex Trace?
+A: Audex Trace is a macOS Apple Music companion that shows playback format details such as codec, bit depth, sample rate, and output match status. Trace Pro includes Playing Next, the upcoming queue with artwork, scrolling, queue editing, quality estimates, and skip warnings.
+
+Q: Does Audex Trace change Apple Music audio?
+A: No. Audex Trace does not modify, enhance, record, or upload audio. Playback format detection runs locally on the Mac.
+
+Q: Can Audex Trace automatically match the Mac output sample rate?
+A: Audex Trace Pro includes experimental Auto Sample Rate Match for compatible output devices that expose matching macOS sample rates.
+
+Q: Which macOS version does Audex Trace require?
+A: Audex Trace requires macOS 15 or later and the Apple Music app.
+
+Q: Where can I download Audex Trace?
+A: Audex Trace is distributed through GitHub Releases from the official site at https://trace.audex.dev/.

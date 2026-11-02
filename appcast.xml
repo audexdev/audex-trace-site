@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Audex Trace</title>
+        <item>
+            <title>1.5</title>
+            <pubDate>Tue, 03 Nov 2026 04:00:07 +0900</pubDate>
+            <link>https://trace.audex.dev</link>
+            <sparkle:version>34</sparkle:version>
+            <sparkle:shortVersionString>1.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.5/AudexTrace-1.5.zip" length="8769068" type="application/octet-stream" sparkle:edSignature="WPF2dgry6e9xBqj4LDWLenui3aEL3W+8ympPvgrL/cKK5X7cRob4QpP27fh5gQjbxwlodupXiaqNJwIe7dJtCw=="/>
+        </item>
+        <item>
+            <title>1.4</title>
+            <pubDate>Sat, 24 Oct 2026 22:31:52 +0900</pubDate>
+            <link>https://trace.audex.dev</link>
+            <sparkle:version>33</sparkle:version>
+            <sparkle:shortVersionString>1.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.4/AudexTrace-1.4.zip" length="8302893" type="application/octet-stream" sparkle:edSignature="zZxhTXczet/VyPLtku+i3jxw1ncA87Cg4SNzHyH7fJia5kNdYTvgs1e4CoeZ5fBv/NSPLnstaY+7Bw0gPVStAQ=="/>
+        </item>
+        <item>
+            <title>1.3.2</title>
+            <pubDate>Tue, 13 Oct 2026 04:23:37 +0900</pubDate>
+            <link>https://trace.audex.dev</link>
+            <sparkle:version>32</sparkle:version>
+            <sparkle:shortVersionString>1.3.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/audexdev/trace-releases/releases/download/v1.3.2/AudexTrace-1.3.2.zip" length="8033873" type="application/octet-stream" sparkle:edSignature="8MqA6zmRSvl4eoiLL9px8XrF5VynYFXeaCym2JlLWpKuigXvmes5VrKGZxkww5zAsg8T3QinTR+wgq/iUPKfDw=="/>
+        </item>
+    </channel>
+</rss>
